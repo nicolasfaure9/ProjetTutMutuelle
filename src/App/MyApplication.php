@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace ProjetTutMutuelle\App;
 
 use Silex\Application;
 
