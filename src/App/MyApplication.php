@@ -1,5 +1,5 @@
 <?php
-namespace GSB\App;
+namespace App;
 
 use Silex\Application;
 

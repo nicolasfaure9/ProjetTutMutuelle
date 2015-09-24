@@ -16,14 +16,12 @@
                     <h1>PokeStore <div class="container">
 
                         </div><br><small>Vente de pokémons en ligne<br>Choisissez une catégorie :<br>
-                            <form class="form-horizontal" role="form" action="/results/" method="post">
+                            <form class="form-horizontal" role="form" >
                                 <div class="form-group">
 
                                     <div class="col-sm-7">
                                         <select class="form-control" name="type">
-                                            {% for type in types %}
-                                                <option value="{{ type.id }}">{{ type.label }}</option>
-                                            {% endfor %}
+                                            
                                         </select>
                                     </div>
                                 </div>
