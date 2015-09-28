@@ -9,3 +9,8 @@ h1 small {
 .nav-tabs {
     margin-bottom: 20px;
 }
+
+a:link 
+{ 
+ text-decoration:none; 
+} 
