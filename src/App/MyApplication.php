@@ -1,8 +1,6 @@
 <?php
 namespace ProjetTutMutuelle\App;
-
 use Silex\Application;
-
 class MyApplication extends Application
 {
     use Application\TwigTrait;

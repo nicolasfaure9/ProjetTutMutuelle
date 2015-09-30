@@ -22,6 +22,8 @@ $app->register(new Silex\Provider\SessionServiceProvider());
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 
-        
+        $app['dao.region'] = $app->share(function ($app) {
+    return new ProjetTutMutuelle\DAO\RegionDAO($app['db']);
+});
     
 

@@ -9,4 +9,4 @@ use ProjetTutMutuelle\Form\Type\VisitReportType;
 
 
 // Home page
-$app->get('/', "ProjetTutMutuelle\Controller\HomeController::indexAction");
+$app->get('/', "ProjetTutMutuelle\Controller\RegionController::regionAction");

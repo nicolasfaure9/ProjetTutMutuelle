@@ -2,13 +2,13 @@
 
 // Doctrine (db)
 $app['db.options'] = array(
-    'driver'   => 'pdo_mysql',
+    'driver'   => 'oci8',
+    'host'     => 'epulgold.univ-lyon1.fr',
+    'dbname' =>'oraepul1',
+    'port'     => '1521',
+    'user'     => 'PBDALG7',
+    'password' => 'PBDALG7',
     'charset'  => 'utf8',
-    'host'     => 'localhost',
-    'port'     => '3306',
-    'dbname'   => 'gsb',
-    'user'     => 'gsb_user',
-    'password' => 'secret',
 );
 
 // enable the debug mode
