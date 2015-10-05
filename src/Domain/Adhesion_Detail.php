@@ -27,8 +27,58 @@ class Adhesion_Detail {
     private $num_beneficiaire;
     
     private $type_beneficiaire;
+    
+    private $primes_acquises;
+    
+    private $code_agent;
+    
+    private $code_region;
+    
+    private $prime_garantie;
+    
+    private $code_postal;
+    
+    public function getPrimes_acquises() {
+        return $this->primes_acquises;
+    }
 
-    public function getNum() {
+    public function getCode_agent() {
+        return $this->code_agent;
+    }
+
+    public function getCode_region() {
+        return $this->code_region;
+    }
+
+    public function getPrime_garantie() {
+        return $this->prime_garantie;
+    }
+
+    public function getCode_postal() {
+        return $this->code_postal;
+    }
+
+    public function setPrimes_acquises($primes_acquises) {
+        $this->primes_acquises = $primes_acquises;
+    }
+
+    public function setCode_agent($code_agent) {
+        $this->code_agent = $code_agent;
+    }
+
+    public function setCode_region($code_region) {
+        $this->code_region = $code_region;
+    }
+
+    public function setPrime_garantie($prime_garantie) {
+        $this->prime_garantie = $prime_garantie;
+    }
+
+    public function setCode_postal($code_postal) {
+        $this->code_postal = $code_postal;
+    }
+
+        public function getNum() {
         return $this->num;
     }
     public function setNum($num) {
@@ -92,9 +142,9 @@ class Adhesion_Detail {
     }
         
     public function getTypeBeneficiaire() {
-        return $this->type_beneficiaire_beneficiaire;
+        return $this->type_beneficiaire;
     }
     public function setTypeBeneficiaire($type_beneficiaire) {
-        $this->type_beneficiaire_beneficiaire = $type_beneficiaire;
+        $this->type_beneficiaire = $type_beneficiaire;
     }
 }
