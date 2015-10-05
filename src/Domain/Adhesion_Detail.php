@@ -19,6 +19,14 @@ class Adhesion_Detail {
     private $code_fractionnement;
     
     private $code_garantie;
+    
+    private $formule;
+    
+    private $exercice_paiement;
+    
+    private $num_beneficiaire;
+    
+    private $type_beneficiaire;
 
     public function getNum() {
         return $this->num;
@@ -60,5 +68,33 @@ class Adhesion_Detail {
     }
     public function setCodeGarantie($code_garantie) {
         $this->code_garantie = $code_garantie;
+    }
+    
+    public function getFormule() {
+        return $this->formule;
+    }
+    public function setFormule($formule) {
+        $this->formule = $formule;
+    }
+    
+    public function getExercicePaiement() {
+        return $this->exercice_paiement;
+    }
+    public function setExercicePaiement($exercice_paiement) {
+        $this->exercice_paiement = $exercice_paiement;
+    }
+    
+    public function getNumBeneficiaire() {
+        return $this->num_beneficiaire;
+    }
+    public function setNumBeneficiaire($num_beneficiaire) {
+        $this->num_beneficiaire = $num_beneficiaire;
+    }
+        
+    public function getTypeBeneficiaire() {
+        return $this->type_beneficiaire_beneficiaire;
+    }
+    public function setTypeBeneficiaire($type_beneficiaire) {
+        $this->type_beneficiaire_beneficiaire = $type_beneficiaire;
     }
 }
