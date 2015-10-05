@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ app.request.basepath }}/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ app.request.basepath }}/css/tutmut.css" rel="stylesheet">
-        <title>Projet TutMutuelle - {% block title %}{% endblock %}</title>
+        <title>Mutuelle - {% block title %}{% endblock %}</title>
     </head>
     <body>
         <div class="container">
@@ -19,24 +19,32 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/">Projet Tut Mutuelle</a>
+                        <a class="navbar-brand" href="/">PokeStore</a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-collapse-target">
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="/accueil" class="navbar-nav" >Mutuelle</a>
-                                
+                            <li class="dropdown {% if Mutuelle is defined %}active{% endif %}">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">Mutuelle<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/">menu</a></li>
+                                </ul>
+
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            
+                             
+                      
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                          <ul class="dropdown-menu">
+                                        <span class="glyphicon glyphicon-user"></span> Non connecté <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{ path('login') }}">Se Connecter</a></li>
                                         
-                                         
                                     </ul>
-                                </li>                              
+                                </li>
+
+
+                          
                         </ul>
 
                     </div>

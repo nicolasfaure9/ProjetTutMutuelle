@@ -9,4 +9,5 @@ use Symfony\Component\HttpFoundation\Request;
 $app->get('/', "ProjetTutMutuelle\Controller\RegionController::regionAction");
 $app->get('/accueil', "ProjetTutMutuelle\Controller\AccueilController::accueilAction");
 
+$app->get('/login', "ProjetTutMutuelle\Controller\HomeController::loginAction")->bind('login');  // named route so that path('login') works in Twig templates
 
