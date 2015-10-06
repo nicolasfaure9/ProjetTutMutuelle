@@ -5,7 +5,8 @@ namespace ProjetTutMutuelle\Domain;
  *
  * @author p1511080
  */
-class Beneficiaire {
+class Beneficiaire implements UserInterface{
+    
     private $num;
     
     private $sexe;
@@ -13,6 +14,8 @@ class Beneficiaire {
     private $regime_social;
     
     private $date_naissance;
+    
+    
     
     public function getNum() {
         return $this->num;

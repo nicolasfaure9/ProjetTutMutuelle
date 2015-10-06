@@ -20,6 +20,19 @@ $app['twig'] = $app->share($app->extend('twig', function(Twig_Environment $twig,
 $app->register(new Silex\Provider\ValidatorServiceProvider());
 $app->register(new Silex\Provider\SessionServiceProvider());
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
+$app->register(new Silex\Provider\SecurityServiceProvider(), array(
+    'security.firewalls' => array(
+        'secured' => array(
+            'pattern' => '^/',
+            'anonymous' => true,
+            'logout' => true,
+            'form' => array('login_path' => '/login', 'check_path' => '/login_check'),
+            'users' => $app->share(function () use ($app) {
+                return new ProjetTutMutuelle\DAO\BeneficiaireDAO($app['db']);
+            }),
+        ),
+    ),
+));
 
 
         $app['dao.region'] = $app->share(function ($app) {
