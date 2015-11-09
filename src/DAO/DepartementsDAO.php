@@ -8,11 +8,6 @@ class DepartementsDAO extends DAO {
 
     
    
-
-    /**
-     * Returns the list of all regions, 
-     * @return array The list of all regions.
-     */
     public function findAll() {
         $sql = "select * from departements";
         $result = $this->getDb()->fetchAll($sql);
@@ -33,8 +28,8 @@ class DepartementsDAO extends DAO {
         
 
         $departement = new Departement();
-        $departement->setId($row['NUM_DEPARTEMENT']);
-        $departement->setIdRegion($row['NUM_REGION']);
+        $departement->setNum($row['NUM_DEPARTEMENT']);
+        $departement->setNumRegion($row['NUM_REGION']);
         $departement->setLib($row['LIB_DEPARTEMENT']);
         
         return $departement;
