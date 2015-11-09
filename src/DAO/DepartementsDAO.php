@@ -33,8 +33,8 @@ class DepartementsDAO extends DAO {
         
 
         $departement = new Departement();
-        $departement->setId($row['NUM_DEPARTEMENT']);
-        $departement->setIdRegion($row['NUM_REGION']);
+        $departement->setNum($row['NUM_DEPARTEMENT']);
+        $departement->setNumRegion($row['NUM_REGION']);
         $departement->setLib($row['LIB_DEPARTEMENT']);
         
         return $departement;
