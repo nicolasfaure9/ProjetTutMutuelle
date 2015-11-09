@@ -7,7 +7,7 @@ use ProjetTutMutuelle\Form\Type\BeneficiaireType;
 
 // Home page
 $app->get('/', "ProjetTutMutuelle\Controller\BeneficiaireController::beneficiaireAction");
-$app->get('/accueil', "ProjetTutMutuelle\Controller\HomeController::indexAction");
+$app->get('/accueil', "ProjetTutMutuelle\Controller\AccueilController::accueilAction");
 
 $app->get('/login', "ProjetTutMutuelle\Controller\HomeController::loginAction")->bind('login');  // named route so that path('login') works in Twig templates
 

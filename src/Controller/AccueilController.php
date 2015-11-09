@@ -9,8 +9,10 @@ use Symfony\Component\HttpFoundation\Request;
 class AccueilController {
 
  public function accueilAction(Application $app) {
-        //$regions = $app['dao.region']->findAll();
+      //  $beneficiares = $app['dao.beneficiaire']->findAll();
+      
         return $app['twig']->render('accueil.html.twig');
+        
     }
 } 
 
