@@ -17,6 +17,7 @@ $app['twig'] = $app->share($app->extend('twig', function(Twig_Environment $twig,
             $twig->addExtension(new Twig_Extensions_Extension_Text());
             return $twig;
         }));
+        
 $app->register(new Silex\Provider\ValidatorServiceProvider());
 $app->register(new Silex\Provider\SessionServiceProvider());
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
@@ -39,4 +40,6 @@ $app->register(new Silex\Provider\SecurityServiceProvider(), array(
     return new ProjetTutMutuelle\DAO\RegionDAO($app['db']);
 });
     
-
+$app['dao.beneficiaire'] = $app->share(function ($app) {
+    return new ProjetTutMutuelle\DAO\BeneficiaireDAO($app['db']);
+    });

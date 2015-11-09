@@ -6,17 +6,12 @@ use ProjetTutMutuelle\Domain\Region;
 
 class RegionDAO extends DAO {
 
-    /**
-     * @var \GSB\DAO\PractitionerTypeDAO
-     */
     
-
    
 
     /**
-     * Returns the list of all practitioners, sorted by name and first name.
-     *
-     * @return array The list of all practitioners.
+     * Returns the list of all regions, 
+     * @return array The list of all regions.
      */
     public function findAll() {
         $sql = "select * from BDRENS.regions";
@@ -33,13 +28,7 @@ class RegionDAO extends DAO {
 
    
 
-    /**
-     * Creates a Practitioner instance from a DB query result row.
-     *
-     * @param array $row The DB query result row.
-     *
-     * @return \GSB\Domain\Practitioner
-     */
+    
     protected function buildDomainObject($row) {
         
 

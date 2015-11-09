@@ -4,16 +4,10 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
-use GSB\Domain\Visitor;
+use ProjetTutMutuelle\Domain\Beneficiaire;
 class BeneficiaireDAO extends DAO implements UserProviderInterface
 {
-    /**
-     * Returns a visitor matching the supplied id.
-     *
-     * @param integer $id
-     *
-     * @return \GSB\Domain\Visitor|throws an exception if no matching user is found
-     */
+    
     public function find($id) {
         $sql = "select * from beneficiaire where num=?";
         $row = $this->getDb()->fetchAssoc($sql, array($id));
@@ -28,40 +22,30 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
         $result = $this->getDb()->fetchAll($sql);
         
         // Converts query result to an array of domain objects
-        $visitors = array();
+        $beneficiaires = array();
         foreach ($result as $row) {
-            $visitorId = $row['num'];
-            $visitors[$visitorId] = $this->buildDomainObject($row);
+            $beneficiaireNum = $row['NUM'];
+            $beneficiaires[$beneficiaireNum] = $this->buildDomainObject($row);
         }
-        return $visitors;
+        return $beneficiaires;
     }
-    /**
-     * Saves a visitor into the database.
-     *
-     * @param \GSB\Domain\Visitor $visitor The visitor to save
-     */
-    public function save($visitor) {
-        $hiringDateString = $visitor->getHiringDate()->format('Y-m-d');
-        $visitorData = array(
-            'visitor_last_name' => $visitor->getLastName(),
-            'visitor_first_name' => $visitor->getFirstName(),
-            'visitor_address' => $visitor->getAddress(),
-            'visitor_zip_code' => $visitor->getZipCode(),
-            'visitor_city' => $visitor->getCity(),
-            'hiring_date' => $hiringDateString,
-            'visitor_type' => $visitor->getType(),
-            'user_name' => $visitor->getUsername(),
-            'password' => $visitor->getPassword(),
+    
+    public function save($beneficiaire) {
+        
+        $beneficiaireData = array(
+            'num' => $beneficiaire->getNum(),
+            'sexe' => $beneficiaire->getSexe(),
+            'DATE_NAISSANCE_BENEFICIAIRE' => $beneficiaire->getAddress(),
+            'REGIME_SOCIAL' => $beneficiaire->getZipCode(),
+            'visitor_city' => $beneficiaire->getCity(),
+            'visitor_type' => $beneficiaire->getType(),
+            'usr_password' => $beneficiaire->getPassword(),
             );
-        if ($visitor->getId()) {
+        if ($beneficiaire->getNum()) {
             // The visitor has already been saved : update it
-            $this->getDb()->update('visitor', $visitorData, array('visitor_id' => $visitor->getId()));
+            $this->getDb()->update('beneficiaire', $beneficiaireData, array('num' => $beneficiaire->getNum()));
         } else {
-            // The visitor has never been saved : insert it
-            $this->getDb()->insert('visitor', $visitorData);
-            // Get the id of the newly created visitor and set it on the entity.
-            $id = $this->getDb()->lastInsertId();
-            $visitor->setId($id);
+            
         }
     }
     /**
@@ -69,7 +53,7 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
      */
     public function loadUserByUsername($username)
     {
-        $sql = "select * from visitor where user_name=?";
+        $sql = "select * from beneficiaire where usr_name=?";
         $row = $this->getDb()->fetchAssoc($sql, array($username));
         if ($row)
             return $this->buildDomainObject($row);
@@ -92,7 +76,7 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
      */
     public function supportsClass($class)
     {
-        return 'GSB\Domain\Visitor' === $class;
+        return 'ProjetTutMutuelle\Domain\Beneficiaire' === $class;
     }
     /**
      * Creates a Visitor object based on a DB row.
@@ -101,21 +85,16 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
      * @return \GSB\Domain\Visitor
      */
     protected function buildDomainObject($row) {
-        $visitor = new Visitor();
-        $visitor->setId($row['visitor_id']);
-        $visitor->setLastName($row['visitor_last_name']);
-        $visitor->setFirstName($row['visitor_first_name']);
-        $visitor->setAddress($row['visitor_address']);
-        $visitor->setZipCode($row['visitor_zip_code']);
-        $visitor->setCity($row['visitor_city']);
-        // Transform the DB date into a DateTime object
-        $hiringDate = \DateTime::createFromFormat('Y-m-d', $row['hiring_date']);
-        $visitor->setHiringDate($hiringDate);
-        $visitor->setType($row['visitor_type']);
-        $visitor->setUsername($row['user_name']);
-        $visitor->setPassword($row['password']);
-        $visitor->setSalt($row['salt']);
-        $visitor->setRole($row['role']);
-        return $visitor;
+        $beneficiaire = new Beneficiaire();
+        $beneficiaire->setNum($row['NUM']);
+        $beneficiaire->setSexe($row['SEXE']);
+        $beneficiaire->setDateNaissance($row['DATE_NAISSANCE_BENEFICIAIRE']);
+        $beneficiaire->setPassword($row['USR_PASSWORD']);
+        $beneficiaire->setSalt($row['USR_SALT']);
+        $beneficiaire->setRole($row['USR_ROLE']);
+        $beneficiaire->setUsername($row['USR_NAME']);
+        $beneficiaire->setRegime_Social($row['REGIME_SOCIAL']);
+        
+        return $beneficiaire;
     }
 }

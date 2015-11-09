@@ -22,8 +22,8 @@
 
                                     <div class="col-sm-7">
                                         <select class="form-control" name="type">
-                                            {% for region in regions %}
-                                                <option value="{{ region.id }}">{{ region.lib }}</option>
+                                            {% for beneficiaire in beneficiaires %}
+                                                <option value="{{ beneficiaire.num }}">{{ beneficiaire.username }}</option>
                                             {% endfor %}
                                         </select>
                                     </div>

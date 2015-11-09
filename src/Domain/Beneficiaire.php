@@ -5,6 +5,7 @@ namespace ProjetTutMutuelle\Domain;
  *
  * @author p1511080
  */
+use Symfony\Component\Security\Core\User\UserInterface;
 class Beneficiaire implements UserInterface{
     
     private $num;
@@ -15,8 +16,52 @@ class Beneficiaire implements UserInterface{
     
     private $date_naissance;
     
+    private $password;
     
     
+    private $username;
+    
+    
+    private $salt;
+
+    private $role;
+    
+    public function getPassword() {
+        return $this->password;
+    }
+
+    public function getSalt() {
+        return $this->salt;
+    }
+
+    public function getRole() {
+        return $this->role;
+    }
+ public function getRoles()
+    {
+        return array($this->getRole());
+    }
+    public function setPassword($password) {
+        $this->password = $password;
+    }
+
+    public function setSalt($salt) {
+        $this->salt = $salt;
+    }
+
+    public function setRole($role) {
+        $this->role = $role;
+    }
+
+    public function getUsername() {
+        return $this->username;
+    }
+
+    public function setUsername($username) {
+            $this->username = $username;
+        }
+
+      
     public function getNum() {
         return $this->num;
     }
@@ -40,5 +85,9 @@ class Beneficiaire implements UserInterface{
     }
     public function setDateNaissance($date_naissance) {
         $this->date_naissance = $date_naissance;
+    }
+    
+    public function eraseCredentials() {
+        
     }
 }

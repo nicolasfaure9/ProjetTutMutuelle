@@ -6,8 +6,8 @@ $app['db.options'] = array(
     'host'     => 'epulgold.univ-lyon1.fr',
     'dbname' =>'oraepul1',
     'port'     => '1521',
-    'user'     => 'PBDALG7',
-    'password' => 'PBDALG7',
+    'user'     => 'PBDALG8',
+    'password' => 'PBDALG8',
     'charset'  => 'utf8',
 );
 
