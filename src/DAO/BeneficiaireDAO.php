@@ -79,7 +79,7 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
         return 'ProjetTutMutuelle\Domain\Beneficiaire' === $class;
     }
     /**
-     * Creates a Visitor object based on a DB row.
+     * Creates a Beneficiaire object based on a DB row.
      *
      * @param array $row The DB row containing Visitor data.
      * @return \GSB\Domain\Visitor
