@@ -14,7 +14,7 @@ class HomeController {
      * @param Application $app Silex application
      */
     public function indexAction(Application $app) {
-       return $app['twig']->render('index.html.twig');
+       return $app['twig']->render('accueil.html.twig');
     }   
     
     public function loginAction(Request $request, Application $app) {
