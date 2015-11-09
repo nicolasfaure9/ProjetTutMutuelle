@@ -35,14 +35,10 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
         $beneficiaireData = array(
             'num' => $beneficiaire->getNum(),
             'sexe' => $beneficiaire->getSexe(),
-            'DATE_NAISSANCE_BENEFICIAIRE' => $beneficiaire->getAddress(),
-            'REGIME_SOCIAL' => $beneficiaire->getZipCode(),
-            'visitor_city' => $beneficiaire->getCity(),
-            'visitor_type' => $beneficiaire->getType(),
             'usr_password' => $beneficiaire->getPassword(),
             );
         if ($beneficiaire->getNum()) {
-            // The visitor has already been saved : update it
+            // The beneficiaire has already been saved : update it
             $this->getDb()->update('beneficiaire', $beneficiaireData, array('num' => $beneficiaire->getNum()));
         } else {
             
@@ -58,10 +54,10 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
         if ($row)
             return $this->buildDomainObject($row);
         else
-            throw new UsernameNotFoundException(sprintf('Visitor "%s" not found.', $username));
+            throw new UsernameNotFoundException(sprintf('Beneficiaire "%s" not found.', $username));
     }
     /**
-     * {@inheritDoc}
+     * {@inheritDocb
      */
     public function refreshUser(UserInterface $user)
     {
@@ -78,12 +74,7 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
     {
         return 'ProjetTutMutuelle\Domain\Beneficiaire' === $class;
     }
-    /**
-     * Creates a Beneficiaire object based on a DB row.
-     *
-     * @param array $row The DB row containing Visitor data.
-     * @return \GSB\Domain\Visitor
-     */
+    
     protected function buildDomainObject($row) {
         $beneficiaire = new Beneficiaire();
         $beneficiaire->setNum($row['NUM']);

@@ -39,7 +39,7 @@
                                         <span class="glyphicon glyphicon-user"></span> Bonjour {{ app.security.token.user.username }} <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="{{ path('logout') }}">Se deconnecter</a></li>
-                                        <li><a href="/user/{{app.security.token.user.num}}/edit">Profil</a></li>
+                                       <li><a href="/me"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
                                          
                                     </ul>
                                 </li>
@@ -53,12 +53,7 @@
                                        
                                     </ul>
                                 </li>
-
-
-                            {% endif %}  
-                      
-                                
-                          
+                            {% endif %}     
                         </ul>
 
                     </div>

@@ -23,9 +23,12 @@ $app->register(new Silex\Provider\SessionServiceProvider());
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 $app->register(new Silex\Provider\SecurityServiceProvider(), array(
     'security.firewalls' => array(
+        'login' => array(
+            'pattern' => '^/login$',
+            'anonymous' => true
+        ),
         'secured' => array(
             'pattern' => '^/',
-            'anonymous' => true,
             'logout' => true,
             'form' => array('login_path' => '/login', 'check_path' => '/login_check'),
             'users' => $app->share(function () use ($app) {
@@ -43,3 +46,5 @@ $app->register(new Silex\Provider\SecurityServiceProvider(), array(
 $app['dao.beneficiaire'] = $app->share(function ($app) {
     return new ProjetTutMutuelle\DAO\BeneficiaireDAO($app['db']);
     });
+$app->register(new Silex\Provider\FormServiceProvider());
+$app->register(new Silex\Provider\TranslationServiceProvider());
