@@ -7,12 +7,7 @@ use ProjetTutMutuelle\Domain\Adhesion_Detail;
 class Adhesion_DetailDAO extends DAO {
 
     
-   
-
-    /**
-     * Returns the list of all regions, 
-     * @return array The list of all regions.
-     */
+  
     public function findAll() {
         $sql = "select * from adhesion_detail";
         $result = $this->getDb()->fetchAll($sql);
