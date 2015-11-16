@@ -1,6 +1,6 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %}authentification utilisateur{% endblock %}
+
 
 {% block content %}
     <h2 class="text-center">{{ block('title') }}</h2>
@@ -10,7 +10,8 @@
         </div>
     {% endif %}
     <div class="well">
-        <form class="form-signin form-horizontal" role="form" action="{{ path('login_check') }}" method="post">
+        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4"><h2 style="margin-left: -5px;">Indentification</h2> <br/></div>
+        <form class="form-signin form-horizontal form-group-material-light-blue-500" role="form" action="{{ path('login_check') }}" method="post">
             <div class="form-group">
                 <label class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" for="unserName">Nom d'utilisateur</label>
                 <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
@@ -18,16 +19,16 @@
                 </div>
                 
             </div>
-            <div class="form-group">
+            <div class="form-group form-group-material-light-blue-500">
                 <label class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" for="password">Mot de Passe</label>
                   
                 <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
                     <input type="password" id="password" name="_password" class="form-control" placeholder="Entrer votre mot de passe" required>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group form-group-material-light-blue-500">
                 <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                    <button type="submit" class="btn btn-default btn-primary"><span class="glyphicon glyphicon-log-in"></span> Connexion</button>
+                    <button type="submit" class="btn btn-material-light-blue-500 btn-primary"><span class="glyphicon glyphicon-log-in"></span> Connexion</button>
                     
                 </div>
             </div>
