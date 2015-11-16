@@ -13,6 +13,9 @@ $app->get('/beneficiaires', "ProjetTutMutuelle\Controller\BeneficiairesControlle
 $app->get('/contracts', "ProjetTutMutuelle\Controller\ContractsController::contractsAction");
 $app->get('/newContract', "ProjetTutMutuelle\Controller\NewContractController::newContractAction");
 $app->get('/detailContract', "ProjetTutMutuelle\Controller\DetailContractController::detailContractAction");
+$app->get('/profil', "ProjetTutMutuelle\Controller\DetailContractController::detailContractAction");
+$app->get('/contacts', "ProjetTutMutuelle\Controller\DetailContractController::detailContractAction");
+$app->get('/documents', "ProjetTutMutuelle\Controller\DetailContractController::detailContractAction");
 
 $app->get('/login', "ProjetTutMutuelle\Controller\HomeController::loginAction")->bind('login');  // named route so that path('login') works in Twig templates
 
