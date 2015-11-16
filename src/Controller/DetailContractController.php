@@ -11,7 +11,7 @@ class DetailContractController {
 
  public function detailContractAction(Application $app) {
         $beneficiaires = $app['dao.beneficiaire']->findAll();
-        return $app['twig']->render('detailController.html.twig', array('beneficiaires' => $beneficiaires));
+        return $app['twig']->render('detailContract.html.twig', array('beneficiaires' => $beneficiaires));
     }
     
 
