@@ -42,6 +42,11 @@ Then, run this script to get the list.
   font-weight: normal;
   font-style: normal;
 }
+
+
+
+
+
 [class^="mdi-"],
 [class*="mdi-"] {
   speak: none;
@@ -2600,7 +2605,7 @@ h6,
 .h2,
 .h3,
 .h4 {
-  font-family: "RobotoDraft", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  "segoe UI Light" ,"RobotoDraft", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 h5,
@@ -46644,4 +46649,32 @@ hr.on-light {
   pointer-events: none;
   color: #757575;
 }
+
+
+.breadcrumb {
+     background-color: #FAFAFA;
+     border-radius: 0;
+     -moz-border-radius: 0;
+     -webkit-border-radius: 0;
+     -o-border-radius: 0;
+}
+
+/*change breadcrumb links color*/
+.breadcrumb a {
+     color: #2196f3;
+}
+
+.breadcrumb a:hover {
+     text-decoration: none;
+	 color : #555;
+}
+
+/*change active color*/
+.breadcrumb > .active {
+     color: #666;
+}
+
+
+
+
 /*# sourceMappingURL=material-fullpalette.css.map */
