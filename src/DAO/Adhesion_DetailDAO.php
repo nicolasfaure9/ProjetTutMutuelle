@@ -6,7 +6,11 @@ use ProjetTutMutuelle\Domain\Adhesion_Detail;
 
 class Adhesion_DetailDAO extends DAO {
 
-    
+    private $BeneficiaireDAO;
+
+    public function setBeneficiaireDAO($BeneficiaireDAO) {
+        $this->BeneficiareDAO = $BeneficiaireDAO;
+    }
   
     public function findAll() {
         $sql = "select * from adhesion_detail";
@@ -26,10 +30,12 @@ class Adhesion_DetailDAO extends DAO {
     
     protected function buildDomainObject($row) {
         
-
+        $beneficiaire_unique = $row['NUM_BENEFICIAIRE_UNIQUE'];
+        $beneficiaire = $this->BeneficiaireDAO->find($beneficiaire_unique);
+        
         $adhesion_detail = new Adhesion_Detail();
         $adhesion_detail->setNum($row['NUM_ADHESION_NORMALISE']);
-        $adhesion_detail->setNumBenificiaireUnique($row['NUM_BENEFICIAIRE_UNIQUE']);
+        $adhesion_detail->setNumBenificiaireUnique($beneficiaire);
         $adhesion_detail->setCodeProfession($row['CODE_PROFESSION']);
         $adhesion_detail->setCodeProduit($row['CODE_PRODUIT']);
         $adhesion_detail->setCodeFractionnement($row['CODE_FRACTIONNEMENT']);

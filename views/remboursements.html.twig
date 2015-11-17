@@ -1,0 +1,112 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Mes remboursements{% endblock %}
+
+{% block content %}
+    <!DOCTYPE HML>
+    <div class="container">
+    <div>
+    <ol class="breadcrumb"  >
+                    <li><a href="/accueil">accueil</a></li>
+                    <li><a href="/remboursements">Mes remboursements</a></li>
+    </ol>
+    </div>
+    <div class="jumbotron">
+    <form class="form-inline">
+         <div class="form-group form-group-material-light-blue-500">
+            <label for="beneficiareSearch">Bénéficiaire</label>
+                    <select id="beneficiaireSearch">
+                    <option> </option>      
+                    <option> Max</option>
+                </select>
+        </div>
+        <div class="form-group form-group-material-light-blue-500">
+            <label for="dateSearch">Date</label>
+            <input type="date" id="dateSearch"/>             
+        </div>     
+    </form>
+   
+    
+    <div>
+            <div>
+                
+                    <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Bénéficiaire</th>
+                            <th>Libellé</th>
+                            <th>Date</th>
+                            <th>Montant payé</th>
+                            <th>Montant remboursement</th>
+                            <th>Dont mutuelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Max</td>
+                            <td>Hopital Lyon</td>
+                            <td>15/10/1995</td>
+                            <td>200€</td>
+                            <td>130€</td>
+                            <td>20€</td>
+                        </tr>
+                        <tr>
+                            <td>Max</td>
+                            <td>Hopital Lyon</td>
+                            <td>15/10/1995</td>
+                            <td>200€</td>
+                            <td>130€</td>
+                            <td>20€</td>
+                        </tr>
+                        <tr>
+                            <td>Max</td>
+                            <td>Hopital Lyon</td>
+                            <td>15/10/1995</td>
+                            <td>200€</td>
+                            <td>130€</td>
+                            <td>20€</td>
+                        </tr>
+                        <tr>
+                            <td>Max</td>
+                            <td>Hopital Lyon</td>
+                            <td>15/10/1995</td>
+                            <td>200€</td>
+                            <td>130€</td>
+                            <td>20€</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            
+    </div>
+        
+    </div>
+        <div class="row">
+    <div class="panel ">
+                <div class="panel-heading">
+                                       <h3 class="panel-title">Panel success</h3>
+                                 </div>
+                                 <div class="panel-body">
+                                      Panel content
+                                  </div>
+                                </div>
+            <div class="panel ">
+                <div class="panel-heading">
+                                       <h3 class="panel-title">Panel success</h3>
+                                 </div>
+                                 <div class="panel-body">
+                                      Panel content
+                                  </div>
+                                </div>
+            <div class="panel ">
+                <div class="panel-heading">
+                                       <h3 class="panel-title">Panel success</h3>
+                                 </div>
+                                 <div class="panel-body">
+                                      Panel content
+                                  </div>
+                                </div>
+        </div>
+    </div>
+                        {% endblock %}
