@@ -12,7 +12,7 @@ $app->get('/remboursements', "ProjetTutMutuelle\Controller\RemboursementsControl
 $app->get('/beneficiaires', "ProjetTutMutuelle\Controller\BeneficiairesController::beneficiairesAction");
 $app->get('/contrats', "ProjetTutMutuelle\Controller\ContratsController::contratsAction");
 $app->get('/newContract', "ProjetTutMutuelle\Controller\NewContratController::newContratAction");
-$app->get('/detailContract', "ProjetTutMutuelle\Controller\DetailContratController::detailContratAction");
+$app->get('/detailContrat', "ProjetTutMutuelle\Controller\DetailContratController::detailContratAction");
 $app->get('/profil', "ProjetTutMutuelle\Controller\ProfilController::profilAction");
 $app->get('/contacts', "ProjetTutMutuelle\Controller\ContactsController::contactsAction");
 $app->get('/documents', "ProjetTutMutuelle\Controller\DocumentsController::documentsAction");
