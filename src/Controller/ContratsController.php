@@ -7,11 +7,11 @@ use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use ProjetTutMutuelle\Form\Type\BeneficiaireType;
 
-class NewContractController {
+class ContratsController {
 
- public function newContractAction(Application $app) {
+ public function contratsAction(Application $app) {
         $beneficiaires = $app['dao.beneficiaire']->findAll();
-        return $app['twig']->render('newContract.html.twig', array('beneficiaires' => $beneficiaires));
+        return $app['twig']->render('contrats.html.twig', array('beneficiaires' => $beneficiaires));
     }
     
 }
