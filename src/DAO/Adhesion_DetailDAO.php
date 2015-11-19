@@ -3,7 +3,9 @@
 namespace ProjetTutMutuelle\DAO;
 
 use ProjetTutMutuelle\Domain\Adhesion_Detail;
-
+use Silex\Application;
+use Symfony\Component\HttpFoundation\Request;
+use ProjetTutMutuelle\Form\Type\BeneficiaireType;
 class Adhesion_DetailDAO extends DAO {
 
     private $BeneficiaireDAO;
@@ -12,30 +14,30 @@ class Adhesion_DetailDAO extends DAO {
         $this->BeneficiareDAO = $BeneficiaireDAO;
     }
   
-    public function findAll() {
-        $sql = "select * from adhesion_detail";
-        $result = $this->getDb()->fetchAll($sql);
-
-        // Converts query result to an array of domain objects
-        $adhesion_details = array();
-        foreach ($result as $row) {
-            $adhesion_detailsId = $row['NUM_ADHESION_NORMALISE'];
-            $adhesion_details[$adhesion_detailsId] = $this->buildDomainObject($row);
-        }
-        return $adhesion_details;
-    }
-
    
 
+   public function findByBeneficiaireAndYear($beneficiaire){
+       $sql = "select * from adhesion_detail where  num_beneficiaire_unique=? and exercice_paiement=2012 ";
+       $result = $this->getDb()->fetchAssoc($sql, array($beneficiaire));
+       return $this->buildDomainObject($result);
+    }
+   
+ public function find($numAdhesion,$beneficiaire,$anneeDebutSoin){
+       $sql = "select * from adhesion_detail where  and num_beneficiaire_unique=? and annee_debut_soin=? ";
+       $result = $this->getDb()->fetchAssoc($sql, array($beneficiaire,$anneeDebutSoin));
+        return $this->buildDomainObject($result);
+    }
+    
+    
     
     protected function buildDomainObject($row) {
-        
-        $beneficiaire_unique = $row['NUM_BENEFICIAIRE_UNIQUE'];
-        $beneficiaire = $this->BeneficiaireDAO->find($beneficiaire_unique);
-        
+       
         $adhesion_detail = new Adhesion_Detail();
+        
+        
+        
         $adhesion_detail->setNum($row['NUM_ADHESION_NORMALISE']);
-        $adhesion_detail->setNumBenificiaireUnique($beneficiaire);
+        $adhesion_detail->setNumBenificiaireUnique($row['NUM_BENEFICIAIRE_UNIQUE']);
         $adhesion_detail->setCodeProfession($row['CODE_PROFESSION']);
         $adhesion_detail->setCodeProduit($row['CODE_PRODUIT']);
         $adhesion_detail->setCodeFractionnement($row['CODE_FRACTIONNEMENT']);

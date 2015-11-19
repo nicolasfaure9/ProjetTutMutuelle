@@ -22,11 +22,13 @@ class Prestation_santeDAO extends DAO {
     }
 
    
-
+ public function setAdhesion_DetailDAO($Adhesion_DetailDAO) {
+        $this->Adhesion_DetailDAO = $Adhesion_DetailDAO;
+    }
     
-    protected function buildDomainObject($row) {
+    
+    protected function buildDomainObject($row) {    
         
-
         $prestation_sante = new Prestation_Sante();
         $prestation_sante->setNum_sinistre($row['NUM_SINISTRE']);
         $prestation_sante->setNum_adhesion($row['NUM_ADHESIOIN']);

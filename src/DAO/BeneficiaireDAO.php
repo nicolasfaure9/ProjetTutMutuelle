@@ -29,7 +29,18 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
         }
         return $beneficiaires;
     }
-    
+   public function findByAdhesion($numadhesion){
+       $sql = "select * from beneficiaire where  num in (select num_beneficiaire_unique from adhesion_detail where num_adhesion_normalise=? and exercice_paiement=2012) ";
+       $result = $this->getDb()->fetchAll($sql,array($numadhesion));
+       $beneficiaires = array();
+        foreach ($result as $row) {
+            $beneficiaireNum = $row['NUM'];
+            $beneficiaires[$beneficiaireNum] = $this->buildDomainObject($row);
+        }
+        return $beneficiaires;
+      
+       
+    }
     public function save($beneficiaire) {
         
         $beneficiaireData = array(

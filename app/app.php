@@ -48,3 +48,7 @@ $app['dao.beneficiaire'] = $app->share(function ($app) {
     });
 $app->register(new Silex\Provider\FormServiceProvider());
 $app->register(new Silex\Provider\TranslationServiceProvider());
+
+$app['dao.adhesion'] = $app->share(function ($app) {
+    return new ProjetTutMutuelle\DAO\Adhesion_DetailDAO($app['db']);
+    });

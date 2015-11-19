@@ -20,3 +20,6 @@ $app->get('/documents', "ProjetTutMutuelle\Controller\DocumentsController::ducom
 $app->get('/login', "ProjetTutMutuelle\Controller\HomeController::loginAction")->bind('login');  // named route so that path('login') works in Twig templates
 
 $app->match('/me', "ProjetTutMutuelle\Controller\BeneficiaireController::profileAction");
+
+
+$app->get('/test', "ProjetTutMutuelle\Controller\adhesionDetailController::adhesionDetailAction");

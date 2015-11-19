@@ -38,7 +38,17 @@ class Adhesion_Detail {
     
     private $code_postal;
     
-    public function getPrimes_acquises() {
+    private $beneficiaires;
+    
+    public function getBeneficiaires() {
+        return $this->beneficiaires;
+    }
+
+    public function setBeneficiaires($beneficiaires) {
+        $this->beneficiaires = $beneficiaires;
+    }
+
+        public function getPrimes_acquises() {
         return $this->primes_acquises;
     }
 
@@ -103,7 +113,7 @@ class Adhesion_Detail {
         return $this->code_produit;
     }
     public function setCodeProduit($code_produit) {
-        $this->code_produit = code_produit;
+        $this->code_produit = $code_produit;
     }
     
     public function getCodeFractionnement() {

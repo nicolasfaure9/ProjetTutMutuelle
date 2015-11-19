@@ -41,7 +41,15 @@ class Prestation_sante {
     
     private $montant_rembourse;
     
-    public function getNum_sinistre() {
+    public function getAdhesion() {
+        return $this->adhesion;
+    }
+
+    public function setAdhesion($adhesion) {
+        $this->adhesion = $adhesion;
+    }
+
+        public function getNum_sinistre() {
         return $this->num_sinistre;
     }
 
