@@ -7,11 +7,14 @@
     <div class="container">
     <div>
     <ol class="breadcrumb"  >
-                    <li><a href="/accueil">accueil</a></li>
+                    <li><a href="/accueil">Accueil</a></li>
                     <li><a href="/remboursements">Mes remboursements</a></li>
     </ol>
     </div>
+        
+        
     <div class="jumbotron">
+        
     <form class="form-inline">
          <div class="form-group form-group-material-light-blue-500">
             <label for="beneficiareSearch">Bénéficiaire</label>
@@ -20,13 +23,24 @@
                     <option> Max</option>
                 </select>
         </div>
-        <div class="form-group form-group-material-light-blue-500">
-            <label for="dateSearch">Date</label>
-            <input type="date" id="dateSearch"/>             
-        </div>     
+        
+            <label for="dateMin">Période :</label>
+          <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     </form>
-   
-    
+
     <div>
             <div>
                 
@@ -41,6 +55,8 @@
                             <th>Dont mutuelle</th>
                         </tr>
                     </thead>
+                    
+                    <!-- A MODIFIER -->
                     <tbody>
                         <tr>
                             <td>Max</td>
@@ -75,6 +91,8 @@
                             <td>20€</td>
                         </tr>
                     </tbody>
+                    
+                    <!-- FIN A MODIFIER -->
                 </table>
                 
             </div>
@@ -82,31 +100,6 @@
     </div>
         
     </div>
-        <div class="row">
-    <div class="panel ">
-                <div class="panel-heading">
-                                       <h3 class="panel-title">Panel success</h3>
-                                 </div>
-                                 <div class="panel-body">
-                                      Panel content
-                                  </div>
-                                </div>
-            <div class="panel ">
-                <div class="panel-heading">
-                                       <h3 class="panel-title">Panel success</h3>
-                                 </div>
-                                 <div class="panel-body">
-                                      Panel content
-                                  </div>
-                                </div>
-            <div class="panel ">
-                <div class="panel-heading">
-                                       <h3 class="panel-title">Panel success</h3>
-                                 </div>
-                                 <div class="panel-body">
-                                      Panel content
-                                  </div>
-                                </div>
-        </div>
+
     </div>
                         {% endblock %}
