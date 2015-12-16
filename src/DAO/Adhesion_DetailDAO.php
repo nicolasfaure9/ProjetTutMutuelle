@@ -32,10 +32,7 @@ class Adhesion_DetailDAO extends DAO {
     
     protected function buildDomainObject($row) {
        
-        $adhesion_detail = new Adhesion_Detail();
-        
-        
-        
+        $adhesion_detail = new Adhesion_Detail();       
         $adhesion_detail->setNum($row['NUM_ADHESION_NORMALISE']);
         $adhesion_detail->setNumBenificiaireUnique($row['NUM_BENEFICIAIRE_UNIQUE']);
         $adhesion_detail->setCodeProfession($row['CODE_PROFESSION']);

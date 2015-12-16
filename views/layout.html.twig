@@ -7,14 +7,14 @@
 
         <title>Mutuelle - {% block title %}{% endblock %}</title>
 
-        <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="./lib/bootstrap/css/roboto.min.css" rel="stylesheet">
-        <link href="./lib/bootstrap/css/material-fullpalette.css" rel="stylesheet">
-        <link href="./lib/bootstrap/css/ripples.min.css" rel="stylesheet">
+        <link href="{{ app.request.basepath }}/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ app.request.basepath }}/lib/bootstrap/css/roboto.min.css" rel="stylesheet">
+        <link href="{{ app.request.basepath }}/lib/bootstrap/css/material-fullpalette.css" rel="stylesheet">
+        <link href="{{ app.request.basepath }}/lib/bootstrap/css/ripples.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
     </head>
-    <body>
+    <body class="well-material-light-blue-500">
 
         
 
