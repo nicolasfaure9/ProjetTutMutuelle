@@ -34,7 +34,7 @@ class Adhesion_DetailDAO extends DAO {
        
         $adhesion_detail = new Adhesion_Detail();       
         $adhesion_detail->setNum($row['NUM_ADHESION_NORMALISE']);
-        $adhesion_detail->setNumBenificiaireUnique($row['NUM_BENEFICIAIRE_UNIQUE']);
+        $adhesion_detail->setNumBeneficiaireUnique($row['NUM_BENEFICIAIRE_UNIQUE']);
         $adhesion_detail->setCodeProfession($row['CODE_PROFESSION']);
         $adhesion_detail->setCodeProduit($row['CODE_PRODUIT']);
         $adhesion_detail->setCodeFractionnement($row['CODE_FRACTIONNEMENT']);

@@ -13,7 +13,7 @@ class Prestation_sante {
     
     private $num_adhesion;
     
-    private $num_benificiaire_sinistre;
+    private $num_beneficiaire_sinistre;
     
     private $num_beneficiaire;
     
@@ -57,8 +57,8 @@ class Prestation_sante {
         return $this->num_adhesion;
     }
 
-    public function getNum_benificiaire_sinistre() {
-        return $this->num_benificiaire_sinistre;
+    public function getNum_beneficiaire_sinistre() {
+        return $this->num_beneficiaire_sinistre;
     }
 
     public function getNum_beneficiaire() {
@@ -121,8 +121,8 @@ class Prestation_sante {
         $this->num_adhesion = $num_adhesion;
     }
 
-    public function setNum_benificiaire_sinistre($num_benificiaire_sinistre) {
-        $this->num_benificiaire_sinistre = $num_benificiaire_sinistre;
+    public function setNum_beneficiaire_sinistre($num_beneficiaire_sinistre) {
+        $this->num_beneficiaire_sinistre = $num_beneficiaire_sinistre;
     }
 
     public function setNum_beneficiaire($num_beneficiaire) {

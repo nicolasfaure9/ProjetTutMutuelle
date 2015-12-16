@@ -16,7 +16,9 @@
                     <div class="panel-heading">Prénom Nom</div>
                     <div class="panel-body">
                         <b>Numéro de bénéficiaire :</b> {{ beneficiaire.num }}<br/>
-                        <b>Date naissance : </b> {{beneficiaire.datenaissance}}
+                        <b>Sexe : </b>{{beneficiaire.sexe}}<br/>
+                        <b>Date naissance : </b> {{beneficiaire.datenaissance}}<br/>
+                        <b>Régime social :</b> {{beneficiaire.regime_social}}
                     </div>
                     <div class="text-center">
                         <a href="/remboursements/{{ beneficiaire.num }}"><span class="glyphicon glyphicon-plus"></span> Plus d'infos</a>

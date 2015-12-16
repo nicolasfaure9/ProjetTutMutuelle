@@ -44,7 +44,7 @@ class Prestation_santeDAO extends DAO {
         $prestation_sante = new Prestation_Sante();
         $prestation_sante->setNum_sinistre($row['NUM_SINISTRE']);
         $prestation_sante->setNum_adhesion($row['NUM_ADHESION']);
-        $prestation_sante->setNum_benificiaire_sinistre($row['NUM_BENEFICIAIRE_SINISTRE']);
+        $prestation_sante->setNum_beneficiaire_sinistre($row['NUM_BENEFICIAIRE_SINISTRE']);
         $prestation_sante->setNum_beneficiaire($row['NUM_BENEFICIAIRE']);
         $prestation_sante->setActe($row['ACTE']);
         $prestation_sante->setDesignation_acte($row['DESIGNATION_ACTE']);

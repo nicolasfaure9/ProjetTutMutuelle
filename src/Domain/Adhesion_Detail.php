@@ -10,7 +10,7 @@ namespace ProjetTutMutuelle\Domain;
 class Adhesion_Detail {
     private $num;
     
-    private $num_benificiaire_unique;
+    private $num_beneficiaire_unique;
     
     private $code_profession;
     
@@ -106,11 +106,11 @@ class Adhesion_Detail {
         $this->num = $num;
     }
         
-    public function getNumBenificiaireUnique() {
+    public function getNumBeneficiaireUnique() {
         return $this->num_beneficiaire_unique;
     }
-    public function setNumBenificiaireUnique($num_benificiaire_unique) {
-        $this->num_benificiaire_unique = $num_benificiaire_unique;    
+    public function setNumBeneficiaireUnique($num_beneficiaire_unique) {
+        $this->num_beneficiaire_unique = $num_beneficiaire_unique;    
     
     }
     public function getCodeProfession() {

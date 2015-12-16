@@ -10,8 +10,8 @@ use ProjetTutMutuelle\Form\Type\BeneficiaireType;
 class ProfilController {
 
  public function profilAction(Application $app) {
-        $beneficiaires = $app['dao.beneficiaire']->findAll();
-        return $app['twig']->render('profil.html.twig', array('beneficiaires' => $beneficiaires));
+        $adherent = $app['dao.adhesion']->findByBeneficiaireAndYear($app['security']->getToken()->getUser()->getNum());
+        return $app['twig']->render('profil.html.twig', array('adherent' => $adherent));
     }
 
 }
