@@ -9,7 +9,7 @@ use ProjetTutMutuelle\Form\Type\BeneficiaireType;
 $app->get('/', "ProjetTutMutuelle\Controller\BeneficiaireController::beneficiaireAction");
 $app->get('/accueil', "ProjetTutMutuelle\Controller\AccueilController::accueilAction");
 $app->get('/remboursements', "ProjetTutMutuelle\Controller\RemboursementsController::remboursementsAction");
-$app->get('/beneficiaires', "ProjetTutMutuelle\Controller\BeneficiairesController::beneficiairesAction");
+
 $app->get('/contrats', "ProjetTutMutuelle\Controller\ContratsController::contratsAction");
 $app->get('/newContract', "ProjetTutMutuelle\Controller\NewContratController::newContratAction");
 $app->get('/detailContrat', "ProjetTutMutuelle\Controller\DetailContratController::detailContratAction");
@@ -22,4 +22,12 @@ $app->get('/login', "ProjetTutMutuelle\Controller\HomeController::loginAction")-
 $app->match('/me', "ProjetTutMutuelle\Controller\BeneficiaireController::profileAction");
 
 
-$app->get('/test', "ProjetTutMutuelle\Controller\adhesionDetailController::adhesionDetailAction");
+$app->get('/beneficiaires', "ProjetTutMutuelle\Controller\adhesionDetailController::adhesionDetailAction");
+
+
+$app->get('/factures', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailAction");
+
+$app->get('/remboursements/{id}', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailActionBeneficiaire");
+
+
+

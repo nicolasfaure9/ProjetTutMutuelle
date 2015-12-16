@@ -40,7 +40,18 @@ class Adhesion_Detail {
     
     private $beneficiaires;
     
-    public function getBeneficiaires() {
+    private $prestations_Details;
+    
+    
+    public function getPrestations_Details() {
+        return $this->prestations_Details;
+    }
+
+    public function setPrestations_Details($prestations_Details) {
+        $this->prestations_Details = $prestations_Details;
+    }
+
+        public function getBeneficiaires() {
         return $this->beneficiaires;
     }
 

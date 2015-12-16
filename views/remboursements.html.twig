@@ -1,105 +1,37 @@
 {% extends "layout.html.twig" %}
+{% set Mutuelle = true %}
 
-{% block title %}Mes remboursements{% endblock %}
+{% block title %}Remboursements{% endblock %}
 
 {% block content %}
-    <!DOCTYPE HML>
-    <div class="container">
-    <div>
-    <ol class="breadcrumb"  >
-                    <li><a href="/accueil">Accueil</a></li>
-                    <li><a href="/remboursements">Mes remboursements</a></li>
-    </ol>
-    </div>
-        
-        
-    <div class="jumbotron">
-        
-    <form class="form-inline">
-         <div class="form-group form-group-material-light-blue-500">
-            <label for="beneficiareSearch">Bénéficiaire</label>
-                    <select id="beneficiaireSearch">
-                    <option> </option>      
-                    <option> Max</option>
-                </select>
-        </div>
-        
-            <label for="dateMin">Période :</label>
-          <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    </form>
-
-    <div>
-            <div>
-                
-                    <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Bénéficiaire</th>
-                            <th>Libellé</th>
-                            <th>Date</th>
-                            <th>Montant payé</th>
-                            <th>Montant remboursement</th>
-                            <th>Dont mutuelle</th>
-                        </tr>
-                    </thead>
+<h2 class="text-center">{{ block('title') }}</h2>
+{% if adhesion %}
+    <div class="table-responsive">
+        <table class="table table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Numero Beneficciaire</th>
+                    <th>Acte</th>
                     
-                    <!-- A MODIFIER -->
-                    <tbody>
-                        <tr>
-                            <td>Max</td>
-                            <td>Hopital Lyon</td>
-                            <td>15/10/1995</td>
-                            <td>200€</td>
-                            <td>130€</td>
-                            <td>20€</td>
-                        </tr>
-                        <tr>
-                            <td>Max</td>
-                            <td>Hopital Lyon</td>
-                            <td>15/10/1995</td>
-                            <td>200€</td>
-                            <td>130€</td>
-                            <td>20€</td>
-                        </tr>
-                        <tr>
-                            <td>Max</td>
-                            <td>Hopital Lyon</td>
-                            <td>15/10/1995</td>
-                            <td>200€</td>
-                            <td>130€</td>
-                            <td>20€</td>
-                        </tr>
-                        <tr>
-                            <td>Max</td>
-                            <td>Hopital Lyon</td>
-                            <td>15/10/1995</td>
-                            <td>200€</td>
-                            <td>130€</td>
-                            <td>20€</td>
-                        </tr>
-                    </tbody>
+                </tr>
+            </thead>
+            {% for prestation_sante in adhesion.prestations_Details %}
+                <tr>
                     
-                    <!-- FIN A MODIFIER -->
-                </table>
-                
-            </div>
-            
+                    
+                    
+                    <td>{{ prestation_sante.num_sinistre }}</a></td>
+                    
+                    <td><a href="/remboursements/{{prestation_sante.num_benificiaire_sinistre }}">{{ prestation_sante.num_benificiaire_sinistre }}</a></td>
+                    
+                    
+                    <td>{{ prestation_sante.designation_acte }}</td>
+                </tr>
+            {% endfor %}
+        </table>
     </div>
-        
-    </div>
-
-    </div>
-                        {% endblock %}
+{% else %}
+    <div class="alert alert-warning">Erreur chargement de vos remboursements.</div>
+{% endif %}   
+{% endblock %}{# empty Twig template #}

@@ -12,10 +12,8 @@ class adhesionDetailController {
  public function adhesionDetailAction(Application $app) {
         $adhesion = $app['dao.adhesion']->findByBeneficiaireAndYear($app['security']->getToken()->getUser()->getNum());
         $beneficiaires = $app['dao.beneficiaire']->findByAdhesion($adhesion->getNum());
-     
         $adhesion->setBeneficiaires($beneficiaires);
-        
-        return $app['twig']->render('test.html.twig', array('adhesion' => $adhesion));
+        return $app['twig']->render('beneficiaires.html.twig', array('adhesion' => $adhesion));
     }
     
     

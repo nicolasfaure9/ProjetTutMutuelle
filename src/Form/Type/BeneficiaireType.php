@@ -19,9 +19,9 @@ class BeneficiaireType extends AbstractType
                     'second_options' => array('label' => 'Repeter le mot de passe'),
                     
                 ))
-            ->add('save', 'submit', array(
-                'label' => 'Mettre à jour',
-            ));
+       //     ->add('save', 'submit', array(
+         //       'label' => 'Mettre à jour',
+            ;
     }
 
     public function getName()

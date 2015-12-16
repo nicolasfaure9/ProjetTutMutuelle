@@ -27,11 +27,34 @@ class Prestation_santeDAO extends DAO {
     }
     
     
+    
+    public function findByAdhesion($numadhesion){
+       $sql = "select * from prestations_sante where num_adhesion=?  ";
+       $result = $this->getDb()->fetchAll($sql,array($numadhesion));
+       $prestations_santes = array();
+        foreach ($result as $row) {
+            $sinistreNum = $row['NUM_SINISTRE'];
+            $prestations_santes[$sinistreNum] = $this->buildDomainObject($row);
+        }
+        return $prestations_santes;
+    }
+    
+    public function findByAdhesionBeneficiaire($numadhesion, $numbeneficiaire){
+       $sql = "select * from prestations_sante where num_adhesion=? and num_beneficiaire_sinistre=? ";
+       $result = $this->getDb()->fetchAll($sql,array($numadhesion, $numbeneficiaire));
+       $prestations_santes = array();
+        foreach ($result as $row) {
+            $sinistreNum = $row['NUM_SINISTRE'];
+            $prestations_santes[$sinistreNum] = $this->buildDomainObject($row);
+        }
+        return $prestations_santes;
+    }
+    
     protected function buildDomainObject($row) {    
         
         $prestation_sante = new Prestation_Sante();
         $prestation_sante->setNum_sinistre($row['NUM_SINISTRE']);
-        $prestation_sante->setNum_adhesion($row['NUM_ADHESIOIN']);
+        $prestation_sante->setNum_adhesion($row['NUM_ADHESION']);
         $prestation_sante->setNum_benificiaire_sinistre($row['NUM_BENEFICIAIRE_SINISTRE']);
         $prestation_sante->setNum_beneficiaire($row['NUM_BENEFICIAIRE']);
         $prestation_sante->setActe($row['ACTE']);
