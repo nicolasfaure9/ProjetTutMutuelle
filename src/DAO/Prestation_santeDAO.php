@@ -8,18 +8,7 @@ class Prestation_santeDAO extends DAO {
 
     
    
-    public function findAll() {
-        $sql = "select * from prestation_sante";
-        $result = $this->getDb()->fetchAll($sql);
-
-        // Converts query result to an array of domain objects
-        $prestations_sante = array();
-        foreach ($result as $row) {
-            $prestations_santeId = $row['NUM_SINISTRE'];
-            $prestations_sante[$prestations_santeId] = $this->buildDomainObject($row);
-        }
-        return $prestations_sante;
-    }
+    
 
    
  public function setAdhesion_DetailDAO($Adhesion_DetailDAO) {
