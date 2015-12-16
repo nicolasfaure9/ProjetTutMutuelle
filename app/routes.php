@@ -26,7 +26,7 @@ $app->get('/beneficiaires', "ProjetTutMutuelle\Controller\adhesionDetailControll
 
 
 $app->get('/factures', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailAction");
-
+$app->get('/remboursements', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailAction");
 $app->get('/remboursements/{id}', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailActionBeneficiaire");
 
 

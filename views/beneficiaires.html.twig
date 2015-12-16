@@ -4,7 +4,15 @@
 {% block title %}Mes bénéficiaires{% endblock %}
 
 {% block content %}
+    <div>
+    <ol class="breadcrumb"  >
+                    <li><a href="/accueil">Accueil</a></li>
+                    <li><a href="/beneficiaires">Mes bénéficiaires</a></li>
+                 
+    </ol>
+    </div>
 <h2 class="text-center">{{ block('title') }}</h2>
+
 {% if adhesion %}
         <div class="jumbotron">
         <div class="row wrap">
