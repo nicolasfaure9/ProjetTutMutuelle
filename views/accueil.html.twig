@@ -1,0 +1,189 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+    <!DOCTYPE HML>
+
+    <div class="container">
+        <ol class="breadcrumb"  >
+            <li><a href="/accueil">Accueil</a></li>
+        </ol>
+    </div>
+    <div class="container"> 
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="panel panel-material-amber-500">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Mes Bénéficiaires</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-2">
+                            <a class="mdi-social-group" href="/beneficiaire"></a>
+                        </div>
+                        <a href="/beneficiaires">
+                            Voir mes bénéficiaires
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-material-green-500">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mes Informations</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-2">
+                            <a class="mdi-social-person" href="/profil"></a>
+                        </div>
+                        <a href="/profil">
+                            Vérifier mes informations
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-material-deep-purple-500">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mes Garanties</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-2">
+                            <a class="mdi-maps-beenhere" href="/contrats"></a>
+                        </div>
+                        <a href="/contrats">
+                            Voir mes Garanties
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <div class="container">
+
+        <div class="jumbotron">
+
+
+
+            <div>
+                <div>
+                    
+                    <table class="table table-bordered table-hover" >
+                        <thead>
+                            <tr>
+                                <th>Bénéficiaire</th>
+                                <th>Libellé</th>
+                                <th>Date</th>
+                                <th>Montant payé</th>
+                                <th>Montant remboursement</th>
+                                <th>Dont mutuelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Max</td>
+                                <td>Hopital Lyon</td>
+                                <td>15/10/1995</td>
+                                <td>200€</td>
+                                <td>130€</td>
+                                <td>20€</td>
+                            </tr>
+                            <tr>
+                                <td>Max</td>
+                                <td>Hopital Lyon</td>
+                                <td>15/10/1995</td>
+                                <td>200€</td>
+                                <td>130€</td>
+                                <td>20€</td>
+                            </tr>
+                            <tr>
+                                <td>Max</td>
+                                <td>Hopital Lyon</td>
+                                <td>15/10/1995</td>
+                                <td>200€</td>
+                                <td>130€</td>
+                                <td>20€</td>
+                            </tr>
+                            <tr>
+                                <td>Max</td>
+                                <td>Hopital Lyon</td>
+                                <td>15/10/1995</td>
+                                <td>200€</td>
+                                <td>130€</td>
+                                <td>20€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container"> 
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mes remboursements</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-2">
+                            <a class="mdi-action-find-in-page" href="/factures"></a>
+                        </div>
+                        <a href="/remboursements">
+                            Consulter mes remboursements
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-material-blue-500">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mes factures</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-2">
+                            <a class="mdi-action-pageview" href="/factures"></a>
+                        </div>
+                        <a href="/factures">
+                           Consulter mes factures
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-material-red-500">
+                    <div class="panel-heading ">
+                        <h3 class="panel-title">Mes Documents</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-2">
+                            <a class="mdi-action-work" href="/documents"></a>
+                        </div>
+                        <a href="/documents">
+                            Consulter mes documents
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-material-deep-orange-500">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Contacts</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-2">
+                            <a class="mdi-communication-quick-contacts-mail" href="/contacts"></a>
+                        </div>
+                        <a href="/contacts">
+                           Nous contacter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>    
+
+
+{% endblock %}

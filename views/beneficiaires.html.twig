@@ -1,0 +1,48 @@
+{% extends "layout.html.twig" %}
+{% set Mutuelle = true %}
+
+{% block title %}Mes bénéficiaires{% endblock %}
+
+{% block content %}
+    <div>
+    <ol class="breadcrumb"  >
+                    <li><a href="/accueil">Accueil</a></li>
+                    <li><a href="/beneficiaires">Mes bénéficiaires</a></li>
+                 
+    </ol>
+    </div>
+<h2 class="text-center">{{ block('title') }}</h2>
+
+{% if adhesion %}
+        <div class="jumbotron">
+        <div class="row wrap">
+          <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                {% for beneficiaire in adhesion.beneficiaires %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">Prénom Nom</div>
+                    <div class="panel-body">
+                        <b>Numéro de bénéficiaire :</b> {{ beneficiaire.num }}<br/>
+                        <b>Sexe : </b>{{beneficiaire.sexe}}<br/>
+                        <b>Date naissance : </b> {{beneficiaire.datenaissance}}<br/>
+                        <b>Régime social :</b> {{beneficiaire.regime_social}}
+                    </div>
+                    <div class="text-center">
+                        <a href="/remboursements/{{ beneficiaire.num }}"><span class="glyphicon glyphicon-plus"></span> Plus d'infos</a>
+                    </div>
+                </div>
+                <hr />
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        
+       
+{% else %}
+    <div class="alert alert-warning">Erreur chargement de vos bénéficiaires.</div>
+{% endif %}   
+{% endblock %}{# empty Twig template #}
