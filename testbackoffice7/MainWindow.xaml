@@ -1,0 +1,46 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map" x:Class="testbackoffice7.MainWindow"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <dragablz:TabablzControl >
+            <dragablz:TabablzControl.InterTabController>
+                <dragablz:InterTabController  />
+            </dragablz:TabablzControl.InterTabController>
+            <TabItem Header="BENEFICIAIRE" >
+
+                <DataGrid Margin="10" x:Name="benegrid" AutoGenerateColumns="True" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" />
+
+            </TabItem>
+            <TabItem Header="PRESTATION">
+                <dxm:MapControl x:Name="mapctrl" HorizontalAlignment="Stretch" ZoomLevel="6"    VerticalAlignment="Stretch">
+
+
+                    <dxm:ImageTilesLayer>
+                        <dxm:ImageTilesLayer.DataProvider>
+                            <dxm:OpenStreetMapDataProvider Kind="Basic" />
+                        </dxm:ImageTilesLayer.DataProvider>
+                    </dxm:ImageTilesLayer>
+                </dxm:MapControl>
+            </TabItem>
+            <TabItem Header="REGIONS">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Looks Quite Nice"/></TextBlock>
+            </TabItem>
+            <TabItem Header="DEPARTEMENT">
+                <dxc:ChartControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  >
+                    <dxc:XYDiagram2D x:Name="diagrammeregion">
+                        <dxc:BarSideBySideSeries2D x:Name="histo" DisplayName="regions"/>
+
+                    </dxc:XYDiagram2D>
+
+
+                </dxc:ChartControl>
+            </TabItem>
+            
+        </dragablz:TabablzControl>
+
+    </Grid>
+</Window>
