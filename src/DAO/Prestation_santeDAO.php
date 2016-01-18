@@ -39,6 +39,16 @@ class Prestation_santeDAO extends DAO {
         return $prestations_santes;
     }
     
+    
+    public function find($id) {
+        $sql = "select * from prestations_sante where num_sinistre=?";
+        $row = $this->getDb()->fetchAssoc($sql, array($id));
+        if ($row)
+            return $this->buildDomainObject($row);
+        else
+            throw new \Exception("No beneficiaire matching id " . $id);
+    }
+    
     protected function buildDomainObject($row) {    
         
         $prestation_sante = new Prestation_Sante();

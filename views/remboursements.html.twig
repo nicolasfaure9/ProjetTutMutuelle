@@ -20,20 +20,17 @@
                     <th>Numero</th>
                     <th>Numero Beneficciaire</th>
                     <th>Acte</th>
+                    <th>Date</th>
                     
                 </tr>
             </thead>
             {% for prestation_sante in adhesion.prestations_Details %}
                 <tr>
-                    
-                    
-                    
-                    <td>{{ prestation_sante.num_sinistre }}</a></td>
-                    
+             
                     <td><a  href="/remboursements/{{prestation_sante.num_beneficiaire_sinistre }}">{{ prestation_sante.num_beneficiaire_sinistre }}</a></td>
+                    <td><a  href="/remboursement/{{ prestation_sante.num_sinistre }}">{{ prestation_sante.designation_acte }}</a></td>
                     
                     
-                    <td>{{ prestation_sante.designation_acte }}</td>
                 </tr>
             {% endfor %}
         </table>

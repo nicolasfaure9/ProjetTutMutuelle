@@ -24,6 +24,11 @@ class PrestationSanteController {
         $adhesion->setPrestations_Details($prestations_Santes);
         return $app['twig']->render('remboursements.html.twig', array('adhesion' => $adhesion));
     }
+    
+    public function prestationSanteDetailActionRemboursement($id, Application $app) {
+        $prestation_Sante = $app['dao.prestationSante']->find($id);
+        return $app['twig']->render('remboursement.html.twig', array('prestation_sante' => $prestation_Sante));
+    }
 }
 
  
