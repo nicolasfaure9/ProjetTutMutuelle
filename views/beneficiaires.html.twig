@@ -21,7 +21,7 @@
             <div class="col-xs-12">
                 {% for beneficiaire in adhesion.beneficiaires %}
                 <div class="panel panel-default">
-                    <div class="panel-heading">Prénom Nom</div>
+                    <div class="panel-heading">{{ beneficiaire.prenom }}</div>
                     <div class="panel-body">
                         <b>Numéro de bénéficiaire :</b> {{ beneficiaire.num }}<br/>
                         <b>Sexe : </b>{{beneficiaire.sexe}}<br/>
