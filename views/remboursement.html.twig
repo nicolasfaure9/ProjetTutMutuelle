@@ -1,24 +1,154 @@
 {% extends "layout.html.twig" %}
 {% set Mutuelle = true %}
 
-{% block title %}Remboursement{% endblock %}
-
 {% block content %}
     <div>
     <ol class="breadcrumb"  >
                     <li><a href="/accueil">Accueil</a></li>
-                    <li><a href="/remboursements">Mes remboursements</a></li>       
+                    <li><a href="/factures">Mes remboursements</a></li>
+                    <li><a href="/sinistre/{{ prestation_sante.num_sinistre }}">remboursement</a></li>       
     </ol>
     </div>
 <h2 class="text-center">{{ block('title') }}</h2>
 {% if prestation_sante %}
-    <div class="table-responsive">
-        <table  class="table table-hover table-condensed"> 
-            <p class="form-control-static">{{ prestation_sante.designation_acte }}</p>
-            <p class="form-control-static">{{ prestation_sante.date_paiement }}</p>
-            <p class="form-control-static">{{ prestation_sante.date_soins }}</p>
-        </table>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="text-center">
+                <i class="fa fa-search-plus pull-left icon"></i>
+                <h2>Sinistre #{{ prestation_sante.num_sinistre }}</h2>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-md-3 col-lg-3 pull-left">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Contrat</div>
+                        <div class="panel-body">
+                            <strong>Numéro de contrat : </strong><br>
+                            {{ prestation_sante.num_sinistre }}<br>
+                            <strong>Numéro de bénéficiaire : </strong><br>
+                            {{ prestation_sante.num_beneficiaire_sinistre }}<br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Sinistre</div>
+                        <div class="panel-body">
+                            <strong>Numéro de sinistre : </strong> {{ prestation_sante.num_sinistre }}<br>
+                            <strong>Acte : </strong>{{ prestation_sante.acte }}<br>
+                            <strong>Désignation : </strong> {{ prestation_sante.designation_acte }}<br>
+                            <strong>Libelle : </strong> {{ prestation_sante.libelle_bareme }}<br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Date des soins</div>
+                        <div class="panel-body">
+                            <strong>{{ prestation_sante.jour_debut_soins }}/{{ prestation_sante.mois_debut_soins }}/{{prestation_sante.annee_debut_soins }}</strong><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3 pull-right">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Date de paiement</div>
+                        <div class="panel-body">
+                            <strong>{{ prestation_sante.jour_paiement }}/{{ prestation_sante.mois_paiement }}/{{prestation_sante.annee_paiement }}</strong>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="text-center"><strong>Résumé du remboursement</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <td><strong>Parties</strong></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-right"><strong>Total</strong></td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>                                    
+                                    
+                                    <td>Montant pris en charge par la sécu</td>
+                                     <td class="text-center"></td>
+                                     <td class="text-center"></td>
+                                    <td class="text-right">{{ prestation_sante.montant_secu }}€</td>
+                                </tr>
+                                <tr>
+                                    <td>Montant pris en charge par la mutuelle</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-right">{{ prestation_sante.montant_rembourse }}€</td>
+                                </tr>
+                                <tr>
+                                    <td>Total de prise en charge</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-right">{{ prestation_sante.montant_secu + prestation_sante.montant_rembourse }}€</td>
+                                </tr>
+                                <tr>
+                                    <td>Reste à payer par l'assuré</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-right">{{ prestation_sante.frais_reel_assure - prestation_sante.montant_secu - prestation_sante.montant_rembourse}}€</td>
+                                </tr>
+                                <tr>
+                                    <td class="highrow emptyrow"><i class="fa fa-barcode iconbig"></i></td>
+                                    <td class=" highrow emptyrow"></td>
+                                    <td class=" highrow emptyrow text-center"><strong>Total de la prestation</strong></td>
+                                    <td class=" highrow emptyrow text-right">{{ prestation_sante.frais_reel_assure }} €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.height {
+    min-height: 200px;
+}
+
+.icon {
+    font-size: 47px;
+    color: #5CB85C;
+}
+
+.iconbig {
+    font-size: 77px;
+    color: #5CB85C;
+}
+
+.table > tbody > tr > .emptyrow {
+    border-top: none;
+}
+
+.table > thead > tr > .emptyrow {
+    border-bottom: none;
+}
+
+.table > tbody > tr > .highrow {
+    border-top: 3px solid;
+}
+</style>
+
 {% else %}
     <div class="alert alert-warning">Erreur chargement de vos remboursements.</div>
 {% endif %}   
