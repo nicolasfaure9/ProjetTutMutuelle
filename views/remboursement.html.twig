@@ -6,7 +6,7 @@
     <ol class="breadcrumb"  >
                     <li><a href="/accueil">Accueil</a></li>
                     <li><a href="/factures">Mes remboursements</a></li>
-                    <li><a href="/sinistre/{{ prestation_sante.num_sinistre }}">remboursement</a></li>       
+                    <li><a href="/remboursement/{{ prestation_sante.num_sinistre }}">sinistre</a></li>       
     </ol>
     </div>
 <h2 class="text-center">{{ block('title') }}</h2>
@@ -47,7 +47,9 @@
                     <div class="panel panel-default height">
                         <div class="panel-heading">Date des soins</div>
                         <div class="panel-body">
-                            <strong>{{ prestation_sante.jour_debut_soins }}/{{ prestation_sante.mois_debut_soins }}/{{prestation_sante.annee_debut_soins }}</strong><br>
+                            <center>
+                                <strong>{{ prestation_sante.jour_debut_soins }}/{{ prestation_sante.mois_debut_soins }}/{{prestation_sante.annee_debut_soins }}</strong><br>
+                            </center>
                         </div>
                     </div>
                 </div>
@@ -55,7 +57,9 @@
                     <div class="panel panel-default height">
                         <div class="panel-heading">Date de paiement</div>
                         <div class="panel-body">
-                            <strong>{{ prestation_sante.jour_paiement }}/{{ prestation_sante.mois_paiement }}/{{prestation_sante.annee_paiement }}</strong>                        
+                            <center>
+                                <strong>{{ prestation_sante.jour_paiement }}/{{ prestation_sante.mois_paiement }}/{{prestation_sante.annee_paiement }}</strong>
+                            </center>
                         </div>
                     </div>
                 </div>
