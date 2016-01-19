@@ -41,7 +41,28 @@ class Prestation_sante {
     
     private $montant_rembourse;
     
-    public function getAdhesion() {
+    private $date_soins;
+    
+    private $date_paiement;
+    
+    
+    public function getDate_soins() {
+        return $this->date_soins;
+    }
+
+    public function getDate_paiement() {
+        return $this->date_paiement;
+    }
+
+    public function setDate_soins($date_soins) {
+        $this->date_soins = $date_soins;
+    }
+
+    public function setDate_paiement($date_paiement) {
+        $this->date_paiement = $date_paiement;
+    }
+
+        public function getAdhesion() {
         return $this->adhesion;
     }
 

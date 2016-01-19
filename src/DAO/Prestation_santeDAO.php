@@ -68,6 +68,8 @@ class Prestation_santeDAO extends DAO {
         $prestation_sante->setFrais_reel_assure($row['FRAIS_REEL_ASSURE']);
         $prestation_sante->setMontant_secu($row['MONTANT_SECU']);
         $prestation_sante->setMontant_rembourse($row['MONTANT_REMBOURSE']);
+        $prestation_sante->setDate_soins($row['DATE_SOINS']);
+        $prestation_sante->setDate_paiement($row['DATE_PAIEMENT']);
         
         return $prestation_sante;
     }
