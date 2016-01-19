@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use ProjetTutMutuelle\Form\Type\BeneficiaireType;
 
 // Home page
-$app->get('/', "ProjetTutMutuelle\Controller\BeneficiaireController::beneficiaireAction");
+$app->get('/', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailActionLimit");
 $app->get('/accueil', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailActionLimit");
 
 $app->get('/remboursements', "ProjetTutMutuelle\Controller\RemboursementsController::remboursementsAction");

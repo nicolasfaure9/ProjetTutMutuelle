@@ -67,7 +67,6 @@
 
             <div>
                 <div>
-                    
                     <table class="table table-bordered table-hover" >
                         <thead>
                 <tr>
@@ -75,17 +74,14 @@
                     <th>Numero Beneficciaire</th>
                     <th>Acte</th>
                     <th>Date</th>
-                    
                 </tr>
                 {% if adhesion %}
             </thead>
             {% for prestation_sante in adhesion.prestations_Details %}
                 <tr>
-             
                     <td><a  href="/remboursements/{{prestation_sante.num_beneficiaire_sinistre }}">{{ prestation_sante.num_beneficiaire_sinistre }}</a></td>
                     <td><a  href="/remboursement/{{ prestation_sante.num_sinistre }}">{{ prestation_sante.designation_acte }}</a></td>
-                    
-                    
+                    <td>{{ prestation_sante.date_soins }}€</td>
                 </tr>
             {% endfor %}
                </table>

@@ -47,7 +47,9 @@ class Prestation_santeDAO extends DAO {
             $sinistreNum = $row['NUM_SINISTRE'];
             $prestations_santes[$sinistreNum] = $this->buildDomainObject($row);
         }
-        return $prestations_santes;
+        $return = array();
+        $return = array_reverse($prestations_santes);
+        return $return;
     }
     
     
