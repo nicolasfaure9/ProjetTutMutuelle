@@ -7,7 +7,8 @@ use ProjetTutMutuelle\Form\Type\BeneficiaireType;
 
 // Home page
 $app->get('/', "ProjetTutMutuelle\Controller\BeneficiaireController::beneficiaireAction");
-$app->get('/accueil', "ProjetTutMutuelle\Controller\AccueilController::accueilAction");
+$app->get('/accueil', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailActionLimit");
+
 $app->get('/remboursements', "ProjetTutMutuelle\Controller\RemboursementsController::remboursementsAction");
 
 $app->get('/contrats', "ProjetTutMutuelle\Controller\ContratsController::contratsAction");

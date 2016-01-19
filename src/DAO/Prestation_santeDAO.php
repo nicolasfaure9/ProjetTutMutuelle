@@ -39,6 +39,17 @@ class Prestation_santeDAO extends DAO {
         return $prestations_santes;
     }
     
+    public function findByAdhesionLimit($numadhesion){
+       $sql = "select * from prestations_sante where num_adhesion=? and rownum<5 order by date_soins";
+       $result = $this->getDb()->fetchAll($sql,array($numadhesion));
+       $prestations_santes = array();
+        foreach ($result as $row) {
+            $sinistreNum = $row['NUM_SINISTRE'];
+            $prestations_santes[$sinistreNum] = $this->buildDomainObject($row);
+        }
+        return $prestations_santes;
+    }
+    
     
     public function find($id) {
         $sql = "select * from prestations_sante where num_sinistre=?";

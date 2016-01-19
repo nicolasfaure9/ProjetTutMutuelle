@@ -26,7 +26,17 @@ class Beneficiaire implements UserInterface{
 
     private $role;
     
-    public function getPassword() {
+    private $prenom;
+        
+    public function getPrenom() {
+        return $this->prenom;
+    }
+
+    public function setPrenom($prenom) {
+        $this->prenom = $prenom;
+    }
+
+        public function getPassword() {
         return $this->password;
     }
 

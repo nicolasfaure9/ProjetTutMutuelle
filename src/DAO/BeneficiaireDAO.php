@@ -96,7 +96,7 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
         $beneficiaire->setRole($row['USR_ROLE']);
         $beneficiaire->setUsername($row['USR_NAME']);
         $beneficiaire->setRegime_Social($row['REGIME_SOCIAL']);
-        
+        $beneficiaire->setPrenom($row['PRENOM']);
         return $beneficiaire;
     }
 }

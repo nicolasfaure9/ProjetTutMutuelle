@@ -70,51 +70,28 @@
                     
                     <table class="table table-bordered table-hover" >
                         <thead>
-                            <tr>
-                                <th>Bénéficiaire</th>
-                                <th>Libellé</th>
-                                <th>Date</th>
-                                <th>Montant payé</th>
-                                <th>Montant remboursement</th>
-                                <th>Dont mutuelle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Max</td>
-                                <td>Hopital Lyon</td>
-                                <td>15/10/1995</td>
-                                <td>200€</td>
-                                <td>130€</td>
-                                <td>20€</td>
-                            </tr>
-                            <tr>
-                                <td>Max</td>
-                                <td>Hopital Lyon</td>
-                                <td>15/10/1995</td>
-                                <td>200€</td>
-                                <td>130€</td>
-                                <td>20€</td>
-                            </tr>
-                            <tr>
-                                <td>Max</td>
-                                <td>Hopital Lyon</td>
-                                <td>15/10/1995</td>
-                                <td>200€</td>
-                                <td>130€</td>
-                                <td>20€</td>
-                            </tr>
-                            <tr>
-                                <td>Max</td>
-                                <td>Hopital Lyon</td>
-                                <td>15/10/1995</td>
-                                <td>200€</td>
-                                <td>130€</td>
-                                <td>20€</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                
+                <tr>
+                    <th>Numero</th>
+                    <th>Numero Beneficciaire</th>
+                    <th>Acte</th>
+                    <th>Date</th>
+                    
+                </tr>
+                {% if adhesion %}
+            </thead>
+            {% for prestation_sante in adhesion.prestations_Details %}
+                <tr>
+             
+                    <td><a  href="/remboursements/{{prestation_sante.num_beneficiaire_sinistre }}">{{ prestation_sante.num_beneficiaire_sinistre }}</a></td>
+                    <td><a  href="/remboursement/{{ prestation_sante.num_sinistre }}">{{ prestation_sante.designation_acte }}</a></td>
+                    
+                    
+                </tr>
+            {% endfor %}
+               </table>
+                {% else %}
+                     <div class="alert alert-warning">Erreur chargement de vos remboursements.</div>
+{% endif %}
                 </div>
 
             </div>
