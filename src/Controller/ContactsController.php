@@ -10,9 +10,15 @@ use ProjetTutMutuelle\Form\Type\BeneficiaireType;
 class ContactsController {
 
  public function contactsAction(Application $app) {
-        $beneficiaires = $app['dao.beneficiaire']->findAll();
-        return $app['twig']->render('contacts.html.twig', array('beneficiaires' => $beneficiaires));
+        
+    
+
+    mail("nicolas.faure69@hotmail.fr","My subject","un message");
+
+        return $app['twig']->render('contacts.html.twig');
     }
 
+    
+    
 }
  

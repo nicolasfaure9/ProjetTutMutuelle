@@ -14,5 +14,8 @@ class AccueilController {
         return $app['twig']->render('accueil.html.twig');
         
     }
-} 
+    
+   
+
+}
 

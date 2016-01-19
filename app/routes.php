@@ -32,4 +32,5 @@ $app->get('/remboursements/{id}', "ProjetTutMutuelle\Controller\PrestationSanteC
 
 $app->get('/remboursement/{id}', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailActionRemboursement");
 
+$app->post('/cts', "ProjetTutMutuelle\Controller\ContactsController::contactsAction");
 
