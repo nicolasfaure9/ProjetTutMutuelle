@@ -46675,6 +46675,12 @@ hr.on-light {
 }
 
 
-
+div.zoomInfos
+{
+    width: 15px;
+    height: 15px;
+    background-image: url(http://www.accordonsnoscultures.fr/assets/images/philosophie/loupe.png);
+    background-size: contain;
+}
 
 /*# sourceMappingURL=material-fullpalette.css.map */

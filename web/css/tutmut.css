@@ -14,3 +14,10 @@ a:link
 { 
  text-decoration:none; 
 } 
+div.zoomInfos
+{
+    width: 10px;
+    height: 10px;
+    background-image: url(http://www.accordonsnoscultures.fr/assets/images/philosophie/loupe.png);
+    background-size: contain;
+}
