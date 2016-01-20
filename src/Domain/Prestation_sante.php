@@ -45,6 +45,18 @@ class Prestation_sante {
     
     private $date_paiement;
     
+    private $beneficiaire;
+    
+    
+    public function getBeneficiaire() {
+        return $this->beneficiaire;
+    }
+
+    public function setBeneficiaire($beneficiaire) {
+        $this->beneficiaire = $beneficiaire;
+    }
+
+        
     
     public function getDate_soins() {
         return $this->date_soins;

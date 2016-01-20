@@ -7,15 +7,16 @@ use ProjetTutMutuelle\Domain\Prestation_sante;
 class Prestation_santeDAO extends DAO {
 
     
-   
-    
-
-   
+ private $beneficiaireDAO ;
+  
  public function setAdhesion_DetailDAO($Adhesion_DetailDAO) {
         $this->Adhesion_DetailDAO = $Adhesion_DetailDAO;
     }
     
-    
+public function setBeneficiaireDAO($beneficiaireDAO) {
+        $this->beneficiaireDAO = $beneficiaireDAO;
+    }
+        
     
     public function findByAdhesion($numadhesion){
        $sql = "select * from prestations_sante where num_adhesion=?  ";
@@ -63,6 +64,9 @@ class Prestation_santeDAO extends DAO {
     }
     
     protected function buildDomainObject($row) {    
+        $beneficiaireID = $row['NUM_BENEFICIAIRE_SINISTRE'];
+        $beneficiaire = $this->beneficiaireDAO->find($beneficiaireID);
+        
         
         $prestation_sante = new Prestation_Sante();
         $prestation_sante->setNum_sinistre($row['NUM_SINISTRE']);
@@ -83,6 +87,7 @@ class Prestation_santeDAO extends DAO {
         $prestation_sante->setMontant_rembourse($row['MONTANT_REMBOURSE']);
         $prestation_sante->setDate_soins($row['DATE_SOINS']);
         $prestation_sante->setDate_paiement($row['DATE_PAIEMENT']);
+        $prestation_sante->setBeneficiaire($beneficiaire);
         
         return $prestation_sante;
     }

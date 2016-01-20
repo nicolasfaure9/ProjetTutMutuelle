@@ -53,6 +53,8 @@ $app['dao.adhesion'] = $app->share(function ($app) {
     return new ProjetTutMutuelle\DAO\Adhesion_DetailDAO($app['db']);
     });
     
-    $app['dao.prestationSante'] = $app->share(function ($app) {
-    return new ProjetTutMutuelle\DAO\Prestation_santeDAO($app['db']);
+$app['dao.prestationSante'] = $app->share(function ($app) {
+     $prestationDAO = new ProjetTutMutuelle\DAO\Prestation_santeDAO($app['db']);
+     $prestationDAO->setBeneficiaireDAO($app['dao.beneficiaire']);
+    return $prestationDAO; 
     });

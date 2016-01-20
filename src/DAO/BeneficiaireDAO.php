@@ -5,9 +5,9 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use ProjetTutMutuelle\Domain\Beneficiaire;
+
 class BeneficiaireDAO extends DAO implements UserProviderInterface
 {
-    
     public function find($id) {
         $sql = "select * from beneficiaire where num=?";
         $row = $this->getDb()->fetchAssoc($sql, array($id));
@@ -16,7 +16,7 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
         else
             throw new \Exception("No beneficiaire matching id " . $id);
     }
-    
+   
     public function findAll() {
         $sql = "select * from beneficiaire";
         $result = $this->getDb()->fetchAll($sql);
