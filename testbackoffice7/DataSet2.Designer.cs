@@ -36,7 +36,7 @@ namespace testbackoffice7 {
         
         private VILLESDataTable tableVILLES;
         
-        private NBADHLOCATIONDataTable tableNBADHLOCATION;
+        private NB_PERS_CODEPOSTDataTable tableNB_PERS_CODEPOST;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -84,8 +84,8 @@ namespace testbackoffice7 {
                 if ((ds.Tables["VILLES"] != null)) {
                     base.Tables.Add(new VILLESDataTable(ds.Tables["VILLES"]));
                 }
-                if ((ds.Tables["NBADHLOCATION"] != null)) {
-                    base.Tables.Add(new NBADHLOCATIONDataTable(ds.Tables["NBADHLOCATION"]));
+                if ((ds.Tables["NB_PERS_CODEPOST"] != null)) {
+                    base.Tables.Add(new NB_PERS_CODEPOSTDataTable(ds.Tables["NB_PERS_CODEPOST"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -169,9 +169,9 @@ namespace testbackoffice7 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public NBADHLOCATIONDataTable NBADHLOCATION {
+        public NB_PERS_CODEPOSTDataTable NB_PERS_CODEPOST {
             get {
-                return this.tableNBADHLOCATION;
+                return this.tableNB_PERS_CODEPOST;
             }
         }
         
@@ -260,8 +260,8 @@ namespace testbackoffice7 {
                 if ((ds.Tables["VILLES"] != null)) {
                     base.Tables.Add(new VILLESDataTable(ds.Tables["VILLES"]));
                 }
-                if ((ds.Tables["NBADHLOCATION"] != null)) {
-                    base.Tables.Add(new NBADHLOCATIONDataTable(ds.Tables["NBADHLOCATION"]));
+                if ((ds.Tables["NB_PERS_CODEPOST"] != null)) {
+                    base.Tables.Add(new NB_PERS_CODEPOSTDataTable(ds.Tables["NB_PERS_CODEPOST"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -332,10 +332,10 @@ namespace testbackoffice7 {
                     this.tableVILLES.InitVars();
                 }
             }
-            this.tableNBADHLOCATION = ((NBADHLOCATIONDataTable)(base.Tables["NBADHLOCATION"]));
+            this.tableNB_PERS_CODEPOST = ((NB_PERS_CODEPOSTDataTable)(base.Tables["NB_PERS_CODEPOST"]));
             if ((initTable == true)) {
-                if ((this.tableNBADHLOCATION != null)) {
-                    this.tableNBADHLOCATION.InitVars();
+                if ((this.tableNB_PERS_CODEPOST != null)) {
+                    this.tableNB_PERS_CODEPOST.InitVars();
                 }
             }
         }
@@ -360,8 +360,8 @@ namespace testbackoffice7 {
             base.Tables.Add(this.tableREGIONS);
             this.tableVILLES = new VILLESDataTable();
             base.Tables.Add(this.tableVILLES);
-            this.tableNBADHLOCATION = new NBADHLOCATIONDataTable();
-            base.Tables.Add(this.tableNBADHLOCATION);
+            this.tableNB_PERS_CODEPOST = new NB_PERS_CODEPOSTDataTable();
+            base.Tables.Add(this.tableNB_PERS_CODEPOST);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -402,7 +402,7 @@ namespace testbackoffice7 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeNBADHLOCATION() {
+        private bool ShouldSerializeNB_PERS_CODEPOST() {
             return false;
         }
         
@@ -480,7 +480,7 @@ namespace testbackoffice7 {
         public delegate void VILLESRowChangeEventHandler(object sender, VILLESRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void NBADHLOCATIONRowChangeEventHandler(object sender, NBADHLOCATIONRowChangeEvent e);
+        public delegate void NB_PERS_CODEPOSTRowChangeEventHandler(object sender, NB_PERS_CODEPOSTRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3138,9 +3138,11 @@ namespace testbackoffice7 {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class NBADHLOCATIONDataTable : global::System.Data.TypedTableBase<NBADHLOCATIONRow> {
+        public partial class NB_PERS_CODEPOSTDataTable : global::System.Data.TypedTableBase<NB_PERS_CODEPOSTRow> {
             
-            private global::System.Data.DataColumn columnNB_ADH;
+            private global::System.Data.DataColumn columnNBPERS;
+            
+            private global::System.Data.DataColumn columnVILLE_CODE_POSTAL;
             
             private global::System.Data.DataColumn columnVILLE_LATITUDE_DEG;
             
@@ -3148,8 +3150,8 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NBADHLOCATIONDataTable() {
-                this.TableName = "NBADHLOCATION";
+            public NB_PERS_CODEPOSTDataTable() {
+                this.TableName = "NB_PERS_CODEPOST";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3157,7 +3159,7 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal NBADHLOCATIONDataTable(global::System.Data.DataTable table) {
+            internal NB_PERS_CODEPOSTDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3174,16 +3176,24 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected NBADHLOCATIONDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected NB_PERS_CODEPOSTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NB_ADHColumn {
+            public global::System.Data.DataColumn NBPERSColumn {
                 get {
-                    return this.columnNB_ADH;
+                    return this.columnNBPERS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_CODE_POSTALColumn {
+                get {
+                    return this.columnVILLE_CODE_POSTAL;
                 }
             }
             
@@ -3214,47 +3224,48 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NBADHLOCATIONRow this[int index] {
+            public NB_PERS_CODEPOSTRow this[int index] {
                 get {
-                    return ((NBADHLOCATIONRow)(this.Rows[index]));
+                    return ((NB_PERS_CODEPOSTRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event NBADHLOCATIONRowChangeEventHandler NBADHLOCATIONRowChanging;
+            public event NB_PERS_CODEPOSTRowChangeEventHandler NB_PERS_CODEPOSTRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event NBADHLOCATIONRowChangeEventHandler NBADHLOCATIONRowChanged;
+            public event NB_PERS_CODEPOSTRowChangeEventHandler NB_PERS_CODEPOSTRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event NBADHLOCATIONRowChangeEventHandler NBADHLOCATIONRowDeleting;
+            public event NB_PERS_CODEPOSTRowChangeEventHandler NB_PERS_CODEPOSTRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event NBADHLOCATIONRowChangeEventHandler NBADHLOCATIONRowDeleted;
+            public event NB_PERS_CODEPOSTRowChangeEventHandler NB_PERS_CODEPOSTRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddNBADHLOCATIONRow(NBADHLOCATIONRow row) {
+            public void AddNB_PERS_CODEPOSTRow(NB_PERS_CODEPOSTRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NBADHLOCATIONRow AddNBADHLOCATIONRow(decimal NB_ADH, decimal VILLE_LATITUDE_DEG, decimal VILLE_LONGITUDE_DEG) {
-                NBADHLOCATIONRow rowNBADHLOCATIONRow = ((NBADHLOCATIONRow)(this.NewRow()));
+            public NB_PERS_CODEPOSTRow AddNB_PERS_CODEPOSTRow(decimal NBPERS, string VILLE_CODE_POSTAL, decimal VILLE_LATITUDE_DEG, decimal VILLE_LONGITUDE_DEG) {
+                NB_PERS_CODEPOSTRow rowNB_PERS_CODEPOSTRow = ((NB_PERS_CODEPOSTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        NB_ADH,
+                        NBPERS,
+                        VILLE_CODE_POSTAL,
                         VILLE_LATITUDE_DEG,
                         VILLE_LONGITUDE_DEG};
-                rowNBADHLOCATIONRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowNBADHLOCATIONRow);
-                return rowNBADHLOCATIONRow;
+                rowNB_PERS_CODEPOSTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowNB_PERS_CODEPOSTRow);
+                return rowNB_PERS_CODEPOSTRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                NBADHLOCATIONDataTable cln = ((NBADHLOCATIONDataTable)(base.Clone()));
+                NB_PERS_CODEPOSTDataTable cln = ((NB_PERS_CODEPOSTDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3262,13 +3273,14 @@ namespace testbackoffice7 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new NBADHLOCATIONDataTable();
+                return new NB_PERS_CODEPOSTDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnNB_ADH = base.Columns["NB_ADH"];
+                this.columnNBPERS = base.Columns["NBPERS"];
+                this.columnVILLE_CODE_POSTAL = base.Columns["VILLE_CODE_POSTAL"];
                 this.columnVILLE_LATITUDE_DEG = base.Columns["VILLE_LATITUDE_DEG"];
                 this.columnVILLE_LONGITUDE_DEG = base.Columns["VILLE_LONGITUDE_DEG"];
             }
@@ -3276,38 +3288,41 @@ namespace testbackoffice7 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnNB_ADH = new global::System.Data.DataColumn("NB_ADH", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNB_ADH);
+                this.columnNBPERS = new global::System.Data.DataColumn("NBPERS", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNBPERS);
+                this.columnVILLE_CODE_POSTAL = new global::System.Data.DataColumn("VILLE_CODE_POSTAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_CODE_POSTAL);
                 this.columnVILLE_LATITUDE_DEG = new global::System.Data.DataColumn("VILLE_LATITUDE_DEG", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVILLE_LATITUDE_DEG);
                 this.columnVILLE_LONGITUDE_DEG = new global::System.Data.DataColumn("VILLE_LONGITUDE_DEG", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVILLE_LONGITUDE_DEG);
+                this.columnVILLE_CODE_POSTAL.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NBADHLOCATIONRow NewNBADHLOCATIONRow() {
-                return ((NBADHLOCATIONRow)(this.NewRow()));
+            public NB_PERS_CODEPOSTRow NewNB_PERS_CODEPOSTRow() {
+                return ((NB_PERS_CODEPOSTRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new NBADHLOCATIONRow(builder);
+                return new NB_PERS_CODEPOSTRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(NBADHLOCATIONRow);
+                return typeof(NB_PERS_CODEPOSTRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.NBADHLOCATIONRowChanged != null)) {
-                    this.NBADHLOCATIONRowChanged(this, new NBADHLOCATIONRowChangeEvent(((NBADHLOCATIONRow)(e.Row)), e.Action));
+                if ((this.NB_PERS_CODEPOSTRowChanged != null)) {
+                    this.NB_PERS_CODEPOSTRowChanged(this, new NB_PERS_CODEPOSTRowChangeEvent(((NB_PERS_CODEPOSTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3315,8 +3330,8 @@ namespace testbackoffice7 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.NBADHLOCATIONRowChanging != null)) {
-                    this.NBADHLOCATIONRowChanging(this, new NBADHLOCATIONRowChangeEvent(((NBADHLOCATIONRow)(e.Row)), e.Action));
+                if ((this.NB_PERS_CODEPOSTRowChanging != null)) {
+                    this.NB_PERS_CODEPOSTRowChanging(this, new NB_PERS_CODEPOSTRowChangeEvent(((NB_PERS_CODEPOSTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3324,8 +3339,8 @@ namespace testbackoffice7 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.NBADHLOCATIONRowDeleted != null)) {
-                    this.NBADHLOCATIONRowDeleted(this, new NBADHLOCATIONRowChangeEvent(((NBADHLOCATIONRow)(e.Row)), e.Action));
+                if ((this.NB_PERS_CODEPOSTRowDeleted != null)) {
+                    this.NB_PERS_CODEPOSTRowDeleted(this, new NB_PERS_CODEPOSTRowChangeEvent(((NB_PERS_CODEPOSTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3333,14 +3348,14 @@ namespace testbackoffice7 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.NBADHLOCATIONRowDeleting != null)) {
-                    this.NBADHLOCATIONRowDeleting(this, new NBADHLOCATIONRowChangeEvent(((NBADHLOCATIONRow)(e.Row)), e.Action));
+                if ((this.NB_PERS_CODEPOSTRowDeleting != null)) {
+                    this.NB_PERS_CODEPOSTRowDeleting(this, new NB_PERS_CODEPOSTRowChangeEvent(((NB_PERS_CODEPOSTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveNBADHLOCATIONRow(NBADHLOCATIONRow row) {
+            public void RemoveNB_PERS_CODEPOSTRow(NB_PERS_CODEPOSTRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3367,7 +3382,7 @@ namespace testbackoffice7 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "NBADHLOCATIONDataTable";
+                attribute2.FixedValue = "NB_PERS_CODEPOSTDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -5541,30 +5556,47 @@ namespace testbackoffice7 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class NBADHLOCATIONRow : global::System.Data.DataRow {
+        public partial class NB_PERS_CODEPOSTRow : global::System.Data.DataRow {
             
-            private NBADHLOCATIONDataTable tableNBADHLOCATION;
+            private NB_PERS_CODEPOSTDataTable tableNB_PERS_CODEPOST;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal NBADHLOCATIONRow(global::System.Data.DataRowBuilder rb) : 
+            internal NB_PERS_CODEPOSTRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableNBADHLOCATION = ((NBADHLOCATIONDataTable)(this.Table));
+                this.tableNB_PERS_CODEPOST = ((NB_PERS_CODEPOSTDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal NB_ADH {
+            public decimal NBPERS {
                 get {
                     try {
-                        return ((decimal)(this[this.tableNBADHLOCATION.NB_ADHColumn]));
+                        return ((decimal)(this[this.tableNB_PERS_CODEPOST.NBPERSColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'NB_ADH\' dans la table \'NBADHLOCATION\' est DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'NBPERS\' dans la table \'NB_PERS_CODEPOST\' est DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNBADHLOCATION.NB_ADHColumn] = value;
+                    this[this.tableNB_PERS_CODEPOST.NBPERSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_CODE_POSTAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableNB_PERS_CODEPOST.VILLE_CODE_POSTALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_CODE_POSTAL\' dans la table \'NB_PERS_CODEPOST\' es" +
+                                "t DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableNB_PERS_CODEPOST.VILLE_CODE_POSTALColumn] = value;
                 }
             }
             
@@ -5573,15 +5605,15 @@ namespace testbackoffice7 {
             public decimal VILLE_LATITUDE_DEG {
                 get {
                     try {
-                        return ((decimal)(this[this.tableNBADHLOCATION.VILLE_LATITUDE_DEGColumn]));
+                        return ((decimal)(this[this.tableNB_PERS_CODEPOST.VILLE_LATITUDE_DEGColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LATITUDE_DEG\' dans la table \'NBADHLOCATION\' est " +
-                                "DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LATITUDE_DEG\' dans la table \'NB_PERS_CODEPOST\' e" +
+                                "st DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNBADHLOCATION.VILLE_LATITUDE_DEGColumn] = value;
+                    this[this.tableNB_PERS_CODEPOST.VILLE_LATITUDE_DEGColumn] = value;
                 }
             }
             
@@ -5590,52 +5622,64 @@ namespace testbackoffice7 {
             public decimal VILLE_LONGITUDE_DEG {
                 get {
                     try {
-                        return ((decimal)(this[this.tableNBADHLOCATION.VILLE_LONGITUDE_DEGColumn]));
+                        return ((decimal)(this[this.tableNB_PERS_CODEPOST.VILLE_LONGITUDE_DEGColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LONGITUDE_DEG\' dans la table \'NBADHLOCATION\' est" +
-                                " DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LONGITUDE_DEG\' dans la table \'NB_PERS_CODEPOST\' " +
+                                "est DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNBADHLOCATION.VILLE_LONGITUDE_DEGColumn] = value;
+                    this[this.tableNB_PERS_CODEPOST.VILLE_LONGITUDE_DEGColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNB_ADHNull() {
-                return this.IsNull(this.tableNBADHLOCATION.NB_ADHColumn);
+            public bool IsNBPERSNull() {
+                return this.IsNull(this.tableNB_PERS_CODEPOST.NBPERSColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNB_ADHNull() {
-                this[this.tableNBADHLOCATION.NB_ADHColumn] = global::System.Convert.DBNull;
+            public void SetNBPERSNull() {
+                this[this.tableNB_PERS_CODEPOST.NBPERSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_CODE_POSTALNull() {
+                return this.IsNull(this.tableNB_PERS_CODEPOST.VILLE_CODE_POSTALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_CODE_POSTALNull() {
+                this[this.tableNB_PERS_CODEPOST.VILLE_CODE_POSTALColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsVILLE_LATITUDE_DEGNull() {
-                return this.IsNull(this.tableNBADHLOCATION.VILLE_LATITUDE_DEGColumn);
+                return this.IsNull(this.tableNB_PERS_CODEPOST.VILLE_LATITUDE_DEGColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetVILLE_LATITUDE_DEGNull() {
-                this[this.tableNBADHLOCATION.VILLE_LATITUDE_DEGColumn] = global::System.Convert.DBNull;
+                this[this.tableNB_PERS_CODEPOST.VILLE_LATITUDE_DEGColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsVILLE_LONGITUDE_DEGNull() {
-                return this.IsNull(this.tableNBADHLOCATION.VILLE_LONGITUDE_DEGColumn);
+                return this.IsNull(this.tableNB_PERS_CODEPOST.VILLE_LONGITUDE_DEGColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetVILLE_LONGITUDE_DEGNull() {
-                this[this.tableNBADHLOCATION.VILLE_LONGITUDE_DEGColumn] = global::System.Convert.DBNull;
+                this[this.tableNB_PERS_CODEPOST.VILLE_LONGITUDE_DEGColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5847,22 +5891,22 @@ namespace testbackoffice7 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class NBADHLOCATIONRowChangeEvent : global::System.EventArgs {
+        public class NB_PERS_CODEPOSTRowChangeEvent : global::System.EventArgs {
             
-            private NBADHLOCATIONRow eventRow;
+            private NB_PERS_CODEPOSTRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NBADHLOCATIONRowChangeEvent(NBADHLOCATIONRow row, global::System.Data.DataRowAction action) {
+            public NB_PERS_CODEPOSTRowChangeEvent(NB_PERS_CODEPOSTRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NBADHLOCATIONRow Row {
+            public NB_PERS_CODEPOSTRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -13960,7 +14004,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class NBADHLOCATIONTableAdapter : global::System.ComponentModel.Component {
+    public partial class NB_PERS_CODEPOSTTableAdapter : global::System.ComponentModel.Component {
         
         private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
         
@@ -13974,7 +14018,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public NBADHLOCATIONTableAdapter() {
+        public NB_PERS_CODEPOSTTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -14071,8 +14115,9 @@ namespace testbackoffice7.DataSet2TableAdapters {
             this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "NBADHLOCATION";
-            tableMapping.ColumnMappings.Add("NB_ADH", "NB_ADH");
+            tableMapping.DataSetTable = "NB_PERS_CODEPOST";
+            tableMapping.ColumnMappings.Add("NBPERS", "NBPERS");
+            tableMapping.ColumnMappings.Add("VILLE_CODE_POSTAL", "VILLE_CODE_POSTAL");
             tableMapping.ColumnMappings.Add("VILLE_LATITUDE_DEG", "VILLE_LATITUDE_DEG");
             tableMapping.ColumnMappings.Add("VILLE_LONGITUDE_DEG", "VILLE_LONGITUDE_DEG");
             this._adapter.TableMappings.Add(tableMapping);
@@ -14091,8 +14136,8 @@ namespace testbackoffice7.DataSet2TableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NB_ADH, VILLE_LATITUDE_DEG, VILLE_LONGITUDE_DEG FROM PBDALG8.NBADHLOCATION" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT NBPERS, VILLE_CODE_POSTAL, VILLE_LATITUDE_DEG, VILLE_LONGITUDE_DEG FROM PB" +
+                "DALG8.NB_PERS_CODEPOST";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -14100,7 +14145,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet2.NBADHLOCATIONDataTable dataTable) {
+        public virtual int Fill(DataSet2.NB_PERS_CODEPOSTDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14113,11 +14158,120 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet2.NBADHLOCATIONDataTable GetData() {
+        public virtual DataSet2.NB_PERS_CODEPOSTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet2.NBADHLOCATIONDataTable dataTable = new DataSet2.NBADHLOCATIONDataTable();
+            DataSet2.NB_PERS_CODEPOSTDataTable dataTable = new DataSet2.NB_PERS_CODEPOSTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class QueriesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.IDbCommand[] _commandCollection;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.IDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.IDbCommand[2];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[0])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::testbackoffice7.Properties.Settings.Default.ConnectionString);
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[0])).CommandText = "PBDALG8.MOYENNE_SOINS_SEXE";
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "SEXE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[0])).Parameters.Add(param);
+            this._commandCollection[1] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[1])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::testbackoffice7.Properties.Settings.Default.ConnectionString);
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[1])).CommandText = "PBDALG8.NB_REMBOURSEMENTS";
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "REGION";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[1])).Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int MOYENNE_SOINS_SEXE(string SEXE) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[0]));
+            if ((SEXE == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(SEXE));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int NB_REMBOURSEMENTS(string REGION) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[1]));
+            if ((REGION == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(REGION));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

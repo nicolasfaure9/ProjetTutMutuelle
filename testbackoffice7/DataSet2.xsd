@@ -2,7 +2,7 @@
 <xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.testbackoffice7.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="Oracle.ManagedDataAccess.Client" />
         </Connections>
@@ -747,26 +747,48 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NBADHLOCATIONTableAdapter" GeneratorDataComponentClassName="NBADHLOCATIONTableAdapter" Name="NBADHLOCATION" UserDataComponentName="NBADHLOCATIONTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NB_PERS_CODEPOSTTableAdapter" GeneratorDataComponentClassName="NB_PERS_CODEPOSTTableAdapter" Name="NB_PERS_CODEPOST" UserDataComponentName="NB_PERS_CODEPOSTTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NBADHLOCATION" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NB_PERS_CODEPOST" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT NB_ADH, VILLE_LATITUDE_DEG, VILLE_LONGITUDE_DEG FROM PBDALG8.NBADHLOCATION</CommandText>
+                    <CommandText>SELECT NBPERS, VILLE_CODE_POSTAL, VILLE_LATITUDE_DEG, VILLE_LONGITUDE_DEG FROM PBDALG8.NB_PERS_CODEPOST</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="NB_ADH" DataSetColumn="NB_ADH" />
+              <Mapping SourceColumn="NBPERS" DataSetColumn="NBPERS" />
+              <Mapping SourceColumn="VILLE_CODE_POSTAL" DataSetColumn="VILLE_CODE_POSTAL" />
               <Mapping SourceColumn="VILLE_LATITUDE_DEG" DataSetColumn="VILLE_LATITUDE_DEG" />
               <Mapping SourceColumn="VILLE_LONGITUDE_DEG" DataSetColumn="VILLE_LONGITUDE_DEG" />
             </Mappings>
             <Sources />
           </TableAdapter>
         </Tables>
-        <Sources />
+        <Sources>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.MOYENNE_SOINS_SEXE" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="MOYENNE_SOINS_SEXE" MethodsParameterType="CLR" Modifier="Public" Name="MOYENNE_SOINS_SEXE" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="MOYENNE_SOINS_SEXE">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.MOYENNE_SOINS_SEXE</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="VARCHAR2" DbType="String" Direction="Input" ParameterName="SEXE" Precision="0" ProviderType="Varchar2" Scale="0" Size="32767" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NB_REMBOURSEMENTS" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="NB_REMBOURSEMENTS" MethodsParameterType="CLR" Modifier="Public" Name="NB_REMBOURSEMENTS" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="NB_REMBOURSEMENTS">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.NB_REMBOURSEMENTS</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="VARCHAR2" DbType="String" Direction="Input" ParameterName="REGION" Precision="0" ProviderType="Varchar2" Scale="0" Size="32767" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
@@ -1139,10 +1161,17 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NBADHLOCATION" msprop:Generator_TableClassName="NBADHLOCATIONDataTable" msprop:Generator_TableVarName="tableNBADHLOCATION" msprop:Generator_TablePropName="NBADHLOCATION" msprop:Generator_RowDeletingName="NBADHLOCATIONRowDeleting" msprop:Generator_RowChangingName="NBADHLOCATIONRowChanging" msprop:Generator_RowEvHandlerName="NBADHLOCATIONRowChangeEventHandler" msprop:Generator_RowDeletedName="NBADHLOCATIONRowDeleted" msprop:Generator_UserTableName="NBADHLOCATION" msprop:Generator_RowChangedName="NBADHLOCATIONRowChanged" msprop:Generator_RowEvArgName="NBADHLOCATIONRowChangeEvent" msprop:Generator_RowClassName="NBADHLOCATIONRow">
+        <xs:element name="NB_PERS_CODEPOST" msprop:Generator_TableClassName="NB_PERS_CODEPOSTDataTable" msprop:Generator_TableVarName="tableNB_PERS_CODEPOST" msprop:Generator_TablePropName="NB_PERS_CODEPOST" msprop:Generator_RowDeletingName="NB_PERS_CODEPOSTRowDeleting" msprop:Generator_RowChangingName="NB_PERS_CODEPOSTRowChanging" msprop:Generator_RowEvHandlerName="NB_PERS_CODEPOSTRowChangeEventHandler" msprop:Generator_RowDeletedName="NB_PERS_CODEPOSTRowDeleted" msprop:Generator_UserTableName="NB_PERS_CODEPOST" msprop:Generator_RowChangedName="NB_PERS_CODEPOSTRowChanged" msprop:Generator_RowEvArgName="NB_PERS_CODEPOSTRowChangeEvent" msprop:Generator_RowClassName="NB_PERS_CODEPOSTRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="NB_ADH" msprop:Generator_ColumnVarNameInTable="columnNB_ADH" msprop:Generator_ColumnPropNameInRow="NB_ADH" msprop:Generator_ColumnPropNameInTable="NB_ADHColumn" msprop:Generator_UserColumnName="NB_ADH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NBPERS" msprop:Generator_ColumnVarNameInTable="columnNBPERS" msprop:Generator_ColumnPropNameInRow="NBPERS" msprop:Generator_ColumnPropNameInTable="NBPERSColumn" msprop:Generator_UserColumnName="NBPERS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VILLE_CODE_POSTAL" msprop:Generator_ColumnVarNameInTable="columnVILLE_CODE_POSTAL" msprop:Generator_ColumnPropNameInRow="VILLE_CODE_POSTAL" msprop:Generator_ColumnPropNameInTable="VILLE_CODE_POSTALColumn" msprop:Generator_UserColumnName="VILLE_CODE_POSTAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="VILLE_LATITUDE_DEG" msprop:Generator_ColumnVarNameInTable="columnVILLE_LATITUDE_DEG" msprop:Generator_ColumnPropNameInRow="VILLE_LATITUDE_DEG" msprop:Generator_ColumnPropNameInTable="VILLE_LATITUDE_DEGColumn" msprop:Generator_UserColumnName="VILLE_LATITUDE_DEG" type="xs:decimal" minOccurs="0" />
               <xs:element name="VILLE_LONGITUDE_DEG" msprop:Generator_ColumnVarNameInTable="columnVILLE_LONGITUDE_DEG" msprop:Generator_ColumnPropNameInRow="VILLE_LONGITUDE_DEG" msprop:Generator_ColumnPropNameInTable="VILLE_LONGITUDE_DEGColumn" msprop:Generator_UserColumnName="VILLE_LONGITUDE_DEG" type="xs:decimal" minOccurs="0" />
             </xs:sequence>

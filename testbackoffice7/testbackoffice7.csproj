@@ -135,6 +135,7 @@
     <Compile Include="simpledatagrid.xaml.cs">
       <DependentUpon>simpledatagrid.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
     <Page Include="Charts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -212,6 +213,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="tutmutlogo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tutmutlogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\cef.redist.x86.3.2454.1344\build\cef.redist.x86.targets" Condition="Exists('..\packages\cef.redist.x86.3.2454.1344\build\cef.redist.x86.targets')" />

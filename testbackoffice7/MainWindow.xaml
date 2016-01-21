@@ -13,41 +13,138 @@
         WindowState="Maximized"
         Title="MainWindow" Height="600" Width="800">
     <Grid>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                    
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
         
-        <dragablz:TabablzControl Panel.ZIndex="5"  >
+        <dragablz:TabablzControl  x:Name="maintab" SelectionChanged="maintab_SelectionChanged" >
             <dragablz:TabablzControl.InterTabController>
                 <dragablz:InterTabController/>
             </dragablz:TabablzControl.InterTabController>
-            
-            <TabItem Header="BENEFICIAIRE" >
-
-                <DataGrid Margin="10" x:Name="benegrid" AutoGenerateColumns="True" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" />
-
-            </TabItem>
-            <TabItem Header="PRESTATION">
-                <dxm:MapControl x:Name="mapctrl" HorizontalAlignment="Stretch" ZoomLevel="6"   VerticalAlignment="Stretch">
+            <TabItem Header="ACCUEIL" Margin="5,0,5,0" x:Name="home">
+                <Grid>
+                <Image Source="tutmutlogo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0" Width="200" Height="200"/>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,100">
+                        
+                        <Label Content="Bonjour" FontFamily="LATO" FontSize="40" FontWeight="Light" Margin="10"/>
+                        <Label Content ="Bienvenue dans le super Backoffice du site TutMut&#10;Veuillez vous identifier " FontFamily="LATO" FontSize="30" FontWeight="Light" Margin="10"/>
+                        <TextBox Width="150" x:Name="login" Margin="10"/>
+                        <PasswordBox Width="150" x:Name="mdp" Margin="20"/>
+                        <Button Content="Commencer le suivi " Height="50" Width="200"  Click="Button_Click" Margin="10"/>
+                    </StackPanel>
                     
-                    <dxm:ImageTilesLayer>
-                        <dxm:BingMapDataProvider BingKey="Ag49VHLhaXRtH2qMVteFcCAYXyFUjj1d-sDDhO4oVffuwA2KISWHXCw1TCjx4suA" />
-                    </dxm:ImageTilesLayer>
-                    <dxm:VectorLayer x:Name="vectorlayer" ViewportChanged="vectorlayer_ViewportChanged" >
-
-                    </dxm:VectorLayer>
-                    <dxm:VectorLayer x:Name="vectorlayerLocal" ViewportChanged="vectorlayer_ViewportChanged" >
-
-                    </dxm:VectorLayer>
-                    <dxm:VectorLayer x:Name="vectorlayerRegion" ViewportChanged="vectorlayer_ViewportChanged" >
-
-                    </dxm:VectorLayer>
-                    <dxm:VectorLayer x:Name="vectorlayerDepartement" ViewportChanged="vectorlayer_ViewportChanged" >
-
-                    </dxm:VectorLayer>
-                </dxm:MapControl>
+                </Grid>
             </TabItem>
-            <TabItem Header="REGIONS" >
-                <local:Charts HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TabItem Header="INDICATEURS" x:Name="indictab" Margin="5,0,5,0" Visibility="Collapsed">
+                <dragablz:TabablzControl  x:Name="charttab" SelectionChanged="maintab_SelectionChanged" >
+                    <dragablz:TabablzControl.InterTabController>
+                        <dragablz:InterTabController/>
+                    </dragablz:TabablzControl.InterTabController>
+                    <TabItem Header="INDICATEURS">
+                        <local:Charts HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    </TabItem>
+                    <TabItem Header="CHIFFRES">
+                        <Grid>
+                            
+                        </Grid>
+                    </TabItem>
+                </dragablz:TabablzControl>
             </TabItem>
-            <TabItem Header="DEPARTEMENT">
+            <TabItem Header="BASE" Margin="5,0,5,0" >
+                <dragablz:TabablzControl>
+                    <dragablz:TabablzControl.InterTabController>
+                        <dragablz:InterTabController/>
+                    </dragablz:TabablzControl.InterTabController>
+                    <TabItem Header="ADHESIONS">
+                        <Grid >
+                            <DataGrid Margin="10" x:Name="adhgrid" AutoGenerateColumns="True" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" />
+                            <Button Height="50" Width="50"  Style="{StaticResource MaterialDesignFloatingActionButton}"
+                         HorizontalAlignment="Right"
+                                    Click="Button_Click_2"
+                        VerticalAlignment="Bottom" Margin="10">
+                                <Viewbox Height="35" Width="35">
+                                    
+                                    <Canvas Width="732.776" Height="906.500">
+                                        
+
+                                        <Canvas>
+
+                                             
+                                            <Path StrokeThickness="28.0" Stroke="White" StrokeMiterLimit="1.0" Fill="White" Data="F1 M 696.752,303.452 L 534.485,303.452 C 522.323,303.452 512.461,313.323 512.461,325.476 C 512.461,337.649 522.323,347.500 534.485,347.500 L 674.727,347.500 L 674.727,848.452 L 58.048,848.452 L 58.048,347.500 L 199.291,347.500 C 211.452,347.500 221.315,337.649 221.315,325.476 C 221.315,313.323 211.452,303.452 199.291,303.452 L 36.024,303.452 C 23.862,303.452 14.000,313.323 14.000,325.476 L 14.000,870.476 C 14.000,882.649 23.862,892.500 36.024,892.500 L 696.752,892.500 C 708.913,892.500 718.776,882.649 718.776,870.476 L 718.776,325.476 C 718.776,313.323 708.913,303.452 696.752,303.452 Z"/>
+
+                                             
+                                            <Path StrokeThickness="27.0" Stroke="White" StrokeMiterLimit="1.0" Fill="White" Data=" M 539.766,534.013 L 539.766,534.013 C 544.146,529.643 550.192,526.927 556.865,526.927 C 570.219,526.927 581.049,537.745 581.049,551.111 C 581.049,557.796 578.345,563.842 573.963,568.210 L 380.486,761.687 L 380.486,761.687 C 376.118,766.081 370.072,768.773 363.388,768.773 C 356.715,768.773 350.669,766.081 346.289,761.687 L 346.289,761.687 L 152.813,568.210 C 148.430,563.842 145.726,557.796 145.726,551.111 C 145.726,537.745 156.556,526.927 169.911,526.927 C 176.595,526.927 182.642,529.643 187.010,534.013 L 187.010,534.013 L 339.203,686.204 L 339.203,37.685 C 339.203,24.340 350.033,13.500 363.388,13.500 C 376.742,13.500 387.572,24.340 387.572,37.685 L 387.572,686.204 L 539.766,534.013 Z"/>
+
+                                        </Canvas>
+                                    </Canvas>
+                                </Viewbox>
+                               
+                            </Button>
+                        </Grid>
+                         
+                        
+                    </TabItem>
+                    <TabItem Header="BENEFICIAIRES">
+                        <DataGrid Margin="10" x:Name="benegrid" AutoGenerateColumns="True" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" />
+                    </TabItem>
+                    <TabItem Header="REGIONS">
+                        <DataGrid Margin="10" x:Name="regiongrid" AutoGenerateColumns="True" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" />
+                    </TabItem>
+                    <TabItem Header="DEPARTEMENTS">
+                        <DataGrid Margin="10" x:Name="depgrid" AutoGenerateColumns="True" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" />
+                    </TabItem>
+                    <TabItem Header="VILLES">
+                        <DataGrid Margin="10" x:Name="villegrid" AutoGenerateColumns="True" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" />
+                    </TabItem>
+                </dragablz:TabablzControl>
+               
+
+            </TabItem>
+            <TabItem Header="GEOGRAPHIE" Margin="10" >
+                <Grid>
+                    
+                    <dxm:MapControl Grid.Row="1" x:Name="mapctrl" HorizontalAlignment="Stretch" ZoomLevel="6"   VerticalAlignment="Stretch">
+
+                        <dxm:ImageTilesLayer>
+                            <dxm:BingMapDataProvider BingKey="Ag49VHLhaXRtH2qMVteFcCAYXyFUjj1d-sDDhO4oVffuwA2KISWHXCw1TCjx4suA" />
+                        </dxm:ImageTilesLayer>
+                        <dxm:VectorLayer x:Name="vectorlayer" ViewportChanged="vectorlayer_ViewportChanged" >
+
+                        </dxm:VectorLayer>
+                        <dxm:VectorLayer x:Name="vectorlayerLocal" ViewportChanged="vectorlayer_ViewportChanged" >
+
+                        </dxm:VectorLayer>
+                        <dxm:VectorLayer x:Name="vectorlayerRegion" ViewportChanged="vectorlayer_ViewportChanged" >
+
+                        </dxm:VectorLayer>
+                        <dxm:VectorLayer x:Name="vectorlayerDepartement" ViewportChanged="vectorlayer_ViewportChanged" >
+
+                        </dxm:VectorLayer>
+                    </dxm:MapControl>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5">
+                        
+                        <Button Content="Regions" Click="Button_Click_3" Margin="2"/>
+                        <Button Content="Departements" Click="Button_Click_4" Margin="2"/>
+                        <Button Content="Commune" Click="Button_Click_5" Margin="2"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Background="White" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <StackPanel.Effect>
+                            <DropShadowEffect Opacity="0.3" Direction="270" ShadowDepth="5" BlurRadius="5"/>
+                        </StackPanel.Effect>
+                        <Label Content="Rechercher" Width="120" Margin="2" Foreground="#FF303030" FontFamily="Lato" FontSize="20" FontWeight="Light" />
+                        <TextBox x:Name="rechtext" Width="150" Margin="2" />
+                        <Button Content="rechercher" Click="Button_Click_6" Margin="2" />
+                    </StackPanel>
+                </Grid>
+                
+            </TabItem>
+
+            <TabItem Header="GRAPHIQUES" Margin="10,0,10,0" >
                 <ScrollViewer>
                 <StackPanel Orientation="Vertical">
                     <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="10"  >
@@ -73,7 +170,7 @@
                 </StackPanel>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="ANALITICS">
+            <TabItem Header="ANALITICS" Margin="5,0,5,0" >
                 <dragablz:TabablzControl>
                     <dragablz:TabablzControl.InterTabController>
                         <dragablz:InterTabController/>
@@ -89,6 +186,29 @@
             </TabItem>
             
         </dragablz:TabablzControl>
+        <Button  Style="{StaticResource MaterialDesignFloatingActionButton}"
+                         HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Click="Button_Click_1"
+                        ToolTip="MaterialDesignFloatingActionButton">
+            <Viewbox Height="25" Width="25">
+                <Canvas Width="95.629" Height="100.000">
 
+                    <Canvas>
+
+                        <Canvas>
+
+                            <!-- Calque 1/power/<Tracé> -->
+                            <Path Fill="#ffffffff" Data="F1 M 64.704,7.439 C 62.854,6.742 60.797,7.674 60.097,9.521 C 59.400,11.364 60.333,13.424 62.175,14.121 C 77.915,20.064 88.486,35.360 88.486,52.185 C 88.486,74.611 70.240,92.857 47.815,92.857 C 25.389,92.857 7.143,74.611 7.143,52.185 C 7.143,35.353 17.718,20.057 33.461,14.121 C 35.307,13.424 36.240,11.364 35.539,9.517 C 34.843,7.674 32.790,6.735 30.940,7.439 C 12.436,14.417 0.000,32.399 0.000,52.185 C 0.000,78.550 21.450,100.000 47.815,100.000 C 74.179,100.000 95.629,78.550 95.629,52.185 C 95.629,32.407 83.201,14.424 64.704,7.439 Z"/>
+
+                            <!-- Calque 1/power/<Tracé> -->
+                            <Path Fill="#ffffffff" Data="F1 M 48.427,43.797 C 50.402,43.797 51.927,42.197 51.927,40.225 L 51.927,3.571 C 51.927,1.600 50.402,0.000 48.427,0.000 C 46.452,0.000 44.927,1.600 44.927,3.571 L 44.927,40.225 C 44.927,42.197 46.452,43.797 48.427,43.797 Z"/>
+
+                        </Canvas>
+
+                    </Canvas>
+                </Canvas>
+            </Viewbox>
+        </Button>
     </Grid>
 </Window>

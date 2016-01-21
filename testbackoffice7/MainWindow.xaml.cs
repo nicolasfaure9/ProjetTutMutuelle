@@ -19,6 +19,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Security;
+using System.Runtime.InteropServices;
 
 
 namespace testbackoffice7
@@ -33,11 +35,14 @@ namespace testbackoffice7
         private DataSet2TableAdapters.DEPARTEMENTSTableAdapter departementTA;
         private DataSet2TableAdapters.REGIONSTableAdapter regionsTA;
         private DataSet2TableAdapters.VILLESTableAdapter villesTA;
-        private DataSet2TableAdapters.NBADHLOCATIONTableAdapter nbadhlocationTA;
+        private DataSet2TableAdapters.NB_PERS_CODEPOSTTableAdapter nbadhlocationTA;
+        private DataSet2TableAdapters.BENEFICIAIRETableAdapter beneTA;
+        private DataSet2TableAdapters.QueriesTableAdapter querieTA;
         private BackgroundWorker bgw = new BackgroundWorker();
         private MapItemStorage storeRegion;
         private MapItemStorage storeLocal;
         private MapItemStorage storeDepartement;
+        private bool Islogged = false;
         public ObservableCollection<MapPushpin> MapItems { get; set; }
         
 
@@ -50,9 +55,34 @@ namespace testbackoffice7
             PaletteHelper mainpalettehelper = new PaletteHelper();
             mainpalettehelper.ReplacePrimaryColor("blue");
             mainpalettehelper.ReplaceAccentColor("amber");
-            
-                 
-           
+
+
+            adhesionTA = new DataSet2TableAdapters.ADHESION_DETAILTableAdapter();
+            departementTA = new DataSet2TableAdapters.DEPARTEMENTSTableAdapter();
+            regionsTA = new DataSet2TableAdapters.REGIONSTableAdapter();
+            villesTA = new DataSet2TableAdapters.VILLESTableAdapter();
+            nbadhlocationTA = new DataSet2TableAdapters.NB_PERS_CODEPOSTTableAdapter();
+            beneTA = new DataSet2TableAdapters.BENEFICIAIRETableAdapter();
+            querieTA = new DataSet2TableAdapters.QueriesTableAdapter();
+
+            dataset = new DataSet2();
+
+           //MessageBox.Show(querieTA.MOYENNE_SOINS_SEXE("M").ToString());
+           //MessageBox.Show(querieTA.MOYENNE_SOINS_SEXE("F").ToString());
+
+            nbadhlocationTA.Fill(dataset.NB_PERS_CODEPOST);
+            adhesionTA.Fill(dataset.ADHESION_DETAIL);
+            departementTA.Fill(dataset.DEPARTEMENTS);
+            regionsTA.Fill(dataset.REGIONS);
+            villesTA.Fill(dataset.VILLES);
+            beneTA.Fill(dataset.BENEFICIAIRE);
+
+
+            benegrid.ItemsSource = dataset.BENEFICIAIRE;
+            adhgrid.ItemsSource = dataset.ADHESION_DETAIL;
+            regiongrid.ItemsSource = dataset.REGIONS;
+            depgrid.ItemsSource = dataset.DEPARTEMENTS;
+            villegrid.ItemsSource = dataset.VILLES;
             
         }
 
@@ -65,18 +95,7 @@ namespace testbackoffice7
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-            adhesionTA = new DataSet2TableAdapters.ADHESION_DETAILTableAdapter();
-            departementTA = new DataSet2TableAdapters.DEPARTEMENTSTableAdapter();
-            regionsTA = new DataSet2TableAdapters.REGIONSTableAdapter();
-            villesTA = new DataSet2TableAdapters.VILLESTableAdapter();
-            nbadhlocationTA = new DataSet2TableAdapters.NBADHLOCATIONTableAdapter();
-            dataset = new DataSet2();
-            nbadhlocationTA.Fill(dataset.NBADHLOCATION);
-            adhesionTA.Fill(dataset.ADHESION_DETAIL);
-            departementTA.Fill(dataset.DEPARTEMENTS);
-            regionsTA.Fill(dataset.REGIONS);
-            villesTA.Fill(dataset.VILLES);
-            benegrid.ItemsSource = dataset.ADHESION_DETAIL;
+            
 
             
             //faire la liste de pushpin pour les regions 
@@ -117,9 +136,9 @@ namespace testbackoffice7
 
 
 
-            foreach (DataSet2.NBADHLOCATIONRow elem in dataset.NBADHLOCATION) 
+            foreach (DataSet2.NB_PERS_CODEPOSTRow elem in dataset.NB_PERS_CODEPOST) 
             {
-                var pin = new MapPushpin() { Location = new GeoPoint((double)elem.VILLE_LATITUDE_DEG,(double)elem.VILLE_LONGITUDE_DEG ), Text = elem.NB_ADH.ToString() };
+                var pin = new MapPushpin() { Location = new GeoPoint((double)elem.VILLE_LATITUDE_DEG,(double)elem.VILLE_LONGITUDE_DEG ), Text = elem.NBPERS.ToString() , Information = elem.VILLE_CODE_POSTAL.ToString() };
                 storeLocal.Items.Add(pin);
             }
 
@@ -148,16 +167,29 @@ namespace testbackoffice7
             foreach (DataSet2.REGIONSRow elem in dataset.REGIONS.Rows)
             {
                 int nbadherant = 0;
+                //bool firstpassage = true;
                 foreach (DataSet2.DEPARTEMENTSRow elem2 in dataset.DEPARTEMENTS)
                 {
                     if (elem2.NUM_REGION == elem.NUM_REGION)
                     {
                         var numdep = elem2.NUM_DEPARTEMENT;
-                        nbadherant += dataset.ADHESION_DETAIL.Where(f => f.CODE_POSTAL.ToString().Substring(0, 2) == numdep.ToString()).Count();
+                        var tempnb = dataset.ADHESION_DETAIL.Where(f => f.CODE_POSTAL.ToString().Substring(0, 2) == numdep.ToString()).Count();
+                        //MessageBox.Show(dataset.NB_PERS_CODEPOST.Where(f => f.VILLE_CODE_POSTAL.ToString().Substring(0, 2) == numdep.ToString()).Count().ToString());
+                        //if (firstpassage == true)
+                        //{
+                            var locdep = dataset.NB_PERS_CODEPOST.Where(f => (f.VILLE_CODE_POSTAL.ToString().Substring(0, 2) == numdep.ToString())).FirstOrDefault();
+                            if (locdep != null)
+                            {
+                                var deppin = new MapPushpin() { Location = new GeoPoint((double)locdep.VILLE_LATITUDE_DEG, (double)locdep.VILLE_LONGITUDE_DEG), Text = tempnb.ToString(), Information = elem2.LIB_DEPARTEMENT.ToString() };
+                                storeDepartement.Items.Add(deppin);
+                            }
+                            //firstpassage = false;
+                        //}
+                        nbadherant += tempnb;
                     }
                 }
                 //if (elem.NUM_REGION == 11) { MessageBox.Show(nbadherant.ToString()); }
-                var pin = new MapPushpin() { Location = new GeoPoint(elem.LONGITUDE, elem.LATITUDE), Text = nbadherant.ToString() };
+                var pin = new MapPushpin() { Location = new GeoPoint(elem.LONGITUDE, elem.LATITUDE), Text = nbadherant.ToString() , Information = elem.LIB_REGION };
 
                 storeRegion.Items.Add(pin);
 
@@ -205,10 +237,11 @@ namespace testbackoffice7
                 //MessageBox.Show(cmp.ToString());
 
                 //vectorlayer.Data = storeRegion;
-
+            this.vectorlayerDepartement.Data = storeDepartement;
             this.vectorlayerLocal.Data = storeLocal;
             this.vectorlayerRegion.Data = storeRegion;
-            
+
+            this.vectorlayerDepartement.Visibility = System.Windows.Visibility.Hidden;
             this.vectorlayerLocal.Visibility = System.Windows.Visibility.Hidden;
             this.vectorlayerRegion.Visibility = System.Windows.Visibility.Visible;
         }
@@ -220,15 +253,131 @@ namespace testbackoffice7
             {
                 this.vectorlayerLocal.Visibility = System.Windows.Visibility.Visible;
                 this.vectorlayerRegion.Visibility = System.Windows.Visibility.Hidden;
+                this.vectorlayerDepartement.Visibility = System.Windows.Visibility.Hidden;
+            }
+            else if (mapctrl.ZoomLevel >=7  )
+            {
+                this.vectorlayerLocal.Visibility = System.Windows.Visibility.Hidden;
+                this.vectorlayerRegion.Visibility = System.Windows.Visibility.Hidden;
+                this.vectorlayerDepartement.Visibility = System.Windows.Visibility.Visible;
             }
             else
             {
                 this.vectorlayerLocal.Visibility = System.Windows.Visibility.Hidden;
                 this.vectorlayerRegion.Visibility = System.Windows.Visibility.Visible;
+                this.vectorlayerDepartement.Visibility = System.Windows.Visibility.Hidden;
+            }
+
+           //App.Current.Dispatcher.BeginInvoke(new Action(()=>{MessageBox.Show(mapctrl.ZoomLevel.ToString());}));
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (login.Text == "admin" && Utils.ConvertToUnsecureString(mdp.SecurePassword) == "admin" || Islogged == true) 
+            {
+                Islogged = true;
+                indictab.IsSelected = true;
+                
             }
             
         }
 
+        private void maintab_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           //App.Current.Dispatcher.BeginInvoke(new Action(()=>{ MessageBox.Show("toto");}));
+            if (Islogged == false) 
+            {
+                home.IsSelected = true;
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (Islogged == true) 
+            {
+                Islogged = false;
+                home.IsSelected = true;
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)//adherant table
+        {
+            try
+            {
+                adhesionTA.Update(dataset.ADHESION_DETAIL);
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            mapctrl.ZoomLevel = 5;
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            mapctrl.ZoomLevel = 7;
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            mapctrl.ZoomLevel = 9;
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            
+            int cmp = 0;
+            
+            foreach (MapPushpin elem in storeRegion.DisplayItems) 
+            {
+                if (elem.Information.ToString().ToUpper() == this.rechtext.Text.ToString()) 
+                {
+                    mapctrl.CenterPoint = elem.Location;
+                    mapctrl.ZoomLevel = 6.5f;
+                    cmp++;
+                }
+                
+            }
+            //MessageBox.Show(cmp.ToString());
+            if (cmp == 0) 
+            {
+                foreach (MapPushpin elem in storeDepartement.DisplayItems)
+                {
+                    if (elem.Information.ToString().ToUpper() == this.rechtext.Text.ToString())
+                    {
+                        mapctrl.CenterPoint = elem.Location;
+                        mapctrl.ZoomLevel = 8f;
+                        cmp++;
+                    }
+                    
+                }
+            }
+           // MessageBox.Show(cmp.ToString());
+            if (cmp == 0) 
+            {
+                foreach (MapPushpin elem in storeLocal.DisplayItems)
+                {
+                    if (elem.Information.ToString().ToUpper() == this.rechtext.Text.ToString())
+                    {
+                        mapctrl.CenterPoint = elem.Location;
+                        mapctrl.ZoomLevel = 11;
+                        cmp++;
+                    }
+                    
+                }
+            }
+            //MessageBox.Show(cmp.ToString());
+        }
+
+        
+
+        
        
        
 
@@ -262,4 +411,5 @@ namespace testbackoffice7
         //    return colorizer;
         //}
     }
+
 }
