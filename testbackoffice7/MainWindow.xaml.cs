@@ -336,7 +336,7 @@ namespace testbackoffice7
             
             foreach (MapPushpin elem in storeRegion.DisplayItems) 
             {
-                if (elem.Information.ToString().ToUpper() == this.rechtext.Text.ToString()) 
+                if (elem.Information.ToString().ToUpper() == this.rechtext.Text.ToString().ToUpper()) 
                 {
                     mapctrl.CenterPoint = elem.Location;
                     mapctrl.ZoomLevel = 6.5f;
@@ -349,7 +349,7 @@ namespace testbackoffice7
             {
                 foreach (MapPushpin elem in storeDepartement.DisplayItems)
                 {
-                    if (elem.Information.ToString().ToUpper() == this.rechtext.Text.ToString())
+                    if (elem.Information.ToString().ToUpper() == this.rechtext.Text.ToString().ToUpper())
                     {
                         mapctrl.CenterPoint = elem.Location;
                         mapctrl.ZoomLevel = 8f;
@@ -363,7 +363,7 @@ namespace testbackoffice7
             {
                 foreach (MapPushpin elem in storeLocal.DisplayItems)
                 {
-                    if (elem.Information.ToString().ToUpper() == this.rechtext.Text.ToString())
+                    if (elem.Information.ToString() == this.rechtext.Text.ToString().ToUpper())
                     {
                         mapctrl.CenterPoint = elem.Location;
                         mapctrl.ZoomLevel = 11;
