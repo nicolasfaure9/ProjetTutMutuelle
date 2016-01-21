@@ -2,42 +2,90 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:local="clr-namespace:testbackoffice7"
+        xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map" x:Class="testbackoffice7.MainWindow"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        Icon="tutmutlogo.ico"
+        dx:ThemeManager.ThemeName="Office2013"
         Loaded="Window_Loaded"
+        WindowState="Maximized"
         Title="MainWindow" Height="600" Width="800">
     <Grid>
-        <dragablz:TabablzControl >
+        
+        <dragablz:TabablzControl Panel.ZIndex="5"  >
             <dragablz:TabablzControl.InterTabController>
-                <dragablz:InterTabController  />
+                <dragablz:InterTabController/>
             </dragablz:TabablzControl.InterTabController>
+            
             <TabItem Header="BENEFICIAIRE" >
 
                 <DataGrid Margin="10" x:Name="benegrid" AutoGenerateColumns="True" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" />
 
             </TabItem>
             <TabItem Header="PRESTATION">
-                <dxm:MapControl x:Name="mapctrl" HorizontalAlignment="Stretch" ZoomLevel="6"    VerticalAlignment="Stretch">
-
-
+                <dxm:MapControl x:Name="mapctrl" HorizontalAlignment="Stretch" ZoomLevel="6"   VerticalAlignment="Stretch">
+                    
                     <dxm:ImageTilesLayer>
-                        <dxm:ImageTilesLayer.DataProvider>
-                            <dxm:OpenStreetMapDataProvider Kind="Basic" />
-                        </dxm:ImageTilesLayer.DataProvider>
+                        <dxm:BingMapDataProvider BingKey="Ag49VHLhaXRtH2qMVteFcCAYXyFUjj1d-sDDhO4oVffuwA2KISWHXCw1TCjx4suA" />
                     </dxm:ImageTilesLayer>
+                    <dxm:VectorLayer x:Name="vectorlayer" ViewportChanged="vectorlayer_ViewportChanged" >
+
+                    </dxm:VectorLayer>
+                    <dxm:VectorLayer x:Name="vectorlayerLocal" ViewportChanged="vectorlayer_ViewportChanged" >
+
+                    </dxm:VectorLayer>
+                    <dxm:VectorLayer x:Name="vectorlayerRegion" ViewportChanged="vectorlayer_ViewportChanged" >
+
+                    </dxm:VectorLayer>
+                    <dxm:VectorLayer x:Name="vectorlayerDepartement" ViewportChanged="vectorlayer_ViewportChanged" >
+
+                    </dxm:VectorLayer>
                 </dxm:MapControl>
             </TabItem>
-            <TabItem Header="REGIONS">
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Looks Quite Nice"/></TextBlock>
+            <TabItem Header="REGIONS" >
+                <local:Charts HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
             </TabItem>
             <TabItem Header="DEPARTEMENT">
-                <dxc:ChartControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  >
-                    <dxc:XYDiagram2D x:Name="diagrammeregion">
-                        <dxc:BarSideBySideSeries2D x:Name="histo" DisplayName="regions"/>
-
-                    </dxc:XYDiagram2D>
-
-
-                </dxc:ChartControl>
+                <ScrollViewer>
+                <StackPanel Orientation="Vertical">
+                    <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="10"  >
+                        <dxc:XYDiagram2D x:Name="diagrammeregion">
+                            <dxc:BarSideBySideSeries2D x:Name="histo" DisplayName="regions"/>
+                        </dxc:XYDiagram2D>
+                    </dxc:ChartControl>
+                    <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10" >
+                        <dxc:XYDiagram2D x:Name="diagrammeregion2">
+                            <dxc:BarSideBySideSeries2D x:Name="histo2" DisplayName="regions"/>
+                        </dxc:XYDiagram2D>
+                    </dxc:ChartControl>
+                    <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10" >
+                        <dxc:XYDiagram2D x:Name="diagrammeregion3">
+                            <dxc:BarSideBySideSeries2D x:Name="histo3" DisplayName="regions"/>
+                        </dxc:XYDiagram2D>
+                    </dxc:ChartControl>
+                    <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10" >
+                        <dxc:XYDiagram2D x:Name="diagrammeregion4">
+                            <dxc:BarSideBySideSeries2D x:Name="histo4" DisplayName="regions" />
+                        </dxc:XYDiagram2D>
+                    </dxc:ChartControl>
+                </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="ANALITICS">
+                <dragablz:TabablzControl>
+                    <dragablz:TabablzControl.InterTabController>
+                        <dragablz:InterTabController/>
+                    </dragablz:TabablzControl.InterTabController>
+                    <TabItem Header="HOTJAR">
+                        <cefSharp:ChromiumWebBrowser x:Name="hotjar" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Address="https://insights.hotjar.com/login"/>
+                    </TabItem>
+                    <TabItem Header="GOOGLE ANALITICS">
+                        <cefSharp:ChromiumWebBrowser x:Name="google" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Address="https://www.google.fr/intl/fr/analytics/"/>
+                    </TabItem>
+                </dragablz:TabablzControl>
+                
             </TabItem>
             
         </dragablz:TabablzControl>

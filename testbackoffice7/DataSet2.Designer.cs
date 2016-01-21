@@ -34,6 +34,10 @@ namespace testbackoffice7 {
         
         private REGIONSDataTable tableREGIONS;
         
+        private VILLESDataTable tableVILLES;
+        
+        private NBADHLOCATIONDataTable tableNBADHLOCATION;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -76,6 +80,12 @@ namespace testbackoffice7 {
                 }
                 if ((ds.Tables["REGIONS"] != null)) {
                     base.Tables.Add(new REGIONSDataTable(ds.Tables["REGIONS"]));
+                }
+                if ((ds.Tables["VILLES"] != null)) {
+                    base.Tables.Add(new VILLESDataTable(ds.Tables["VILLES"]));
+                }
+                if ((ds.Tables["NBADHLOCATION"] != null)) {
+                    base.Tables.Add(new NBADHLOCATIONDataTable(ds.Tables["NBADHLOCATION"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -142,6 +152,26 @@ namespace testbackoffice7 {
         public REGIONSDataTable REGIONS {
             get {
                 return this.tableREGIONS;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VILLESDataTable VILLES {
+            get {
+                return this.tableVILLES;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public NBADHLOCATIONDataTable NBADHLOCATION {
+            get {
+                return this.tableNBADHLOCATION;
             }
         }
         
@@ -227,6 +257,12 @@ namespace testbackoffice7 {
                 if ((ds.Tables["REGIONS"] != null)) {
                     base.Tables.Add(new REGIONSDataTable(ds.Tables["REGIONS"]));
                 }
+                if ((ds.Tables["VILLES"] != null)) {
+                    base.Tables.Add(new VILLESDataTable(ds.Tables["VILLES"]));
+                }
+                if ((ds.Tables["NBADHLOCATION"] != null)) {
+                    base.Tables.Add(new NBADHLOCATIONDataTable(ds.Tables["NBADHLOCATION"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -290,6 +326,18 @@ namespace testbackoffice7 {
                     this.tableREGIONS.InitVars();
                 }
             }
+            this.tableVILLES = ((VILLESDataTable)(base.Tables["VILLES"]));
+            if ((initTable == true)) {
+                if ((this.tableVILLES != null)) {
+                    this.tableVILLES.InitVars();
+                }
+            }
+            this.tableNBADHLOCATION = ((NBADHLOCATIONDataTable)(base.Tables["NBADHLOCATION"]));
+            if ((initTable == true)) {
+                if ((this.tableNBADHLOCATION != null)) {
+                    this.tableNBADHLOCATION.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -310,6 +358,10 @@ namespace testbackoffice7 {
             base.Tables.Add(this.tablePRESTATIONS_SANTE);
             this.tableREGIONS = new REGIONSDataTable();
             base.Tables.Add(this.tableREGIONS);
+            this.tableVILLES = new VILLESDataTable();
+            base.Tables.Add(this.tableVILLES);
+            this.tableNBADHLOCATION = new NBADHLOCATIONDataTable();
+            base.Tables.Add(this.tableNBADHLOCATION);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -339,6 +391,18 @@ namespace testbackoffice7 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeREGIONS() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeVILLES() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeNBADHLOCATION() {
             return false;
         }
         
@@ -411,6 +475,12 @@ namespace testbackoffice7 {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void REGIONSRowChangeEventHandler(object sender, REGIONSRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void VILLESRowChangeEventHandler(object sender, VILLESRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void NBADHLOCATIONRowChangeEventHandler(object sender, NBADHLOCATIONRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -902,6 +972,8 @@ namespace testbackoffice7 {
             
             private global::System.Data.DataColumn columnUSR_NAME;
             
+            private global::System.Data.DataColumn columnPRENOM;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public BENEFICIAIREDataTable() {
@@ -1001,6 +1073,14 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PRENOMColumn {
+                get {
+                    return this.columnPRENOM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1036,7 +1116,7 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BENEFICIAIRERow AddBENEFICIAIRERow(decimal NUM, string SEXE, string REGIME_SOCIAL, System.DateTime DATE_NAISSANCE_BENEFICIAIRE, string USR_PASSWORD, string USR_SALT, string USR_ROLE, string USR_NAME) {
+            public BENEFICIAIRERow AddBENEFICIAIRERow(decimal NUM, string SEXE, string REGIME_SOCIAL, System.DateTime DATE_NAISSANCE_BENEFICIAIRE, string USR_PASSWORD, string USR_SALT, string USR_ROLE, string USR_NAME, string PRENOM) {
                 BENEFICIAIRERow rowBENEFICIAIRERow = ((BENEFICIAIRERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NUM,
@@ -1046,7 +1126,8 @@ namespace testbackoffice7 {
                         USR_PASSWORD,
                         USR_SALT,
                         USR_ROLE,
-                        USR_NAME};
+                        USR_NAME,
+                        PRENOM};
                 rowBENEFICIAIRERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBENEFICIAIRERow);
                 return rowBENEFICIAIRERow;
@@ -1084,6 +1165,7 @@ namespace testbackoffice7 {
                 this.columnUSR_SALT = base.Columns["USR_SALT"];
                 this.columnUSR_ROLE = base.Columns["USR_ROLE"];
                 this.columnUSR_NAME = base.Columns["USR_NAME"];
+                this.columnPRENOM = base.Columns["PRENOM"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1105,6 +1187,8 @@ namespace testbackoffice7 {
                 base.Columns.Add(this.columnUSR_ROLE);
                 this.columnUSR_NAME = new global::System.Data.DataColumn("USR_NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUSR_NAME);
+                this.columnPRENOM = new global::System.Data.DataColumn("PRENOM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRENOM);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNUM}, true));
                 this.columnNUM.AllowDBNull = false;
@@ -1115,6 +1199,7 @@ namespace testbackoffice7 {
                 this.columnUSR_SALT.MaxLength = 23;
                 this.columnUSR_ROLE.MaxLength = 50;
                 this.columnUSR_NAME.MaxLength = 50;
+                this.columnPRENOM.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1254,6 +1339,10 @@ namespace testbackoffice7 {
             
             private global::System.Data.DataColumn columnLIB_DEPARTEMENT;
             
+            private global::System.Data.DataColumn columnLONGITUDE;
+            
+            private global::System.Data.DataColumn columnLATITUDE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DEPARTEMENTSDataTable() {
@@ -1313,6 +1402,22 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LONGITUDEColumn {
+                get {
+                    return this.columnLONGITUDE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LATITUDEColumn {
+                get {
+                    return this.columnLATITUDE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1348,12 +1453,14 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DEPARTEMENTSRow AddDEPARTEMENTSRow(string NUM_DEPARTEMENT, decimal NUM_REGION, string LIB_DEPARTEMENT) {
+            public DEPARTEMENTSRow AddDEPARTEMENTSRow(string NUM_DEPARTEMENT, decimal NUM_REGION, string LIB_DEPARTEMENT, long LONGITUDE, long LATITUDE) {
                 DEPARTEMENTSRow rowDEPARTEMENTSRow = ((DEPARTEMENTSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NUM_DEPARTEMENT,
                         NUM_REGION,
-                        LIB_DEPARTEMENT};
+                        LIB_DEPARTEMENT,
+                        LONGITUDE,
+                        LATITUDE};
                 rowDEPARTEMENTSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDEPARTEMENTSRow);
                 return rowDEPARTEMENTSRow;
@@ -1386,6 +1493,8 @@ namespace testbackoffice7 {
                 this.columnNUM_DEPARTEMENT = base.Columns["NUM_DEPARTEMENT"];
                 this.columnNUM_REGION = base.Columns["NUM_REGION"];
                 this.columnLIB_DEPARTEMENT = base.Columns["LIB_DEPARTEMENT"];
+                this.columnLONGITUDE = base.Columns["LONGITUDE"];
+                this.columnLATITUDE = base.Columns["LATITUDE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1397,6 +1506,10 @@ namespace testbackoffice7 {
                 base.Columns.Add(this.columnNUM_REGION);
                 this.columnLIB_DEPARTEMENT = new global::System.Data.DataColumn("LIB_DEPARTEMENT", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLIB_DEPARTEMENT);
+                this.columnLONGITUDE = new global::System.Data.DataColumn("LONGITUDE", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLONGITUDE);
+                this.columnLATITUDE = new global::System.Data.DataColumn("LATITUDE", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLATITUDE);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNUM_DEPARTEMENT}, true));
                 this.columnNUM_DEPARTEMENT.AllowDBNull = false;
@@ -1568,6 +1681,10 @@ namespace testbackoffice7 {
             
             private global::System.Data.DataColumn columnMONTANT_REMBOURSE;
             
+            private global::System.Data.DataColumn columnDATE_SOINS;
+            
+            private global::System.Data.DataColumn columnDATE_PAIEMENT;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PRESTATIONS_SANTEDataTable() {
@@ -1731,6 +1848,22 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DATE_SOINSColumn {
+                get {
+                    return this.columnDATE_SOINS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DATE_PAIEMENTColumn {
+                get {
+                    return this.columnDATE_PAIEMENT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1782,7 +1915,9 @@ namespace testbackoffice7 {
                         decimal ANNEE_PAIEMENT, 
                         decimal FRAIS_REEL_ASSURE, 
                         decimal MONTANT_SECU, 
-                        decimal MONTANT_REMBOURSE) {
+                        decimal MONTANT_REMBOURSE, 
+                        string DATE_SOINS, 
+                        string DATE_PAIEMENT) {
                 PRESTATIONS_SANTERow rowPRESTATIONS_SANTERow = ((PRESTATIONS_SANTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NUM_SINISTRE,
@@ -1800,7 +1935,9 @@ namespace testbackoffice7 {
                         ANNEE_PAIEMENT,
                         FRAIS_REEL_ASSURE,
                         MONTANT_SECU,
-                        MONTANT_REMBOURSE};
+                        MONTANT_REMBOURSE,
+                        DATE_SOINS,
+                        DATE_PAIEMENT};
                 rowPRESTATIONS_SANTERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPRESTATIONS_SANTERow);
                 return rowPRESTATIONS_SANTERow;
@@ -1846,6 +1983,8 @@ namespace testbackoffice7 {
                 this.columnFRAIS_REEL_ASSURE = base.Columns["FRAIS_REEL_ASSURE"];
                 this.columnMONTANT_SECU = base.Columns["MONTANT_SECU"];
                 this.columnMONTANT_REMBOURSE = base.Columns["MONTANT_REMBOURSE"];
+                this.columnDATE_SOINS = base.Columns["DATE_SOINS"];
+                this.columnDATE_PAIEMENT = base.Columns["DATE_PAIEMENT"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1883,6 +2022,10 @@ namespace testbackoffice7 {
                 base.Columns.Add(this.columnMONTANT_SECU);
                 this.columnMONTANT_REMBOURSE = new global::System.Data.DataColumn("MONTANT_REMBOURSE", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMONTANT_REMBOURSE);
+                this.columnDATE_SOINS = new global::System.Data.DataColumn("DATE_SOINS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATE_SOINS);
+                this.columnDATE_PAIEMENT = new global::System.Data.DataColumn("DATE_PAIEMENT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATE_PAIEMENT);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNUM_SINISTRE}, true));
                 this.columnNUM_SINISTRE.AllowDBNull = false;
@@ -1894,6 +2037,8 @@ namespace testbackoffice7 {
                 this.columnMOIS_DEBUT_SOINS.MaxLength = 2;
                 this.columnJOUR_PAIEMENT.MaxLength = 2;
                 this.columnMOIS_PAIEMENT.MaxLength = 2;
+                this.columnDATE_SOINS.MaxLength = 10;
+                this.columnDATE_PAIEMENT.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2031,6 +2176,10 @@ namespace testbackoffice7 {
             
             private global::System.Data.DataColumn columnLIB_REGION;
             
+            private global::System.Data.DataColumn columnLATITUDE;
+            
+            private global::System.Data.DataColumn columnLONGITUDE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public REGIONSDataTable() {
@@ -2082,6 +2231,22 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LATITUDEColumn {
+                get {
+                    return this.columnLATITUDE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LONGITUDEColumn {
+                get {
+                    return this.columnLONGITUDE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2117,11 +2282,13 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public REGIONSRow AddREGIONSRow(decimal NUM_REGION, string LIB_REGION) {
+            public REGIONSRow AddREGIONSRow(decimal NUM_REGION, string LIB_REGION, long LATITUDE, long LONGITUDE) {
                 REGIONSRow rowREGIONSRow = ((REGIONSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NUM_REGION,
-                        LIB_REGION};
+                        LIB_REGION,
+                        LATITUDE,
+                        LONGITUDE};
                 rowREGIONSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowREGIONSRow);
                 return rowREGIONSRow;
@@ -2153,6 +2320,8 @@ namespace testbackoffice7 {
             internal void InitVars() {
                 this.columnNUM_REGION = base.Columns["NUM_REGION"];
                 this.columnLIB_REGION = base.Columns["LIB_REGION"];
+                this.columnLATITUDE = base.Columns["LATITUDE"];
+                this.columnLONGITUDE = base.Columns["LONGITUDE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2162,11 +2331,17 @@ namespace testbackoffice7 {
                 base.Columns.Add(this.columnNUM_REGION);
                 this.columnLIB_REGION = new global::System.Data.DataColumn("LIB_REGION", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLIB_REGION);
+                this.columnLATITUDE = new global::System.Data.DataColumn("LATITUDE", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLATITUDE);
+                this.columnLONGITUDE = new global::System.Data.DataColumn("LONGITUDE", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLONGITUDE);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNUM_REGION}, true));
                 this.columnNUM_REGION.AllowDBNull = false;
                 this.columnNUM_REGION.Unique = true;
                 this.columnLIB_REGION.MaxLength = 50;
+                this.columnLATITUDE.AllowDBNull = false;
+                this.columnLONGITUDE.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2253,6 +2428,946 @@ namespace testbackoffice7 {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "REGIONSDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VILLESDataTable : global::System.Data.TypedTableBase<VILLESRow> {
+            
+            private global::System.Data.DataColumn columnVILLE_ID;
+            
+            private global::System.Data.DataColumn columnVILLE_DEPARTEMENT;
+            
+            private global::System.Data.DataColumn columnVILLE_SLUG;
+            
+            private global::System.Data.DataColumn columnVILLE_NOM;
+            
+            private global::System.Data.DataColumn columnVILLE_NOM_SIMPLE;
+            
+            private global::System.Data.DataColumn columnVILLE_NOM_REEL;
+            
+            private global::System.Data.DataColumn columnVILLE_NOM_SOUNDEX;
+            
+            private global::System.Data.DataColumn columnVILLE_NOM_METAPHONE;
+            
+            private global::System.Data.DataColumn columnVILLE_CODE_POSTAL;
+            
+            private global::System.Data.DataColumn columnVILLE_COMMUNE;
+            
+            private global::System.Data.DataColumn columnVILLE_CODE_COMMUNE;
+            
+            private global::System.Data.DataColumn columnVILLE_ARRONDISSEMENT;
+            
+            private global::System.Data.DataColumn columnVILLE_CANTON;
+            
+            private global::System.Data.DataColumn columnVILLE_AMDI;
+            
+            private global::System.Data.DataColumn columnVILLE_POPULATION_2010;
+            
+            private global::System.Data.DataColumn columnVILLE_POPULATION_1999;
+            
+            private global::System.Data.DataColumn columnVILLE_POPULATION_2012;
+            
+            private global::System.Data.DataColumn columnVILLE_DENSITE_2010;
+            
+            private global::System.Data.DataColumn columnVILLE_SURFACE;
+            
+            private global::System.Data.DataColumn columnVILLE_LONGITUDE_DEG;
+            
+            private global::System.Data.DataColumn columnVILLE_LATITUDE_DEG;
+            
+            private global::System.Data.DataColumn columnVILLE_LONGITUDE_GRD;
+            
+            private global::System.Data.DataColumn columnVILLE_LATITUDE_GRD;
+            
+            private global::System.Data.DataColumn columnVILLE_LONGITUDE_DMS;
+            
+            private global::System.Data.DataColumn columnVILLE_LATITUDE_DMS;
+            
+            private global::System.Data.DataColumn columnVILLE_ZMIN;
+            
+            private global::System.Data.DataColumn columnVILLE_ZMAX;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VILLESDataTable() {
+                this.TableName = "VILLES";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VILLESDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected VILLESDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_IDColumn {
+                get {
+                    return this.columnVILLE_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_DEPARTEMENTColumn {
+                get {
+                    return this.columnVILLE_DEPARTEMENT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_SLUGColumn {
+                get {
+                    return this.columnVILLE_SLUG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_NOMColumn {
+                get {
+                    return this.columnVILLE_NOM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_NOM_SIMPLEColumn {
+                get {
+                    return this.columnVILLE_NOM_SIMPLE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_NOM_REELColumn {
+                get {
+                    return this.columnVILLE_NOM_REEL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_NOM_SOUNDEXColumn {
+                get {
+                    return this.columnVILLE_NOM_SOUNDEX;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_NOM_METAPHONEColumn {
+                get {
+                    return this.columnVILLE_NOM_METAPHONE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_CODE_POSTALColumn {
+                get {
+                    return this.columnVILLE_CODE_POSTAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_COMMUNEColumn {
+                get {
+                    return this.columnVILLE_COMMUNE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_CODE_COMMUNEColumn {
+                get {
+                    return this.columnVILLE_CODE_COMMUNE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_ARRONDISSEMENTColumn {
+                get {
+                    return this.columnVILLE_ARRONDISSEMENT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_CANTONColumn {
+                get {
+                    return this.columnVILLE_CANTON;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_AMDIColumn {
+                get {
+                    return this.columnVILLE_AMDI;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_POPULATION_2010Column {
+                get {
+                    return this.columnVILLE_POPULATION_2010;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_POPULATION_1999Column {
+                get {
+                    return this.columnVILLE_POPULATION_1999;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_POPULATION_2012Column {
+                get {
+                    return this.columnVILLE_POPULATION_2012;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_DENSITE_2010Column {
+                get {
+                    return this.columnVILLE_DENSITE_2010;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_SURFACEColumn {
+                get {
+                    return this.columnVILLE_SURFACE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_LONGITUDE_DEGColumn {
+                get {
+                    return this.columnVILLE_LONGITUDE_DEG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_LATITUDE_DEGColumn {
+                get {
+                    return this.columnVILLE_LATITUDE_DEG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_LONGITUDE_GRDColumn {
+                get {
+                    return this.columnVILLE_LONGITUDE_GRD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_LATITUDE_GRDColumn {
+                get {
+                    return this.columnVILLE_LATITUDE_GRD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_LONGITUDE_DMSColumn {
+                get {
+                    return this.columnVILLE_LONGITUDE_DMS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_LATITUDE_DMSColumn {
+                get {
+                    return this.columnVILLE_LATITUDE_DMS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_ZMINColumn {
+                get {
+                    return this.columnVILLE_ZMIN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_ZMAXColumn {
+                get {
+                    return this.columnVILLE_ZMAX;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VILLESRow this[int index] {
+                get {
+                    return ((VILLESRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VILLESRowChangeEventHandler VILLESRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VILLESRowChangeEventHandler VILLESRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VILLESRowChangeEventHandler VILLESRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event VILLESRowChangeEventHandler VILLESRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddVILLESRow(VILLESRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VILLESRow AddVILLESRow(
+                        decimal VILLE_ID, 
+                        string VILLE_DEPARTEMENT, 
+                        string VILLE_SLUG, 
+                        string VILLE_NOM, 
+                        string VILLE_NOM_SIMPLE, 
+                        string VILLE_NOM_REEL, 
+                        string VILLE_NOM_SOUNDEX, 
+                        string VILLE_NOM_METAPHONE, 
+                        string VILLE_CODE_POSTAL, 
+                        string VILLE_COMMUNE, 
+                        string VILLE_CODE_COMMUNE, 
+                        decimal VILLE_ARRONDISSEMENT, 
+                        string VILLE_CANTON, 
+                        decimal VILLE_AMDI, 
+                        decimal VILLE_POPULATION_2010, 
+                        decimal VILLE_POPULATION_1999, 
+                        decimal VILLE_POPULATION_2012, 
+                        decimal VILLE_DENSITE_2010, 
+                        decimal VILLE_SURFACE, 
+                        decimal VILLE_LONGITUDE_DEG, 
+                        decimal VILLE_LATITUDE_DEG, 
+                        string VILLE_LONGITUDE_GRD, 
+                        string VILLE_LATITUDE_GRD, 
+                        string VILLE_LONGITUDE_DMS, 
+                        string VILLE_LATITUDE_DMS, 
+                        decimal VILLE_ZMIN, 
+                        decimal VILLE_ZMAX) {
+                VILLESRow rowVILLESRow = ((VILLESRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        VILLE_ID,
+                        VILLE_DEPARTEMENT,
+                        VILLE_SLUG,
+                        VILLE_NOM,
+                        VILLE_NOM_SIMPLE,
+                        VILLE_NOM_REEL,
+                        VILLE_NOM_SOUNDEX,
+                        VILLE_NOM_METAPHONE,
+                        VILLE_CODE_POSTAL,
+                        VILLE_COMMUNE,
+                        VILLE_CODE_COMMUNE,
+                        VILLE_ARRONDISSEMENT,
+                        VILLE_CANTON,
+                        VILLE_AMDI,
+                        VILLE_POPULATION_2010,
+                        VILLE_POPULATION_1999,
+                        VILLE_POPULATION_2012,
+                        VILLE_DENSITE_2010,
+                        VILLE_SURFACE,
+                        VILLE_LONGITUDE_DEG,
+                        VILLE_LATITUDE_DEG,
+                        VILLE_LONGITUDE_GRD,
+                        VILLE_LATITUDE_GRD,
+                        VILLE_LONGITUDE_DMS,
+                        VILLE_LATITUDE_DMS,
+                        VILLE_ZMIN,
+                        VILLE_ZMAX};
+                rowVILLESRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVILLESRow);
+                return rowVILLESRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VILLESRow FindByVILLE_ID(decimal VILLE_ID) {
+                return ((VILLESRow)(this.Rows.Find(new object[] {
+                            VILLE_ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VILLESDataTable cln = ((VILLESDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VILLESDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnVILLE_ID = base.Columns["VILLE_ID"];
+                this.columnVILLE_DEPARTEMENT = base.Columns["VILLE_DEPARTEMENT"];
+                this.columnVILLE_SLUG = base.Columns["VILLE_SLUG"];
+                this.columnVILLE_NOM = base.Columns["VILLE_NOM"];
+                this.columnVILLE_NOM_SIMPLE = base.Columns["VILLE_NOM_SIMPLE"];
+                this.columnVILLE_NOM_REEL = base.Columns["VILLE_NOM_REEL"];
+                this.columnVILLE_NOM_SOUNDEX = base.Columns["VILLE_NOM_SOUNDEX"];
+                this.columnVILLE_NOM_METAPHONE = base.Columns["VILLE_NOM_METAPHONE"];
+                this.columnVILLE_CODE_POSTAL = base.Columns["VILLE_CODE_POSTAL"];
+                this.columnVILLE_COMMUNE = base.Columns["VILLE_COMMUNE"];
+                this.columnVILLE_CODE_COMMUNE = base.Columns["VILLE_CODE_COMMUNE"];
+                this.columnVILLE_ARRONDISSEMENT = base.Columns["VILLE_ARRONDISSEMENT"];
+                this.columnVILLE_CANTON = base.Columns["VILLE_CANTON"];
+                this.columnVILLE_AMDI = base.Columns["VILLE_AMDI"];
+                this.columnVILLE_POPULATION_2010 = base.Columns["VILLE_POPULATION_2010"];
+                this.columnVILLE_POPULATION_1999 = base.Columns["VILLE_POPULATION_1999"];
+                this.columnVILLE_POPULATION_2012 = base.Columns["VILLE_POPULATION_2012"];
+                this.columnVILLE_DENSITE_2010 = base.Columns["VILLE_DENSITE_2010"];
+                this.columnVILLE_SURFACE = base.Columns["VILLE_SURFACE"];
+                this.columnVILLE_LONGITUDE_DEG = base.Columns["VILLE_LONGITUDE_DEG"];
+                this.columnVILLE_LATITUDE_DEG = base.Columns["VILLE_LATITUDE_DEG"];
+                this.columnVILLE_LONGITUDE_GRD = base.Columns["VILLE_LONGITUDE_GRD"];
+                this.columnVILLE_LATITUDE_GRD = base.Columns["VILLE_LATITUDE_GRD"];
+                this.columnVILLE_LONGITUDE_DMS = base.Columns["VILLE_LONGITUDE_DMS"];
+                this.columnVILLE_LATITUDE_DMS = base.Columns["VILLE_LATITUDE_DMS"];
+                this.columnVILLE_ZMIN = base.Columns["VILLE_ZMIN"];
+                this.columnVILLE_ZMAX = base.Columns["VILLE_ZMAX"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnVILLE_ID = new global::System.Data.DataColumn("VILLE_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_ID);
+                this.columnVILLE_DEPARTEMENT = new global::System.Data.DataColumn("VILLE_DEPARTEMENT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_DEPARTEMENT);
+                this.columnVILLE_SLUG = new global::System.Data.DataColumn("VILLE_SLUG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_SLUG);
+                this.columnVILLE_NOM = new global::System.Data.DataColumn("VILLE_NOM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_NOM);
+                this.columnVILLE_NOM_SIMPLE = new global::System.Data.DataColumn("VILLE_NOM_SIMPLE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_NOM_SIMPLE);
+                this.columnVILLE_NOM_REEL = new global::System.Data.DataColumn("VILLE_NOM_REEL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_NOM_REEL);
+                this.columnVILLE_NOM_SOUNDEX = new global::System.Data.DataColumn("VILLE_NOM_SOUNDEX", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_NOM_SOUNDEX);
+                this.columnVILLE_NOM_METAPHONE = new global::System.Data.DataColumn("VILLE_NOM_METAPHONE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_NOM_METAPHONE);
+                this.columnVILLE_CODE_POSTAL = new global::System.Data.DataColumn("VILLE_CODE_POSTAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_CODE_POSTAL);
+                this.columnVILLE_COMMUNE = new global::System.Data.DataColumn("VILLE_COMMUNE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_COMMUNE);
+                this.columnVILLE_CODE_COMMUNE = new global::System.Data.DataColumn("VILLE_CODE_COMMUNE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_CODE_COMMUNE);
+                this.columnVILLE_ARRONDISSEMENT = new global::System.Data.DataColumn("VILLE_ARRONDISSEMENT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_ARRONDISSEMENT);
+                this.columnVILLE_CANTON = new global::System.Data.DataColumn("VILLE_CANTON", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_CANTON);
+                this.columnVILLE_AMDI = new global::System.Data.DataColumn("VILLE_AMDI", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_AMDI);
+                this.columnVILLE_POPULATION_2010 = new global::System.Data.DataColumn("VILLE_POPULATION_2010", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_POPULATION_2010);
+                this.columnVILLE_POPULATION_1999 = new global::System.Data.DataColumn("VILLE_POPULATION_1999", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_POPULATION_1999);
+                this.columnVILLE_POPULATION_2012 = new global::System.Data.DataColumn("VILLE_POPULATION_2012", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_POPULATION_2012);
+                this.columnVILLE_DENSITE_2010 = new global::System.Data.DataColumn("VILLE_DENSITE_2010", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_DENSITE_2010);
+                this.columnVILLE_SURFACE = new global::System.Data.DataColumn("VILLE_SURFACE", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_SURFACE);
+                this.columnVILLE_LONGITUDE_DEG = new global::System.Data.DataColumn("VILLE_LONGITUDE_DEG", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_LONGITUDE_DEG);
+                this.columnVILLE_LATITUDE_DEG = new global::System.Data.DataColumn("VILLE_LATITUDE_DEG", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_LATITUDE_DEG);
+                this.columnVILLE_LONGITUDE_GRD = new global::System.Data.DataColumn("VILLE_LONGITUDE_GRD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_LONGITUDE_GRD);
+                this.columnVILLE_LATITUDE_GRD = new global::System.Data.DataColumn("VILLE_LATITUDE_GRD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_LATITUDE_GRD);
+                this.columnVILLE_LONGITUDE_DMS = new global::System.Data.DataColumn("VILLE_LONGITUDE_DMS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_LONGITUDE_DMS);
+                this.columnVILLE_LATITUDE_DMS = new global::System.Data.DataColumn("VILLE_LATITUDE_DMS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_LATITUDE_DMS);
+                this.columnVILLE_ZMIN = new global::System.Data.DataColumn("VILLE_ZMIN", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_ZMIN);
+                this.columnVILLE_ZMAX = new global::System.Data.DataColumn("VILLE_ZMAX", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_ZMAX);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnVILLE_ID}, true));
+                this.columnVILLE_ID.AllowDBNull = false;
+                this.columnVILLE_ID.Unique = true;
+                this.columnVILLE_DEPARTEMENT.MaxLength = 3;
+                this.columnVILLE_SLUG.MaxLength = 255;
+                this.columnVILLE_NOM.MaxLength = 45;
+                this.columnVILLE_NOM_SIMPLE.MaxLength = 45;
+                this.columnVILLE_NOM_REEL.MaxLength = 45;
+                this.columnVILLE_NOM_SOUNDEX.MaxLength = 20;
+                this.columnVILLE_NOM_METAPHONE.MaxLength = 22;
+                this.columnVILLE_CODE_POSTAL.MaxLength = 255;
+                this.columnVILLE_COMMUNE.MaxLength = 3;
+                this.columnVILLE_CODE_COMMUNE.AllowDBNull = false;
+                this.columnVILLE_CODE_COMMUNE.MaxLength = 5;
+                this.columnVILLE_CANTON.MaxLength = 4;
+                this.columnVILLE_LONGITUDE_GRD.MaxLength = 9;
+                this.columnVILLE_LATITUDE_GRD.MaxLength = 8;
+                this.columnVILLE_LONGITUDE_DMS.MaxLength = 9;
+                this.columnVILLE_LATITUDE_DMS.MaxLength = 8;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VILLESRow NewVILLESRow() {
+                return ((VILLESRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VILLESRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VILLESRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VILLESRowChanged != null)) {
+                    this.VILLESRowChanged(this, new VILLESRowChangeEvent(((VILLESRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VILLESRowChanging != null)) {
+                    this.VILLESRowChanging(this, new VILLESRowChangeEvent(((VILLESRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VILLESRowDeleted != null)) {
+                    this.VILLESRowDeleted(this, new VILLESRowChangeEvent(((VILLESRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VILLESRowDeleting != null)) {
+                    this.VILLESRowDeleting(this, new VILLESRowChangeEvent(((VILLESRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveVILLESRow(VILLESRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSet2 ds = new DataSet2();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VILLESDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class NBADHLOCATIONDataTable : global::System.Data.TypedTableBase<NBADHLOCATIONRow> {
+            
+            private global::System.Data.DataColumn columnNB_ADH;
+            
+            private global::System.Data.DataColumn columnVILLE_LATITUDE_DEG;
+            
+            private global::System.Data.DataColumn columnVILLE_LONGITUDE_DEG;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public NBADHLOCATIONDataTable() {
+                this.TableName = "NBADHLOCATION";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal NBADHLOCATIONDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected NBADHLOCATIONDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NB_ADHColumn {
+                get {
+                    return this.columnNB_ADH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_LATITUDE_DEGColumn {
+                get {
+                    return this.columnVILLE_LATITUDE_DEG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VILLE_LONGITUDE_DEGColumn {
+                get {
+                    return this.columnVILLE_LONGITUDE_DEG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public NBADHLOCATIONRow this[int index] {
+                get {
+                    return ((NBADHLOCATIONRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event NBADHLOCATIONRowChangeEventHandler NBADHLOCATIONRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event NBADHLOCATIONRowChangeEventHandler NBADHLOCATIONRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event NBADHLOCATIONRowChangeEventHandler NBADHLOCATIONRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event NBADHLOCATIONRowChangeEventHandler NBADHLOCATIONRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddNBADHLOCATIONRow(NBADHLOCATIONRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public NBADHLOCATIONRow AddNBADHLOCATIONRow(decimal NB_ADH, decimal VILLE_LATITUDE_DEG, decimal VILLE_LONGITUDE_DEG) {
+                NBADHLOCATIONRow rowNBADHLOCATIONRow = ((NBADHLOCATIONRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        NB_ADH,
+                        VILLE_LATITUDE_DEG,
+                        VILLE_LONGITUDE_DEG};
+                rowNBADHLOCATIONRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowNBADHLOCATIONRow);
+                return rowNBADHLOCATIONRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                NBADHLOCATIONDataTable cln = ((NBADHLOCATIONDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new NBADHLOCATIONDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnNB_ADH = base.Columns["NB_ADH"];
+                this.columnVILLE_LATITUDE_DEG = base.Columns["VILLE_LATITUDE_DEG"];
+                this.columnVILLE_LONGITUDE_DEG = base.Columns["VILLE_LONGITUDE_DEG"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnNB_ADH = new global::System.Data.DataColumn("NB_ADH", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNB_ADH);
+                this.columnVILLE_LATITUDE_DEG = new global::System.Data.DataColumn("VILLE_LATITUDE_DEG", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_LATITUDE_DEG);
+                this.columnVILLE_LONGITUDE_DEG = new global::System.Data.DataColumn("VILLE_LONGITUDE_DEG", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVILLE_LONGITUDE_DEG);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public NBADHLOCATIONRow NewNBADHLOCATIONRow() {
+                return ((NBADHLOCATIONRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new NBADHLOCATIONRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(NBADHLOCATIONRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.NBADHLOCATIONRowChanged != null)) {
+                    this.NBADHLOCATIONRowChanged(this, new NBADHLOCATIONRowChangeEvent(((NBADHLOCATIONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.NBADHLOCATIONRowChanging != null)) {
+                    this.NBADHLOCATIONRowChanging(this, new NBADHLOCATIONRowChangeEvent(((NBADHLOCATIONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.NBADHLOCATIONRowDeleted != null)) {
+                    this.NBADHLOCATIONRowDeleted(this, new NBADHLOCATIONRowChangeEvent(((NBADHLOCATIONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.NBADHLOCATIONRowDeleting != null)) {
+                    this.NBADHLOCATIONRowDeleting(this, new NBADHLOCATIONRowChangeEvent(((NBADHLOCATIONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveNBADHLOCATIONRow(NBADHLOCATIONRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSet2 ds = new DataSet2();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "NBADHLOCATIONDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2830,6 +3945,22 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PRENOM {
+                get {
+                    try {
+                        return ((string)(this[this.tableBENEFICIAIRE.PRENOMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'PRENOM\' dans la table \'BENEFICIAIRE\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBENEFICIAIRE.PRENOMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSEXENull() {
                 return this.IsNull(this.tableBENEFICIAIRE.SEXEColumn);
             }
@@ -2911,6 +4042,18 @@ namespace testbackoffice7 {
             public void SetUSR_NAMENull() {
                 this[this.tableBENEFICIAIRE.USR_NAMEColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPRENOMNull() {
+                return this.IsNull(this.tableBENEFICIAIRE.PRENOMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPRENOMNull() {
+                this[this.tableBENEFICIAIRE.PRENOMColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -2973,6 +4116,38 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long LONGITUDE {
+                get {
+                    try {
+                        return ((long)(this[this.tableDEPARTEMENTS.LONGITUDEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'LONGITUDE\' dans la table \'DEPARTEMENTS\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDEPARTEMENTS.LONGITUDEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long LATITUDE {
+                get {
+                    try {
+                        return ((long)(this[this.tableDEPARTEMENTS.LATITUDEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'LATITUDE\' dans la table \'DEPARTEMENTS\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDEPARTEMENTS.LATITUDEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNUM_REGIONNull() {
                 return this.IsNull(this.tableDEPARTEMENTS.NUM_REGIONColumn);
             }
@@ -2993,6 +4168,30 @@ namespace testbackoffice7 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetLIB_DEPARTEMENTNull() {
                 this[this.tableDEPARTEMENTS.LIB_DEPARTEMENTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLONGITUDENull() {
+                return this.IsNull(this.tableDEPARTEMENTS.LONGITUDEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLONGITUDENull() {
+                this[this.tableDEPARTEMENTS.LONGITUDEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLATITUDENull() {
+                return this.IsNull(this.tableDEPARTEMENTS.LATITUDEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLATITUDENull() {
+                this[this.tableDEPARTEMENTS.LATITUDEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3277,6 +4476,40 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DATE_SOINS {
+                get {
+                    try {
+                        return ((string)(this[this.tablePRESTATIONS_SANTE.DATE_SOINSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'DATE_SOINS\' dans la table \'PRESTATIONS_SANTE\' est DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablePRESTATIONS_SANTE.DATE_SOINSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DATE_PAIEMENT {
+                get {
+                    try {
+                        return ((string)(this[this.tablePRESTATIONS_SANTE.DATE_PAIEMENTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'DATE_PAIEMENT\' dans la table \'PRESTATIONS_SANTE\' est D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePRESTATIONS_SANTE.DATE_PAIEMENTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNUM_ADHESIONNull() {
                 return this.IsNull(this.tablePRESTATIONS_SANTE.NUM_ADHESIONColumn);
             }
@@ -3454,6 +4687,30 @@ namespace testbackoffice7 {
             public void SetMONTANT_REMBOURSENull() {
                 this[this.tablePRESTATIONS_SANTE.MONTANT_REMBOURSEColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDATE_SOINSNull() {
+                return this.IsNull(this.tablePRESTATIONS_SANTE.DATE_SOINSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDATE_SOINSNull() {
+                this[this.tablePRESTATIONS_SANTE.DATE_SOINSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDATE_PAIEMENTNull() {
+                return this.IsNull(this.tablePRESTATIONS_SANTE.DATE_PAIEMENTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDATE_PAIEMENTNull() {
+                this[this.tablePRESTATIONS_SANTE.DATE_PAIEMENTColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -3499,6 +4756,28 @@ namespace testbackoffice7 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long LATITUDE {
+                get {
+                    return ((long)(this[this.tableREGIONS.LATITUDEColumn]));
+                }
+                set {
+                    this[this.tableREGIONS.LATITUDEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long LONGITUDE {
+                get {
+                    return ((long)(this[this.tableREGIONS.LONGITUDEColumn]));
+                }
+                set {
+                    this[this.tableREGIONS.LONGITUDEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsLIB_REGIONNull() {
                 return this.IsNull(this.tableREGIONS.LIB_REGIONColumn);
             }
@@ -3507,6 +4786,856 @@ namespace testbackoffice7 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetLIB_REGIONNull() {
                 this[this.tableREGIONS.LIB_REGIONColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class VILLESRow : global::System.Data.DataRow {
+            
+            private VILLESDataTable tableVILLES;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal VILLESRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVILLES = ((VILLESDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_ID {
+                get {
+                    return ((decimal)(this[this.tableVILLES.VILLE_IDColumn]));
+                }
+                set {
+                    this[this.tableVILLES.VILLE_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_DEPARTEMENT {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_DEPARTEMENTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_DEPARTEMENT\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_DEPARTEMENTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_SLUG {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_SLUGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_SLUG\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_SLUGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_NOM {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_NOMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_NOM\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_NOMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_NOM_SIMPLE {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_NOM_SIMPLEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_NOM_SIMPLE\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_NOM_SIMPLEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_NOM_REEL {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_NOM_REELColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_NOM_REEL\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_NOM_REELColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_NOM_SOUNDEX {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_NOM_SOUNDEXColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_NOM_SOUNDEX\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_NOM_SOUNDEXColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_NOM_METAPHONE {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_NOM_METAPHONEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_NOM_METAPHONE\' dans la table \'VILLES\' est DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_NOM_METAPHONEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_CODE_POSTAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_CODE_POSTALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_CODE_POSTAL\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_CODE_POSTALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_COMMUNE {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_COMMUNEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_COMMUNE\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_COMMUNEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_CODE_COMMUNE {
+                get {
+                    return ((string)(this[this.tableVILLES.VILLE_CODE_COMMUNEColumn]));
+                }
+                set {
+                    this[this.tableVILLES.VILLE_CODE_COMMUNEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_ARRONDISSEMENT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_ARRONDISSEMENTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_ARRONDISSEMENT\' dans la table \'VILLES\' est DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_ARRONDISSEMENTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_CANTON {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_CANTONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_CANTON\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_CANTONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_AMDI {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_AMDIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_AMDI\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_AMDIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_POPULATION_2010 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_POPULATION_2010Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_POPULATION_2010\' dans la table \'VILLES\' est DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_POPULATION_2010Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_POPULATION_1999 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_POPULATION_1999Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_POPULATION_1999\' dans la table \'VILLES\' est DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_POPULATION_1999Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_POPULATION_2012 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_POPULATION_2012Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_POPULATION_2012\' dans la table \'VILLES\' est DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_POPULATION_2012Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_DENSITE_2010 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_DENSITE_2010Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_DENSITE_2010\' dans la table \'VILLES\' est DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_DENSITE_2010Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_SURFACE {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_SURFACEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_SURFACE\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_SURFACEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_LONGITUDE_DEG {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_LONGITUDE_DEGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LONGITUDE_DEG\' dans la table \'VILLES\' est DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_LONGITUDE_DEGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_LATITUDE_DEG {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_LATITUDE_DEGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LATITUDE_DEG\' dans la table \'VILLES\' est DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_LATITUDE_DEGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_LONGITUDE_GRD {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_LONGITUDE_GRDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LONGITUDE_GRD\' dans la table \'VILLES\' est DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_LONGITUDE_GRDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_LATITUDE_GRD {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_LATITUDE_GRDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LATITUDE_GRD\' dans la table \'VILLES\' est DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_LATITUDE_GRDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_LONGITUDE_DMS {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_LONGITUDE_DMSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LONGITUDE_DMS\' dans la table \'VILLES\' est DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_LONGITUDE_DMSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string VILLE_LATITUDE_DMS {
+                get {
+                    try {
+                        return ((string)(this[this.tableVILLES.VILLE_LATITUDE_DMSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LATITUDE_DMS\' dans la table \'VILLES\' est DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_LATITUDE_DMSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_ZMIN {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_ZMINColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_ZMIN\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_ZMINColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_ZMAX {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVILLES.VILLE_ZMAXColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_ZMAX\' dans la table \'VILLES\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVILLES.VILLE_ZMAXColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_DEPARTEMENTNull() {
+                return this.IsNull(this.tableVILLES.VILLE_DEPARTEMENTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_DEPARTEMENTNull() {
+                this[this.tableVILLES.VILLE_DEPARTEMENTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_SLUGNull() {
+                return this.IsNull(this.tableVILLES.VILLE_SLUGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_SLUGNull() {
+                this[this.tableVILLES.VILLE_SLUGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_NOMNull() {
+                return this.IsNull(this.tableVILLES.VILLE_NOMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_NOMNull() {
+                this[this.tableVILLES.VILLE_NOMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_NOM_SIMPLENull() {
+                return this.IsNull(this.tableVILLES.VILLE_NOM_SIMPLEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_NOM_SIMPLENull() {
+                this[this.tableVILLES.VILLE_NOM_SIMPLEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_NOM_REELNull() {
+                return this.IsNull(this.tableVILLES.VILLE_NOM_REELColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_NOM_REELNull() {
+                this[this.tableVILLES.VILLE_NOM_REELColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_NOM_SOUNDEXNull() {
+                return this.IsNull(this.tableVILLES.VILLE_NOM_SOUNDEXColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_NOM_SOUNDEXNull() {
+                this[this.tableVILLES.VILLE_NOM_SOUNDEXColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_NOM_METAPHONENull() {
+                return this.IsNull(this.tableVILLES.VILLE_NOM_METAPHONEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_NOM_METAPHONENull() {
+                this[this.tableVILLES.VILLE_NOM_METAPHONEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_CODE_POSTALNull() {
+                return this.IsNull(this.tableVILLES.VILLE_CODE_POSTALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_CODE_POSTALNull() {
+                this[this.tableVILLES.VILLE_CODE_POSTALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_COMMUNENull() {
+                return this.IsNull(this.tableVILLES.VILLE_COMMUNEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_COMMUNENull() {
+                this[this.tableVILLES.VILLE_COMMUNEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_ARRONDISSEMENTNull() {
+                return this.IsNull(this.tableVILLES.VILLE_ARRONDISSEMENTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_ARRONDISSEMENTNull() {
+                this[this.tableVILLES.VILLE_ARRONDISSEMENTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_CANTONNull() {
+                return this.IsNull(this.tableVILLES.VILLE_CANTONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_CANTONNull() {
+                this[this.tableVILLES.VILLE_CANTONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_AMDINull() {
+                return this.IsNull(this.tableVILLES.VILLE_AMDIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_AMDINull() {
+                this[this.tableVILLES.VILLE_AMDIColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_POPULATION_2010Null() {
+                return this.IsNull(this.tableVILLES.VILLE_POPULATION_2010Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_POPULATION_2010Null() {
+                this[this.tableVILLES.VILLE_POPULATION_2010Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_POPULATION_1999Null() {
+                return this.IsNull(this.tableVILLES.VILLE_POPULATION_1999Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_POPULATION_1999Null() {
+                this[this.tableVILLES.VILLE_POPULATION_1999Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_POPULATION_2012Null() {
+                return this.IsNull(this.tableVILLES.VILLE_POPULATION_2012Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_POPULATION_2012Null() {
+                this[this.tableVILLES.VILLE_POPULATION_2012Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_DENSITE_2010Null() {
+                return this.IsNull(this.tableVILLES.VILLE_DENSITE_2010Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_DENSITE_2010Null() {
+                this[this.tableVILLES.VILLE_DENSITE_2010Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_SURFACENull() {
+                return this.IsNull(this.tableVILLES.VILLE_SURFACEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_SURFACENull() {
+                this[this.tableVILLES.VILLE_SURFACEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_LONGITUDE_DEGNull() {
+                return this.IsNull(this.tableVILLES.VILLE_LONGITUDE_DEGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_LONGITUDE_DEGNull() {
+                this[this.tableVILLES.VILLE_LONGITUDE_DEGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_LATITUDE_DEGNull() {
+                return this.IsNull(this.tableVILLES.VILLE_LATITUDE_DEGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_LATITUDE_DEGNull() {
+                this[this.tableVILLES.VILLE_LATITUDE_DEGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_LONGITUDE_GRDNull() {
+                return this.IsNull(this.tableVILLES.VILLE_LONGITUDE_GRDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_LONGITUDE_GRDNull() {
+                this[this.tableVILLES.VILLE_LONGITUDE_GRDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_LATITUDE_GRDNull() {
+                return this.IsNull(this.tableVILLES.VILLE_LATITUDE_GRDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_LATITUDE_GRDNull() {
+                this[this.tableVILLES.VILLE_LATITUDE_GRDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_LONGITUDE_DMSNull() {
+                return this.IsNull(this.tableVILLES.VILLE_LONGITUDE_DMSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_LONGITUDE_DMSNull() {
+                this[this.tableVILLES.VILLE_LONGITUDE_DMSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_LATITUDE_DMSNull() {
+                return this.IsNull(this.tableVILLES.VILLE_LATITUDE_DMSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_LATITUDE_DMSNull() {
+                this[this.tableVILLES.VILLE_LATITUDE_DMSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_ZMINNull() {
+                return this.IsNull(this.tableVILLES.VILLE_ZMINColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_ZMINNull() {
+                this[this.tableVILLES.VILLE_ZMINColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_ZMAXNull() {
+                return this.IsNull(this.tableVILLES.VILLE_ZMAXColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_ZMAXNull() {
+                this[this.tableVILLES.VILLE_ZMAXColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class NBADHLOCATIONRow : global::System.Data.DataRow {
+            
+            private NBADHLOCATIONDataTable tableNBADHLOCATION;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal NBADHLOCATIONRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableNBADHLOCATION = ((NBADHLOCATIONDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal NB_ADH {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableNBADHLOCATION.NB_ADHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'NB_ADH\' dans la table \'NBADHLOCATION\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableNBADHLOCATION.NB_ADHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_LATITUDE_DEG {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableNBADHLOCATION.VILLE_LATITUDE_DEGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LATITUDE_DEG\' dans la table \'NBADHLOCATION\' est " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableNBADHLOCATION.VILLE_LATITUDE_DEGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal VILLE_LONGITUDE_DEG {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableNBADHLOCATION.VILLE_LONGITUDE_DEGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'VILLE_LONGITUDE_DEG\' dans la table \'NBADHLOCATION\' est" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableNBADHLOCATION.VILLE_LONGITUDE_DEGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNB_ADHNull() {
+                return this.IsNull(this.tableNBADHLOCATION.NB_ADHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNB_ADHNull() {
+                this[this.tableNBADHLOCATION.NB_ADHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_LATITUDE_DEGNull() {
+                return this.IsNull(this.tableNBADHLOCATION.VILLE_LATITUDE_DEGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_LATITUDE_DEGNull() {
+                this[this.tableNBADHLOCATION.VILLE_LATITUDE_DEGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVILLE_LONGITUDE_DEGNull() {
+                return this.IsNull(this.tableNBADHLOCATION.VILLE_LONGITUDE_DEGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVILLE_LONGITUDE_DEGNull() {
+                this[this.tableNBADHLOCATION.VILLE_LONGITUDE_DEGColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3666,6 +5795,74 @@ namespace testbackoffice7 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public REGIONSRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class VILLESRowChangeEvent : global::System.EventArgs {
+            
+            private VILLESRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VILLESRowChangeEvent(VILLESRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public VILLESRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class NBADHLOCATIONRowChangeEvent : global::System.EventArgs {
+            
+            private NBADHLOCATIONRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public NBADHLOCATIONRowChangeEvent(NBADHLOCATIONRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public NBADHLOCATIONRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5254,10 +7451,11 @@ namespace testbackoffice7.DataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("USR_SALT", "USR_SALT");
             tableMapping.ColumnMappings.Add("USR_ROLE", "USR_ROLE");
             tableMapping.ColumnMappings.Add("USR_NAME", "USR_NAME");
+            tableMapping.ColumnMappings.Add("PRENOM", "PRENOM");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""PBDALG8"".""BENEFICIAIRE"" WHERE ((""NUM"" = :Original_NUM) AND ((:IsNull_SEXE = 1 AND ""SEXE"" IS NULL) OR (""SEXE"" = :Original_SEXE)) AND ((:IsNull_REGIME_SOCIAL = 1 AND ""REGIME_SOCIAL"" IS NULL) OR (""REGIME_SOCIAL"" = :Original_REGIME_SOCIAL)) AND ((:p3 = 1 AND ""DATE_NAISSANCE_BENEFICIAIRE"" IS NULL) OR (""DATE_NAISSANCE_BENEFICIAIRE"" = :p2)) AND ((:IsNull_USR_PASSWORD = 1 AND ""USR_PASSWORD"" IS NULL) OR (""USR_PASSWORD"" = :Original_USR_PASSWORD)) AND ((:IsNull_USR_SALT = 1 AND ""USR_SALT"" IS NULL) OR (""USR_SALT"" = :Original_USR_SALT)) AND ((:IsNull_USR_ROLE = 1 AND ""USR_ROLE"" IS NULL) OR (""USR_ROLE"" = :Original_USR_ROLE)) AND ((:IsNull_USR_NAME = 1 AND ""USR_NAME"" IS NULL) OR (""USR_NAME"" = :Original_USR_NAME)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""PBDALG8"".""BENEFICIAIRE"" WHERE ((""NUM"" = :Original_NUM) AND ((:IsNull_SEXE = 1 AND ""SEXE"" IS NULL) OR (""SEXE"" = :Original_SEXE)) AND ((:IsNull_REGIME_SOCIAL = 1 AND ""REGIME_SOCIAL"" IS NULL) OR (""REGIME_SOCIAL"" = :Original_REGIME_SOCIAL)) AND ((:p3 = 1 AND ""DATE_NAISSANCE_BENEFICIAIRE"" IS NULL) OR (""DATE_NAISSANCE_BENEFICIAIRE"" = :p2)) AND ((:IsNull_USR_PASSWORD = 1 AND ""USR_PASSWORD"" IS NULL) OR (""USR_PASSWORD"" = :Original_USR_PASSWORD)) AND ((:IsNull_USR_SALT = 1 AND ""USR_SALT"" IS NULL) OR (""USR_SALT"" = :Original_USR_SALT)) AND ((:IsNull_USR_ROLE = 1 AND ""USR_ROLE"" IS NULL) OR (""USR_ROLE"" = :Original_USR_ROLE)) AND ((:IsNull_USR_NAME = 1 AND ""USR_NAME"" IS NULL) OR (""USR_NAME"" = :Original_USR_NAME)) AND ((:IsNull_PRENOM = 1 AND ""PRENOM"" IS NULL) OR (""PRENOM"" = :Original_PRENOM)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_NUM";
@@ -5395,12 +7593,27 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.SourceColumn = "USR_NAME";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_PRENOM";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PRENOM";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_PRENOM";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PRENOM";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"PBDALG8\".\"BENEFICIAIRE\" (\"NUM\", \"SEXE\", \"REGIME_SOCIAL\", \"DATE_NAISS" +
-                "ANCE_BENEFICIAIRE\", \"USR_PASSWORD\", \"USR_SALT\", \"USR_ROLE\", \"USR_NAME\") VALUES (" +
-                ":NUM, :SEXE, :REGIME_SOCIAL, :p1, :USR_PASSWORD, :USR_SALT, :USR_ROLE, :USR_NAME" +
-                ")";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""PBDALG8"".""BENEFICIAIRE"" (""NUM"", ""SEXE"", ""REGIME_SOCIAL"", ""DATE_NAISSANCE_BENEFICIAIRE"", ""USR_PASSWORD"", ""USR_SALT"", ""USR_ROLE"", ""USR_NAME"", ""PRENOM"") VALUES (:NUM, :SEXE, :REGIME_SOCIAL, :p1, :USR_PASSWORD, :USR_SALT, :USR_ROLE, :USR_NAME, :PRENOM)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "NUM";
@@ -5460,9 +7673,16 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "USR_NAME";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "PRENOM";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PRENOM";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""PBDALG8"".""BENEFICIAIRE"" SET ""NUM"" = :NUM, ""SEXE"" = :SEXE, ""REGIME_SOCIAL"" = :REGIME_SOCIAL, ""DATE_NAISSANCE_BENEFICIAIRE"" = :p1, ""USR_PASSWORD"" = :USR_PASSWORD, ""USR_SALT"" = :USR_SALT, ""USR_ROLE"" = :USR_ROLE, ""USR_NAME"" = :USR_NAME WHERE ((""NUM"" = :Original_NUM) AND ((:IsNull_SEXE = 1 AND ""SEXE"" IS NULL) OR (""SEXE"" = :Original_SEXE)) AND ((:IsNull_REGIME_SOCIAL = 1 AND ""REGIME_SOCIAL"" IS NULL) OR (""REGIME_SOCIAL"" = :Original_REGIME_SOCIAL)) AND ((:p3 = 1 AND ""DATE_NAISSANCE_BENEFICIAIRE"" IS NULL) OR (""DATE_NAISSANCE_BENEFICIAIRE"" = :p2)) AND ((:IsNull_USR_PASSWORD = 1 AND ""USR_PASSWORD"" IS NULL) OR (""USR_PASSWORD"" = :Original_USR_PASSWORD)) AND ((:IsNull_USR_SALT = 1 AND ""USR_SALT"" IS NULL) OR (""USR_SALT"" = :Original_USR_SALT)) AND ((:IsNull_USR_ROLE = 1 AND ""USR_ROLE"" IS NULL) OR (""USR_ROLE"" = :Original_USR_ROLE)) AND ((:IsNull_USR_NAME = 1 AND ""USR_NAME"" IS NULL) OR (""USR_NAME"" = :Original_USR_NAME)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""PBDALG8"".""BENEFICIAIRE"" SET ""NUM"" = :NUM, ""SEXE"" = :SEXE, ""REGIME_SOCIAL"" = :REGIME_SOCIAL, ""DATE_NAISSANCE_BENEFICIAIRE"" = :p1, ""USR_PASSWORD"" = :USR_PASSWORD, ""USR_SALT"" = :USR_SALT, ""USR_ROLE"" = :USR_ROLE, ""USR_NAME"" = :USR_NAME, ""PRENOM"" = :PRENOM WHERE ((""NUM"" = :Original_NUM) AND ((:IsNull_SEXE = 1 AND ""SEXE"" IS NULL) OR (""SEXE"" = :Original_SEXE)) AND ((:IsNull_REGIME_SOCIAL = 1 AND ""REGIME_SOCIAL"" IS NULL) OR (""REGIME_SOCIAL"" = :Original_REGIME_SOCIAL)) AND ((:p3 = 1 AND ""DATE_NAISSANCE_BENEFICIAIRE"" IS NULL) OR (""DATE_NAISSANCE_BENEFICIAIRE"" = :p2)) AND ((:IsNull_USR_PASSWORD = 1 AND ""USR_PASSWORD"" IS NULL) OR (""USR_PASSWORD"" = :Original_USR_PASSWORD)) AND ((:IsNull_USR_SALT = 1 AND ""USR_SALT"" IS NULL) OR (""USR_SALT"" = :Original_USR_SALT)) AND ((:IsNull_USR_ROLE = 1 AND ""USR_ROLE"" IS NULL) OR (""USR_ROLE"" = :Original_USR_ROLE)) AND ((:IsNull_USR_NAME = 1 AND ""USR_NAME"" IS NULL) OR (""USR_NAME"" = :Original_USR_NAME)) AND ((:IsNull_PRENOM = 1 AND ""PRENOM"" IS NULL) OR (""PRENOM"" = :Original_PRENOM)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "NUM";
@@ -5521,6 +7741,13 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "USR_NAME";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "PRENOM";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PRENOM";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_NUM";
@@ -5658,6 +7885,24 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.SourceColumn = "USR_NAME";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_PRENOM";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PRENOM";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_PRENOM";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "PRENOM";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5674,7 +7919,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT NUM, SEXE, REGIME_SOCIAL, DATE_NAISSANCE_BENEFICIAIRE, USR_PASSWORD, USR_S" +
-                "ALT, USR_ROLE, USR_NAME FROM PBDALG8.BENEFICIAIRE";
+                "ALT, USR_ROLE, USR_NAME, PRENOM FROM PBDALG8.BENEFICIAIRE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5735,7 +7980,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_NUM, string Original_SEXE, string Original_REGIME_SOCIAL, global::System.Nullable<global::System.DateTime> p2, string Original_USR_PASSWORD, string Original_USR_SALT, string Original_USR_ROLE, string Original_USR_NAME) {
+        public virtual int Delete(decimal Original_NUM, string Original_SEXE, string Original_REGIME_SOCIAL, global::System.Nullable<global::System.DateTime> p2, string Original_USR_PASSWORD, string Original_USR_SALT, string Original_USR_ROLE, string Original_USR_NAME, string Original_PRENOM) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_NUM));
             if ((Original_SEXE == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -5793,6 +8038,14 @@ namespace testbackoffice7.DataSet2TableAdapters {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_USR_NAME));
             }
+            if ((Original_PRENOM == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_PRENOM));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5813,7 +8066,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(decimal NUM, string SEXE, string REGIME_SOCIAL, global::System.Nullable<global::System.DateTime> p1, string USR_PASSWORD, string USR_SALT, string USR_ROLE, string USR_NAME) {
+        public virtual int Insert(decimal NUM, string SEXE, string REGIME_SOCIAL, global::System.Nullable<global::System.DateTime> p1, string USR_PASSWORD, string USR_SALT, string USR_ROLE, string USR_NAME, string PRENOM) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(NUM));
             if ((SEXE == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -5857,6 +8110,12 @@ namespace testbackoffice7.DataSet2TableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(USR_NAME));
             }
+            if ((PRENOM == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(PRENOM));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5886,6 +8145,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     string USR_SALT, 
                     string USR_ROLE, 
                     string USR_NAME, 
+                    string PRENOM, 
                     decimal Original_NUM, 
                     string Original_SEXE, 
                     string Original_REGIME_SOCIAL, 
@@ -5893,7 +8153,8 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     string Original_USR_PASSWORD, 
                     string Original_USR_SALT, 
                     string Original_USR_ROLE, 
-                    string Original_USR_NAME) {
+                    string Original_USR_NAME, 
+                    string Original_PRENOM) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(NUM));
             if ((SEXE == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -5937,62 +8198,76 @@ namespace testbackoffice7.DataSet2TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(USR_NAME));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_NUM));
-            if ((Original_SEXE == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            if ((PRENOM == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_SEXE));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(PRENOM));
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_NUM));
+            if ((Original_SEXE == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_SEXE));
             }
             if ((Original_REGIME_SOCIAL == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_REGIME_SOCIAL));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_REGIME_SOCIAL));
             }
             if ((p2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(p2.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(p2.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_USR_PASSWORD == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_USR_PASSWORD));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_USR_PASSWORD));
             }
             if ((Original_USR_SALT == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_USR_SALT));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_USR_SALT));
             }
             if ((Original_USR_ROLE == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_USR_ROLE));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_USR_ROLE));
             }
             if ((Original_USR_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_USR_NAME));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_USR_NAME));
+            }
+            if ((Original_PRENOM == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_PRENOM));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6014,8 +8289,25 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string SEXE, string REGIME_SOCIAL, global::System.Nullable<global::System.DateTime> p1, string USR_PASSWORD, string USR_SALT, string USR_ROLE, string USR_NAME, decimal Original_NUM, string Original_SEXE, string Original_REGIME_SOCIAL, global::System.Nullable<global::System.DateTime> p2, string Original_USR_PASSWORD, string Original_USR_SALT, string Original_USR_ROLE, string Original_USR_NAME) {
-            return this.Update(Original_NUM, SEXE, REGIME_SOCIAL, p1, USR_PASSWORD, USR_SALT, USR_ROLE, USR_NAME, Original_NUM, Original_SEXE, Original_REGIME_SOCIAL, p2, Original_USR_PASSWORD, Original_USR_SALT, Original_USR_ROLE, Original_USR_NAME);
+        public virtual int Update(
+                    string SEXE, 
+                    string REGIME_SOCIAL, 
+                    global::System.Nullable<global::System.DateTime> p1, 
+                    string USR_PASSWORD, 
+                    string USR_SALT, 
+                    string USR_ROLE, 
+                    string USR_NAME, 
+                    string PRENOM, 
+                    decimal Original_NUM, 
+                    string Original_SEXE, 
+                    string Original_REGIME_SOCIAL, 
+                    global::System.Nullable<global::System.DateTime> p2, 
+                    string Original_USR_PASSWORD, 
+                    string Original_USR_SALT, 
+                    string Original_USR_ROLE, 
+                    string Original_USR_NAME, 
+                    string Original_PRENOM) {
+            return this.Update(Original_NUM, SEXE, REGIME_SOCIAL, p1, USR_PASSWORD, USR_SALT, USR_ROLE, USR_NAME, PRENOM, Original_NUM, Original_SEXE, Original_REGIME_SOCIAL, p2, Original_USR_PASSWORD, Original_USR_SALT, Original_USR_ROLE, Original_USR_NAME, Original_PRENOM);
         }
     }
     
@@ -6143,10 +8435,12 @@ namespace testbackoffice7.DataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("NUM_DEPARTEMENT", "NUM_DEPARTEMENT");
             tableMapping.ColumnMappings.Add("NUM_REGION", "NUM_REGION");
             tableMapping.ColumnMappings.Add("LIB_DEPARTEMENT", "LIB_DEPARTEMENT");
+            tableMapping.ColumnMappings.Add("LONGITUDE", "LONGITUDE");
+            tableMapping.ColumnMappings.Add("LATITUDE", "LATITUDE");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""PBDALG8"".""DEPARTEMENTS"" WHERE ((""NUM_DEPARTEMENT"" = :Original_NUM_DEPARTEMENT) AND ((:IsNull_NUM_REGION = 1 AND ""NUM_REGION"" IS NULL) OR (""NUM_REGION"" = :Original_NUM_REGION)) AND ((:IsNull_LIB_DEPARTEMENT = 1 AND ""LIB_DEPARTEMENT"" IS NULL) OR (""LIB_DEPARTEMENT"" = :Original_LIB_DEPARTEMENT)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""PBDALG8"".""DEPARTEMENTS"" WHERE ((""NUM_DEPARTEMENT"" = :Original_NUM_DEPARTEMENT) AND ((:IsNull_NUM_REGION = 1 AND ""NUM_REGION"" IS NULL) OR (""NUM_REGION"" = :Original_NUM_REGION)) AND ((:IsNull_LIB_DEPARTEMENT = 1 AND ""LIB_DEPARTEMENT"" IS NULL) OR (""LIB_DEPARTEMENT"" = :Original_LIB_DEPARTEMENT)) AND ((:IsNull_LONGITUDE = 1 AND ""LONGITUDE"" IS NULL) OR (""LONGITUDE"" = :Original_LONGITUDE)) AND ((:IsNull_LATITUDE = 1 AND ""LATITUDE"" IS NULL) OR (""LATITUDE"" = :Original_LATITUDE)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_NUM_DEPARTEMENT";
@@ -6193,10 +8487,49 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.SourceColumn = "LIB_DEPARTEMENT";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_LATITUDE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LATITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO \"PBDALG8\".\"DEPARTEMENTS\" (\"NUM_DEPARTEMENT\", \"NUM_REGION\", \"LIB_DEPAR" +
-                "TEMENT\") VALUES (:NUM_DEPARTEMENT, :NUM_REGION, :LIB_DEPARTEMENT)";
+                "TEMENT\", \"LONGITUDE\", \"LATITUDE\") VALUES (:NUM_DEPARTEMENT, :NUM_REGION, :LIB_DE" +
+                "PARTEMENT, :LONGITUDE, :LATITUDE)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "NUM_DEPARTEMENT";
@@ -6220,9 +8553,25 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "LIB_DEPARTEMENT";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LATITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""PBDALG8"".""DEPARTEMENTS"" SET ""NUM_DEPARTEMENT"" = :NUM_DEPARTEMENT, ""NUM_REGION"" = :NUM_REGION, ""LIB_DEPARTEMENT"" = :LIB_DEPARTEMENT WHERE ((""NUM_DEPARTEMENT"" = :Original_NUM_DEPARTEMENT) AND ((:IsNull_NUM_REGION = 1 AND ""NUM_REGION"" IS NULL) OR (""NUM_REGION"" = :Original_NUM_REGION)) AND ((:IsNull_LIB_DEPARTEMENT = 1 AND ""LIB_DEPARTEMENT"" IS NULL) OR (""LIB_DEPARTEMENT"" = :Original_LIB_DEPARTEMENT)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""PBDALG8"".""DEPARTEMENTS"" SET ""NUM_DEPARTEMENT"" = :NUM_DEPARTEMENT, ""NUM_REGION"" = :NUM_REGION, ""LIB_DEPARTEMENT"" = :LIB_DEPARTEMENT, ""LONGITUDE"" = :LONGITUDE, ""LATITUDE"" = :LATITUDE WHERE ((""NUM_DEPARTEMENT"" = :Original_NUM_DEPARTEMENT) AND ((:IsNull_NUM_REGION = 1 AND ""NUM_REGION"" IS NULL) OR (""NUM_REGION"" = :Original_NUM_REGION)) AND ((:IsNull_LIB_DEPARTEMENT = 1 AND ""LIB_DEPARTEMENT"" IS NULL) OR (""LIB_DEPARTEMENT"" = :Original_LIB_DEPARTEMENT)) AND ((:IsNull_LONGITUDE = 1 AND ""LONGITUDE"" IS NULL) OR (""LONGITUDE"" = :Original_LONGITUDE)) AND ((:IsNull_LATITUDE = 1 AND ""LATITUDE"" IS NULL) OR (""LATITUDE"" = :Original_LATITUDE)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "NUM_DEPARTEMENT";
@@ -6245,6 +8594,22 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "LIB_DEPARTEMENT";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LATITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_NUM_DEPARTEMENT";
@@ -6291,6 +8656,44 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.SourceColumn = "LIB_DEPARTEMENT";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_LATITUDE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LATITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6306,7 +8709,8 @@ namespace testbackoffice7.DataSet2TableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NUM_DEPARTEMENT, NUM_REGION, LIB_DEPARTEMENT FROM PBDALG8.DEPARTEMENTS";
+            this._commandCollection[0].CommandText = "SELECT NUM_DEPARTEMENT, NUM_REGION, LIB_DEPARTEMENT, LONGITUDE, LATITUDE FROM PBD" +
+                "ALG8.DEPARTEMENTS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6367,7 +8771,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_NUM_DEPARTEMENT, global::System.Nullable<decimal> Original_NUM_REGION, string Original_LIB_DEPARTEMENT) {
+        public virtual int Delete(string Original_NUM_DEPARTEMENT, global::System.Nullable<decimal> Original_NUM_REGION, string Original_LIB_DEPARTEMENT, global::System.Nullable<long> Original_LONGITUDE, global::System.Nullable<long> Original_LATITUDE) {
             if ((Original_NUM_DEPARTEMENT == null)) {
                 throw new global::System.ArgumentNullException("Original_NUM_DEPARTEMENT");
             }
@@ -6390,6 +8794,22 @@ namespace testbackoffice7.DataSet2TableAdapters {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_LIB_DEPARTEMENT));
             }
+            if ((Original_LONGITUDE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((long)(Original_LONGITUDE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_LATITUDE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((long)(Original_LATITUDE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6410,7 +8830,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string NUM_DEPARTEMENT, global::System.Nullable<decimal> NUM_REGION, string LIB_DEPARTEMENT) {
+        public virtual int Insert(string NUM_DEPARTEMENT, global::System.Nullable<decimal> NUM_REGION, string LIB_DEPARTEMENT, global::System.Nullable<long> LONGITUDE, global::System.Nullable<long> LATITUDE) {
             if ((NUM_DEPARTEMENT == null)) {
                 throw new global::System.ArgumentNullException("NUM_DEPARTEMENT");
             }
@@ -6428,6 +8848,18 @@ namespace testbackoffice7.DataSet2TableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(LIB_DEPARTEMENT));
+            }
+            if ((LONGITUDE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((long)(LONGITUDE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((LATITUDE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((long)(LATITUDE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6449,7 +8881,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NUM_DEPARTEMENT, global::System.Nullable<decimal> NUM_REGION, string LIB_DEPARTEMENT, string Original_NUM_DEPARTEMENT, global::System.Nullable<decimal> Original_NUM_REGION, string Original_LIB_DEPARTEMENT) {
+        public virtual int Update(string NUM_DEPARTEMENT, global::System.Nullable<decimal> NUM_REGION, string LIB_DEPARTEMENT, global::System.Nullable<long> LONGITUDE, global::System.Nullable<long> LATITUDE, string Original_NUM_DEPARTEMENT, global::System.Nullable<decimal> Original_NUM_REGION, string Original_LIB_DEPARTEMENT, global::System.Nullable<long> Original_LONGITUDE, global::System.Nullable<long> Original_LATITUDE) {
             if ((NUM_DEPARTEMENT == null)) {
                 throw new global::System.ArgumentNullException("NUM_DEPARTEMENT");
             }
@@ -6468,27 +8900,55 @@ namespace testbackoffice7.DataSet2TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(LIB_DEPARTEMENT));
             }
+            if ((LONGITUDE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((long)(LONGITUDE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((LATITUDE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(LATITUDE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             if ((Original_NUM_DEPARTEMENT == null)) {
                 throw new global::System.ArgumentNullException("Original_NUM_DEPARTEMENT");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_NUM_DEPARTEMENT));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_NUM_DEPARTEMENT));
             }
             if ((Original_NUM_REGION.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Original_NUM_REGION.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_NUM_REGION.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_LIB_DEPARTEMENT == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
+            if ((Original_LIB_DEPARTEMENT == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_LIB_DEPARTEMENT));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_LIB_DEPARTEMENT));
+            }
+            if ((Original_LONGITUDE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((long)(Original_LONGITUDE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_LATITUDE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((long)(Original_LATITUDE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6510,8 +8970,8 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<decimal> NUM_REGION, string LIB_DEPARTEMENT, string Original_NUM_DEPARTEMENT, global::System.Nullable<decimal> Original_NUM_REGION, string Original_LIB_DEPARTEMENT) {
-            return this.Update(Original_NUM_DEPARTEMENT, NUM_REGION, LIB_DEPARTEMENT, Original_NUM_DEPARTEMENT, Original_NUM_REGION, Original_LIB_DEPARTEMENT);
+        public virtual int Update(global::System.Nullable<decimal> NUM_REGION, string LIB_DEPARTEMENT, global::System.Nullable<long> LONGITUDE, global::System.Nullable<long> LATITUDE, string Original_NUM_DEPARTEMENT, global::System.Nullable<decimal> Original_NUM_REGION, string Original_LIB_DEPARTEMENT, global::System.Nullable<long> Original_LONGITUDE, global::System.Nullable<long> Original_LATITUDE) {
+            return this.Update(Original_NUM_DEPARTEMENT, NUM_REGION, LIB_DEPARTEMENT, LONGITUDE, LATITUDE, Original_NUM_DEPARTEMENT, Original_NUM_REGION, Original_LIB_DEPARTEMENT, Original_LONGITUDE, Original_LATITUDE);
         }
     }
     
@@ -6652,6 +9112,8 @@ namespace testbackoffice7.DataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("FRAIS_REEL_ASSURE", "FRAIS_REEL_ASSURE");
             tableMapping.ColumnMappings.Add("MONTANT_SECU", "MONTANT_SECU");
             tableMapping.ColumnMappings.Add("MONTANT_REMBOURSE", "MONTANT_REMBOURSE");
+            tableMapping.ColumnMappings.Add("DATE_SOINS", "DATE_SOINS");
+            tableMapping.ColumnMappings.Add("DATE_PAIEMENT", "DATE_PAIEMENT");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -6677,7 +9139,9 @@ namespace testbackoffice7.DataSet2TableAdapters {
                 "_FRAIS_REEL_ASSURE)) AND ((:IsNull_MONTANT_SECU = 1 AND \"MONTANT_SECU\" IS NULL) " +
                 "OR (\"MONTANT_SECU\" = :Original_MONTANT_SECU)) AND ((:IsNull_MONTANT_REMBOURSE = " +
                 "1 AND \"MONTANT_REMBOURSE\" IS NULL) OR (\"MONTANT_REMBOURSE\" = :Original_MONTANT_R" +
-                "EMBOURSE)))";
+                "EMBOURSE)) AND ((:IsNull_DATE_SOINS = 1 AND \"DATE_SOINS\" IS NULL) OR (\"DATE_SOIN" +
+                "S\" = :Original_DATE_SOINS)) AND ((:IsNull_DATE_PAIEMENT = 1 AND \"DATE_PAIEMENT\" " +
+                "IS NULL) OR (\"DATE_PAIEMENT\" = :Original_DATE_PAIEMENT)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_NUM_SINISTRE";
@@ -6966,9 +9430,45 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.SourceColumn = "MONTANT_REMBOURSE";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DATE_SOINS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_SOINS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DATE_SOINS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_SOINS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DATE_PAIEMENT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_PAIEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DATE_PAIEMENT";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_PAIEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""PBDALG8"".""PRESTATIONS_SANTE"" (""NUM_SINISTRE"", ""NUM_ADHESION"", ""NUM_BENEFICIAIRE_SINISTRE"", ""NUM_BENEFICIAIRE"", ""ACTE"", ""DESIGNATION_ACTE"", ""LIBELLE_BAREME"", ""JOUR_DEBUT_SOINS"", ""MOIS_DEBUT_SOINS"", ""ANNEE_DEBUT_SOINS"", ""JOUR_PAIEMENT"", ""MOIS_PAIEMENT"", ""ANNEE_PAIEMENT"", ""FRAIS_REEL_ASSURE"", ""MONTANT_SECU"", ""MONTANT_REMBOURSE"") VALUES (:NUM_SINISTRE, :NUM_ADHESION, :p1, :NUM_BENEFICIAIRE, :ACTE, :DESIGNATION_ACTE, :LIBELLE_BAREME, :JOUR_DEBUT_SOINS, :MOIS_DEBUT_SOINS, :ANNEE_DEBUT_SOINS, :JOUR_PAIEMENT, :MOIS_PAIEMENT, :ANNEE_PAIEMENT, :FRAIS_REEL_ASSURE, :MONTANT_SECU, :MONTANT_REMBOURSE)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""PBDALG8"".""PRESTATIONS_SANTE"" (""NUM_SINISTRE"", ""NUM_ADHESION"", ""NUM_BENEFICIAIRE_SINISTRE"", ""NUM_BENEFICIAIRE"", ""ACTE"", ""DESIGNATION_ACTE"", ""LIBELLE_BAREME"", ""JOUR_DEBUT_SOINS"", ""MOIS_DEBUT_SOINS"", ""ANNEE_DEBUT_SOINS"", ""JOUR_PAIEMENT"", ""MOIS_PAIEMENT"", ""ANNEE_PAIEMENT"", ""FRAIS_REEL_ASSURE"", ""MONTANT_SECU"", ""MONTANT_REMBOURSE"", ""DATE_SOINS"", ""DATE_PAIEMENT"") VALUES (:NUM_SINISTRE, :NUM_ADHESION, :p1, :NUM_BENEFICIAIRE, :ACTE, :DESIGNATION_ACTE, :LIBELLE_BAREME, :JOUR_DEBUT_SOINS, :MOIS_DEBUT_SOINS, :ANNEE_DEBUT_SOINS, :JOUR_PAIEMENT, :MOIS_PAIEMENT, :ANNEE_PAIEMENT, :FRAIS_REEL_ASSURE, :MONTANT_SECU, :MONTANT_REMBOURSE, :DATE_SOINS, :DATE_PAIEMENT)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "NUM_SINISTRE";
@@ -7091,6 +9591,20 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "MONTANT_REMBOURSE";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DATE_SOINS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_SOINS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DATE_PAIEMENT";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_PAIEMENT";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE \"PBDALG8\".\"PRESTATIONS_SANTE\" SET \"NUM_SINISTRE\" = :NUM_SINISTRE, \"NUM_ADH" +
@@ -7100,29 +9614,32 @@ namespace testbackoffice7.DataSet2TableAdapters {
                 "UT_SOINS\" = :MOIS_DEBUT_SOINS, \"ANNEE_DEBUT_SOINS\" = :ANNEE_DEBUT_SOINS, \"JOUR_P" +
                 "AIEMENT\" = :JOUR_PAIEMENT, \"MOIS_PAIEMENT\" = :MOIS_PAIEMENT, \"ANNEE_PAIEMENT\" = " +
                 ":ANNEE_PAIEMENT, \"FRAIS_REEL_ASSURE\" = :FRAIS_REEL_ASSURE, \"MONTANT_SECU\" = :MON" +
-                "TANT_SECU, \"MONTANT_REMBOURSE\" = :MONTANT_REMBOURSE WHERE ((\"NUM_SINISTRE\" = :Or" +
-                "iginal_NUM_SINISTRE) AND ((:IsNull_NUM_ADHESION = 1 AND \"NUM_ADHESION\" IS NULL) " +
-                "OR (\"NUM_ADHESION\" = :Original_NUM_ADHESION)) AND ((:p3 = 1 AND \"NUM_BENEFICIAIR" +
-                "E_SINISTRE\" IS NULL) OR (\"NUM_BENEFICIAIRE_SINISTRE\" = :p2)) AND ((:IsNull_NUM_B" +
-                "ENEFICIAIRE = 1 AND \"NUM_BENEFICIAIRE\" IS NULL) OR (\"NUM_BENEFICIAIRE\" = :Origin" +
-                "al_NUM_BENEFICIAIRE)) AND ((:IsNull_ACTE = 1 AND \"ACTE\" IS NULL) OR (\"ACTE\" = :O" +
-                "riginal_ACTE)) AND ((:IsNull_DESIGNATION_ACTE = 1 AND \"DESIGNATION_ACTE\" IS NULL" +
-                ") OR (\"DESIGNATION_ACTE\" = :Original_DESIGNATION_ACTE)) AND ((:IsNull_LIBELLE_BA" +
-                "REME = 1 AND \"LIBELLE_BAREME\" IS NULL) OR (\"LIBELLE_BAREME\" = :Original_LIBELLE_" +
-                "BAREME)) AND ((:IsNull_JOUR_DEBUT_SOINS = 1 AND \"JOUR_DEBUT_SOINS\" IS NULL) OR (" +
-                "\"JOUR_DEBUT_SOINS\" = :Original_JOUR_DEBUT_SOINS)) AND ((:IsNull_MOIS_DEBUT_SOINS" +
-                " = 1 AND \"MOIS_DEBUT_SOINS\" IS NULL) OR (\"MOIS_DEBUT_SOINS\" = :Original_MOIS_DEB" +
-                "UT_SOINS)) AND ((:IsNull_ANNEE_DEBUT_SOINS = 1 AND \"ANNEE_DEBUT_SOINS\" IS NULL) " +
-                "OR (\"ANNEE_DEBUT_SOINS\" = :Original_ANNEE_DEBUT_SOINS)) AND ((:IsNull_JOUR_PAIEM" +
-                "ENT = 1 AND \"JOUR_PAIEMENT\" IS NULL) OR (\"JOUR_PAIEMENT\" = :Original_JOUR_PAIEME" +
-                "NT)) AND ((:IsNull_MOIS_PAIEMENT = 1 AND \"MOIS_PAIEMENT\" IS NULL) OR (\"MOIS_PAIE" +
-                "MENT\" = :Original_MOIS_PAIEMENT)) AND ((:IsNull_ANNEE_PAIEMENT = 1 AND \"ANNEE_PA" +
-                "IEMENT\" IS NULL) OR (\"ANNEE_PAIEMENT\" = :Original_ANNEE_PAIEMENT)) AND ((:IsNull" +
-                "_FRAIS_REEL_ASSURE = 1 AND \"FRAIS_REEL_ASSURE\" IS NULL) OR (\"FRAIS_REEL_ASSURE\" " +
-                "= :Original_FRAIS_REEL_ASSURE)) AND ((:IsNull_MONTANT_SECU = 1 AND \"MONTANT_SECU" +
-                "\" IS NULL) OR (\"MONTANT_SECU\" = :Original_MONTANT_SECU)) AND ((:IsNull_MONTANT_R" +
-                "EMBOURSE = 1 AND \"MONTANT_REMBOURSE\" IS NULL) OR (\"MONTANT_REMBOURSE\" = :Origina" +
-                "l_MONTANT_REMBOURSE)))";
+                "TANT_SECU, \"MONTANT_REMBOURSE\" = :MONTANT_REMBOURSE, \"DATE_SOINS\" = :DATE_SOINS," +
+                " \"DATE_PAIEMENT\" = :DATE_PAIEMENT WHERE ((\"NUM_SINISTRE\" = :Original_NUM_SINISTR" +
+                "E) AND ((:IsNull_NUM_ADHESION = 1 AND \"NUM_ADHESION\" IS NULL) OR (\"NUM_ADHESION\"" +
+                " = :Original_NUM_ADHESION)) AND ((:p3 = 1 AND \"NUM_BENEFICIAIRE_SINISTRE\" IS NUL" +
+                "L) OR (\"NUM_BENEFICIAIRE_SINISTRE\" = :p2)) AND ((:IsNull_NUM_BENEFICIAIRE = 1 AN" +
+                "D \"NUM_BENEFICIAIRE\" IS NULL) OR (\"NUM_BENEFICIAIRE\" = :Original_NUM_BENEFICIAIR" +
+                "E)) AND ((:IsNull_ACTE = 1 AND \"ACTE\" IS NULL) OR (\"ACTE\" = :Original_ACTE)) AND" +
+                " ((:IsNull_DESIGNATION_ACTE = 1 AND \"DESIGNATION_ACTE\" IS NULL) OR (\"DESIGNATION" +
+                "_ACTE\" = :Original_DESIGNATION_ACTE)) AND ((:IsNull_LIBELLE_BAREME = 1 AND \"LIBE" +
+                "LLE_BAREME\" IS NULL) OR (\"LIBELLE_BAREME\" = :Original_LIBELLE_BAREME)) AND ((:Is" +
+                "Null_JOUR_DEBUT_SOINS = 1 AND \"JOUR_DEBUT_SOINS\" IS NULL) OR (\"JOUR_DEBUT_SOINS\"" +
+                " = :Original_JOUR_DEBUT_SOINS)) AND ((:IsNull_MOIS_DEBUT_SOINS = 1 AND \"MOIS_DEB" +
+                "UT_SOINS\" IS NULL) OR (\"MOIS_DEBUT_SOINS\" = :Original_MOIS_DEBUT_SOINS)) AND ((:" +
+                "IsNull_ANNEE_DEBUT_SOINS = 1 AND \"ANNEE_DEBUT_SOINS\" IS NULL) OR (\"ANNEE_DEBUT_S" +
+                "OINS\" = :Original_ANNEE_DEBUT_SOINS)) AND ((:IsNull_JOUR_PAIEMENT = 1 AND \"JOUR_" +
+                "PAIEMENT\" IS NULL) OR (\"JOUR_PAIEMENT\" = :Original_JOUR_PAIEMENT)) AND ((:IsNull" +
+                "_MOIS_PAIEMENT = 1 AND \"MOIS_PAIEMENT\" IS NULL) OR (\"MOIS_PAIEMENT\" = :Original_" +
+                "MOIS_PAIEMENT)) AND ((:IsNull_ANNEE_PAIEMENT = 1 AND \"ANNEE_PAIEMENT\" IS NULL) O" +
+                "R (\"ANNEE_PAIEMENT\" = :Original_ANNEE_PAIEMENT)) AND ((:IsNull_FRAIS_REEL_ASSURE" +
+                " = 1 AND \"FRAIS_REEL_ASSURE\" IS NULL) OR (\"FRAIS_REEL_ASSURE\" = :Original_FRAIS_" +
+                "REEL_ASSURE)) AND ((:IsNull_MONTANT_SECU = 1 AND \"MONTANT_SECU\" IS NULL) OR (\"MO" +
+                "NTANT_SECU\" = :Original_MONTANT_SECU)) AND ((:IsNull_MONTANT_REMBOURSE = 1 AND \"" +
+                "MONTANT_REMBOURSE\" IS NULL) OR (\"MONTANT_REMBOURSE\" = :Original_MONTANT_REMBOURS" +
+                "E)) AND ((:IsNull_DATE_SOINS = 1 AND \"DATE_SOINS\" IS NULL) OR (\"DATE_SOINS\" = :O" +
+                "riginal_DATE_SOINS)) AND ((:IsNull_DATE_PAIEMENT = 1 AND \"DATE_PAIEMENT\" IS NULL" +
+                ") OR (\"DATE_PAIEMENT\" = :Original_DATE_PAIEMENT)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "NUM_SINISTRE";
@@ -7244,6 +9761,20 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.Size = 22;
             param.IsNullable = true;
             param.SourceColumn = "MONTANT_REMBOURSE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DATE_SOINS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_SOINS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DATE_PAIEMENT";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_PAIEMENT";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_NUM_SINISTRE";
@@ -7532,6 +10063,42 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.SourceColumn = "MONTANT_REMBOURSE";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DATE_SOINS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_SOINS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DATE_SOINS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_SOINS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DATE_PAIEMENT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_PAIEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DATE_PAIEMENT";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "DATE_PAIEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7547,7 +10114,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT NUM_SINISTRE, NUM_ADHESION, NUM_BENEFICIAIRE_SINISTRE, NUM_BENEFICIAIRE, ACTE, DESIGNATION_ACTE, LIBELLE_BAREME, JOUR_DEBUT_SOINS, MOIS_DEBUT_SOINS, ANNEE_DEBUT_SOINS, JOUR_PAIEMENT, MOIS_PAIEMENT, ANNEE_PAIEMENT, FRAIS_REEL_ASSURE, MONTANT_SECU, MONTANT_REMBOURSE FROM PBDALG8.PRESTATIONS_SANTE";
+            this._commandCollection[0].CommandText = @"SELECT NUM_SINISTRE, NUM_ADHESION, NUM_BENEFICIAIRE_SINISTRE, NUM_BENEFICIAIRE, ACTE, DESIGNATION_ACTE, LIBELLE_BAREME, JOUR_DEBUT_SOINS, MOIS_DEBUT_SOINS, ANNEE_DEBUT_SOINS, JOUR_PAIEMENT, MOIS_PAIEMENT, ANNEE_PAIEMENT, FRAIS_REEL_ASSURE, MONTANT_SECU, MONTANT_REMBOURSE, DATE_SOINS, DATE_PAIEMENT FROM PBDALG8.PRESTATIONS_SANTE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7624,7 +10191,9 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     global::System.Nullable<decimal> Original_ANNEE_PAIEMENT, 
                     global::System.Nullable<decimal> Original_FRAIS_REEL_ASSURE, 
                     global::System.Nullable<decimal> Original_MONTANT_SECU, 
-                    global::System.Nullable<decimal> Original_MONTANT_REMBOURSE) {
+                    global::System.Nullable<decimal> Original_MONTANT_REMBOURSE, 
+                    string Original_DATE_SOINS, 
+                    string Original_DATE_PAIEMENT) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_NUM_SINISTRE));
             if ((Original_NUM_ADHESION.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -7746,6 +10315,22 @@ namespace testbackoffice7.DataSet2TableAdapters {
                 this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
+            if ((Original_DATE_SOINS == null)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_DATE_SOINS));
+            }
+            if ((Original_DATE_PAIEMENT == null)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_DATE_PAIEMENT));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7782,7 +10367,9 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     global::System.Nullable<decimal> ANNEE_PAIEMENT, 
                     global::System.Nullable<decimal> FRAIS_REEL_ASSURE, 
                     global::System.Nullable<decimal> MONTANT_SECU, 
-                    global::System.Nullable<decimal> MONTANT_REMBOURSE) {
+                    global::System.Nullable<decimal> MONTANT_REMBOURSE, 
+                    string DATE_SOINS, 
+                    string DATE_PAIEMENT) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(NUM_SINISTRE));
             if ((NUM_ADHESION.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(NUM_ADHESION.Value));
@@ -7874,6 +10461,18 @@ namespace testbackoffice7.DataSet2TableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
+            if ((DATE_SOINS == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(DATE_SOINS));
+            }
+            if ((DATE_PAIEMENT == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(DATE_PAIEMENT));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7911,6 +10510,8 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     global::System.Nullable<decimal> FRAIS_REEL_ASSURE, 
                     global::System.Nullable<decimal> MONTANT_SECU, 
                     global::System.Nullable<decimal> MONTANT_REMBOURSE, 
+                    string DATE_SOINS, 
+                    string DATE_PAIEMENT, 
                     decimal Original_NUM_SINISTRE, 
                     global::System.Nullable<decimal> Original_NUM_ADHESION, 
                     global::System.Nullable<decimal> p2, 
@@ -7926,7 +10527,9 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     global::System.Nullable<decimal> Original_ANNEE_PAIEMENT, 
                     global::System.Nullable<decimal> Original_FRAIS_REEL_ASSURE, 
                     global::System.Nullable<decimal> Original_MONTANT_SECU, 
-                    global::System.Nullable<decimal> Original_MONTANT_REMBOURSE) {
+                    global::System.Nullable<decimal> Original_MONTANT_REMBOURSE, 
+                    string Original_DATE_SOINS, 
+                    string Original_DATE_PAIEMENT) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(NUM_SINISTRE));
             if ((NUM_ADHESION.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(NUM_ADHESION.Value));
@@ -8018,126 +10621,154 @@ namespace testbackoffice7.DataSet2TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(Original_NUM_SINISTRE));
-            if ((Original_NUM_ADHESION.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(Original_NUM_ADHESION.Value));
+            if ((DATE_SOINS == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(DATE_SOINS));
             }
-            if ((p2.HasValue == true)) {
+            if ((DATE_PAIEMENT == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(DATE_PAIEMENT));
+            }
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(Original_NUM_SINISTRE));
+            if ((Original_NUM_ADHESION.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(p2.Value));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(Original_NUM_ADHESION.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            if ((Original_NUM_BENEFICIAIRE.HasValue == true)) {
+            if ((p2.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(Original_NUM_BENEFICIAIRE.Value));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(p2.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_ACTE == null)) {
+            if ((Original_NUM_BENEFICIAIRE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(Original_NUM_BENEFICIAIRE.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_ACTE));
-            }
-            if ((Original_DESIGNATION_ACTE == null)) {
+            if ((Original_ACTE == null)) {
                 this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_DESIGNATION_ACTE));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_ACTE));
             }
-            if ((Original_LIBELLE_BAREME == null)) {
+            if ((Original_DESIGNATION_ACTE == null)) {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_LIBELLE_BAREME));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_DESIGNATION_ACTE));
             }
-            if ((Original_JOUR_DEBUT_SOINS == null)) {
+            if ((Original_LIBELLE_BAREME == null)) {
                 this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_JOUR_DEBUT_SOINS));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_LIBELLE_BAREME));
             }
-            if ((Original_MOIS_DEBUT_SOINS == null)) {
+            if ((Original_JOUR_DEBUT_SOINS == null)) {
                 this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_MOIS_DEBUT_SOINS));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_JOUR_DEBUT_SOINS));
             }
-            if ((Original_ANNEE_DEBUT_SOINS.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((decimal)(Original_ANNEE_DEBUT_SOINS.Value));
-            }
-            else {
+            if ((Original_MOIS_DEBUT_SOINS == null)) {
                 this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
-            if ((Original_JOUR_PAIEMENT == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_MOIS_DEBUT_SOINS));
+            }
+            if ((Original_ANNEE_DEBUT_SOINS.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((decimal)(Original_ANNEE_DEBUT_SOINS.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_JOUR_PAIEMENT));
-            }
-            if ((Original_MOIS_PAIEMENT == null)) {
+            if ((Original_JOUR_PAIEMENT == null)) {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_MOIS_PAIEMENT));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_JOUR_PAIEMENT));
             }
-            if ((Original_ANNEE_PAIEMENT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((decimal)(Original_ANNEE_PAIEMENT.Value));
-            }
-            else {
+            if ((Original_MOIS_PAIEMENT == null)) {
                 this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
-            if ((Original_FRAIS_REEL_ASSURE.HasValue == true)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_MOIS_PAIEMENT));
+            }
+            if ((Original_ANNEE_PAIEMENT.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((decimal)(Original_FRAIS_REEL_ASSURE.Value));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((decimal)(Original_ANNEE_PAIEMENT.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
-            if ((Original_MONTANT_SECU.HasValue == true)) {
+            if ((Original_FRAIS_REEL_ASSURE.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((decimal)(Original_MONTANT_SECU.Value));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((decimal)(Original_FRAIS_REEL_ASSURE.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
-            if ((Original_MONTANT_REMBOURSE.HasValue == true)) {
+            if ((Original_MONTANT_SECU.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((decimal)(Original_MONTANT_REMBOURSE.Value));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((decimal)(Original_MONTANT_SECU.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            if ((Original_MONTANT_REMBOURSE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((decimal)(Original_MONTANT_REMBOURSE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DATE_SOINS == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_DATE_SOINS));
+            }
+            if ((Original_DATE_PAIEMENT == null)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_DATE_PAIEMENT));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8175,6 +10806,8 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     global::System.Nullable<decimal> FRAIS_REEL_ASSURE, 
                     global::System.Nullable<decimal> MONTANT_SECU, 
                     global::System.Nullable<decimal> MONTANT_REMBOURSE, 
+                    string DATE_SOINS, 
+                    string DATE_PAIEMENT, 
                     decimal Original_NUM_SINISTRE, 
                     global::System.Nullable<decimal> Original_NUM_ADHESION, 
                     global::System.Nullable<decimal> p2, 
@@ -8190,8 +10823,10 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     global::System.Nullable<decimal> Original_ANNEE_PAIEMENT, 
                     global::System.Nullable<decimal> Original_FRAIS_REEL_ASSURE, 
                     global::System.Nullable<decimal> Original_MONTANT_SECU, 
-                    global::System.Nullable<decimal> Original_MONTANT_REMBOURSE) {
-            return this.Update(Original_NUM_SINISTRE, NUM_ADHESION, p1, NUM_BENEFICIAIRE, ACTE, DESIGNATION_ACTE, LIBELLE_BAREME, JOUR_DEBUT_SOINS, MOIS_DEBUT_SOINS, ANNEE_DEBUT_SOINS, JOUR_PAIEMENT, MOIS_PAIEMENT, ANNEE_PAIEMENT, FRAIS_REEL_ASSURE, MONTANT_SECU, MONTANT_REMBOURSE, Original_NUM_SINISTRE, Original_NUM_ADHESION, p2, Original_NUM_BENEFICIAIRE, Original_ACTE, Original_DESIGNATION_ACTE, Original_LIBELLE_BAREME, Original_JOUR_DEBUT_SOINS, Original_MOIS_DEBUT_SOINS, Original_ANNEE_DEBUT_SOINS, Original_JOUR_PAIEMENT, Original_MOIS_PAIEMENT, Original_ANNEE_PAIEMENT, Original_FRAIS_REEL_ASSURE, Original_MONTANT_SECU, Original_MONTANT_REMBOURSE);
+                    global::System.Nullable<decimal> Original_MONTANT_REMBOURSE, 
+                    string Original_DATE_SOINS, 
+                    string Original_DATE_PAIEMENT) {
+            return this.Update(Original_NUM_SINISTRE, NUM_ADHESION, p1, NUM_BENEFICIAIRE, ACTE, DESIGNATION_ACTE, LIBELLE_BAREME, JOUR_DEBUT_SOINS, MOIS_DEBUT_SOINS, ANNEE_DEBUT_SOINS, JOUR_PAIEMENT, MOIS_PAIEMENT, ANNEE_PAIEMENT, FRAIS_REEL_ASSURE, MONTANT_SECU, MONTANT_REMBOURSE, DATE_SOINS, DATE_PAIEMENT, Original_NUM_SINISTRE, Original_NUM_ADHESION, p2, Original_NUM_BENEFICIAIRE, Original_ACTE, Original_DESIGNATION_ACTE, Original_LIBELLE_BAREME, Original_JOUR_DEBUT_SOINS, Original_MOIS_DEBUT_SOINS, Original_ANNEE_DEBUT_SOINS, Original_JOUR_PAIEMENT, Original_MOIS_PAIEMENT, Original_ANNEE_PAIEMENT, Original_FRAIS_REEL_ASSURE, Original_MONTANT_SECU, Original_MONTANT_REMBOURSE, Original_DATE_SOINS, Original_DATE_PAIEMENT);
         }
     }
     
@@ -8318,12 +10953,15 @@ namespace testbackoffice7.DataSet2TableAdapters {
             tableMapping.DataSetTable = "REGIONS";
             tableMapping.ColumnMappings.Add("NUM_REGION", "NUM_REGION");
             tableMapping.ColumnMappings.Add("LIB_REGION", "LIB_REGION");
+            tableMapping.ColumnMappings.Add("LATITUDE", "LATITUDE");
+            tableMapping.ColumnMappings.Add("LONGITUDE", "LONGITUDE");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM \"PBDALG8\".\"REGIONS\" WHERE ((\"NUM_REGION\" = :Original_NUM_REGION) AND " +
                 "((:IsNull_LIB_REGION = 1 AND \"LIB_REGION\" IS NULL) OR (\"LIB_REGION\" = :Original_" +
-                "LIB_REGION)))";
+                "LIB_REGION)) AND (\"LATITUDE\" = :Original_LATITUDE) AND (\"LONGITUDE\" = :Original_" +
+                "LONGITUDE))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_NUM_REGION";
@@ -8352,10 +10990,28 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.SourceColumn = "LIB_REGION";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LATITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"PBDALG8\".\"REGIONS\" (\"NUM_REGION\", \"LIB_REGION\") VALUES (:NUM_REGION," +
-                " :LIB_REGION)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"PBDALG8\".\"REGIONS\" (\"NUM_REGION\", \"LIB_REGION\", \"LATITUDE\", \"LONGITU" +
+                "DE\") VALUES (:NUM_REGION, :LIB_REGION, :LATITUDE, :LONGITUDE)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "NUM_REGION";
@@ -8372,11 +11028,25 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "LIB_REGION";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LATITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE \"PBDALG8\".\"REGIONS\" SET \"NUM_REGION\" = :NUM_REGION, \"LIB_REGION\" = :LIB_RE" +
-                "GION WHERE ((\"NUM_REGION\" = :Original_NUM_REGION) AND ((:IsNull_LIB_REGION = 1 A" +
-                "ND \"LIB_REGION\" IS NULL) OR (\"LIB_REGION\" = :Original_LIB_REGION)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""PBDALG8"".""REGIONS"" SET ""NUM_REGION"" = :NUM_REGION, ""LIB_REGION"" = :LIB_REGION, ""LATITUDE"" = :LATITUDE, ""LONGITUDE"" = :LONGITUDE WHERE ((""NUM_REGION"" = :Original_NUM_REGION) AND ((:IsNull_LIB_REGION = 1 AND ""LIB_REGION"" IS NULL) OR (""LIB_REGION"" = :Original_LIB_REGION)) AND (""LATITUDE"" = :Original_LATITUDE) AND (""LONGITUDE"" = :Original_LONGITUDE))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "NUM_REGION";
@@ -8392,6 +11062,22 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "LIB_REGION";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LATITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_NUM_REGION";
@@ -8420,6 +11106,24 @@ namespace testbackoffice7.DataSet2TableAdapters {
             param.SourceColumn = "LIB_REGION";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LATITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LATITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LONGITUDE";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int64;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LONGITUDE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8435,7 +11139,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NUM_REGION, LIB_REGION FROM PBDALG8.REGIONS";
+            this._commandCollection[0].CommandText = "SELECT NUM_REGION, LIB_REGION, LATITUDE, LONGITUDE FROM PBDALG8.REGIONS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8496,7 +11200,7 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_NUM_REGION, string Original_LIB_REGION) {
+        public virtual int Delete(decimal Original_NUM_REGION, string Original_LIB_REGION, long Original_LATITUDE, long Original_LONGITUDE) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_NUM_REGION));
             if ((Original_LIB_REGION == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -8505,6 +11209,2025 @@ namespace testbackoffice7.DataSet2TableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_LIB_REGION));
+            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((long)(Original_LATITUDE));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((long)(Original_LONGITUDE));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(decimal NUM_REGION, string LIB_REGION, long LATITUDE, long LONGITUDE) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(NUM_REGION));
+            if ((LIB_REGION == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(LIB_REGION));
+            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((long)(LATITUDE));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((long)(LONGITUDE));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(decimal NUM_REGION, string LIB_REGION, long LATITUDE, long LONGITUDE, decimal Original_NUM_REGION, string Original_LIB_REGION, long Original_LATITUDE, long Original_LONGITUDE) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(NUM_REGION));
+            if ((LIB_REGION == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(LIB_REGION));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((long)(LATITUDE));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((long)(LONGITUDE));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Original_NUM_REGION));
+            if ((Original_LIB_REGION == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_LIB_REGION));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((long)(Original_LATITUDE));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((long)(Original_LONGITUDE));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string LIB_REGION, long LATITUDE, long LONGITUDE, decimal Original_NUM_REGION, string Original_LIB_REGION, long Original_LATITUDE, long Original_LONGITUDE) {
+            return this.Update(Original_NUM_REGION, LIB_REGION, LATITUDE, LONGITUDE, Original_NUM_REGION, Original_LIB_REGION, Original_LATITUDE, Original_LONGITUDE);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VILLESTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public VILLESTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VILLES";
+            tableMapping.ColumnMappings.Add("VILLE_ID", "VILLE_ID");
+            tableMapping.ColumnMappings.Add("VILLE_DEPARTEMENT", "VILLE_DEPARTEMENT");
+            tableMapping.ColumnMappings.Add("VILLE_SLUG", "VILLE_SLUG");
+            tableMapping.ColumnMappings.Add("VILLE_NOM", "VILLE_NOM");
+            tableMapping.ColumnMappings.Add("VILLE_NOM_SIMPLE", "VILLE_NOM_SIMPLE");
+            tableMapping.ColumnMappings.Add("VILLE_NOM_REEL", "VILLE_NOM_REEL");
+            tableMapping.ColumnMappings.Add("VILLE_NOM_SOUNDEX", "VILLE_NOM_SOUNDEX");
+            tableMapping.ColumnMappings.Add("VILLE_NOM_METAPHONE", "VILLE_NOM_METAPHONE");
+            tableMapping.ColumnMappings.Add("VILLE_CODE_POSTAL", "VILLE_CODE_POSTAL");
+            tableMapping.ColumnMappings.Add("VILLE_COMMUNE", "VILLE_COMMUNE");
+            tableMapping.ColumnMappings.Add("VILLE_CODE_COMMUNE", "VILLE_CODE_COMMUNE");
+            tableMapping.ColumnMappings.Add("VILLE_ARRONDISSEMENT", "VILLE_ARRONDISSEMENT");
+            tableMapping.ColumnMappings.Add("VILLE_CANTON", "VILLE_CANTON");
+            tableMapping.ColumnMappings.Add("VILLE_AMDI", "VILLE_AMDI");
+            tableMapping.ColumnMappings.Add("VILLE_POPULATION_2010", "VILLE_POPULATION_2010");
+            tableMapping.ColumnMappings.Add("VILLE_POPULATION_1999", "VILLE_POPULATION_1999");
+            tableMapping.ColumnMappings.Add("VILLE_POPULATION_2012", "VILLE_POPULATION_2012");
+            tableMapping.ColumnMappings.Add("VILLE_DENSITE_2010", "VILLE_DENSITE_2010");
+            tableMapping.ColumnMappings.Add("VILLE_SURFACE", "VILLE_SURFACE");
+            tableMapping.ColumnMappings.Add("VILLE_LONGITUDE_DEG", "VILLE_LONGITUDE_DEG");
+            tableMapping.ColumnMappings.Add("VILLE_LATITUDE_DEG", "VILLE_LATITUDE_DEG");
+            tableMapping.ColumnMappings.Add("VILLE_LONGITUDE_GRD", "VILLE_LONGITUDE_GRD");
+            tableMapping.ColumnMappings.Add("VILLE_LATITUDE_GRD", "VILLE_LATITUDE_GRD");
+            tableMapping.ColumnMappings.Add("VILLE_LONGITUDE_DMS", "VILLE_LONGITUDE_DMS");
+            tableMapping.ColumnMappings.Add("VILLE_LATITUDE_DMS", "VILLE_LATITUDE_DMS");
+            tableMapping.ColumnMappings.Add("VILLE_ZMIN", "VILLE_ZMIN");
+            tableMapping.ColumnMappings.Add("VILLE_ZMAX", "VILLE_ZMAX");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM \"PBDALG8\".\"VILLES\" WHERE ((\"VILLE_ID\" = :Original_VILLE_ID) AND ((:Is" +
+                "Null_VILLE_DEPARTEMENT = 1 AND \"VILLE_DEPARTEMENT\" IS NULL) OR (\"VILLE_DEPARTEME" +
+                "NT\" = :Original_VILLE_DEPARTEMENT)) AND ((:IsNull_VILLE_SLUG = 1 AND \"VILLE_SLUG" +
+                "\" IS NULL) OR (\"VILLE_SLUG\" = :Original_VILLE_SLUG)) AND ((:IsNull_VILLE_NOM = 1" +
+                " AND \"VILLE_NOM\" IS NULL) OR (\"VILLE_NOM\" = :Original_VILLE_NOM)) AND ((:IsNull_" +
+                "VILLE_NOM_SIMPLE = 1 AND \"VILLE_NOM_SIMPLE\" IS NULL) OR (\"VILLE_NOM_SIMPLE\" = :O" +
+                "riginal_VILLE_NOM_SIMPLE)) AND ((:IsNull_VILLE_NOM_REEL = 1 AND \"VILLE_NOM_REEL\"" +
+                " IS NULL) OR (\"VILLE_NOM_REEL\" = :Original_VILLE_NOM_REEL)) AND ((:IsNull_VILLE_" +
+                "NOM_SOUNDEX = 1 AND \"VILLE_NOM_SOUNDEX\" IS NULL) OR (\"VILLE_NOM_SOUNDEX\" = :Orig" +
+                "inal_VILLE_NOM_SOUNDEX)) AND ((:IsNull_VILLE_NOM_METAPHONE = 1 AND \"VILLE_NOM_ME" +
+                "TAPHONE\" IS NULL) OR (\"VILLE_NOM_METAPHONE\" = :Original_VILLE_NOM_METAPHONE)) AN" +
+                "D ((:IsNull_VILLE_CODE_POSTAL = 1 AND \"VILLE_CODE_POSTAL\" IS NULL) OR (\"VILLE_CO" +
+                "DE_POSTAL\" = :Original_VILLE_CODE_POSTAL)) AND ((:IsNull_VILLE_COMMUNE = 1 AND \"" +
+                "VILLE_COMMUNE\" IS NULL) OR (\"VILLE_COMMUNE\" = :Original_VILLE_COMMUNE)) AND (\"VI" +
+                "LLE_CODE_COMMUNE\" = :Original_VILLE_CODE_COMMUNE) AND ((:IsNull_VILLE_ARRONDISSE" +
+                "MENT = 1 AND \"VILLE_ARRONDISSEMENT\" IS NULL) OR (\"VILLE_ARRONDISSEMENT\" = :Origi" +
+                "nal_VILLE_ARRONDISSEMENT)) AND ((:IsNull_VILLE_CANTON = 1 AND \"VILLE_CANTON\" IS " +
+                "NULL) OR (\"VILLE_CANTON\" = :Original_VILLE_CANTON)) AND ((:IsNull_VILLE_AMDI = 1" +
+                " AND \"VILLE_AMDI\" IS NULL) OR (\"VILLE_AMDI\" = :Original_VILLE_AMDI)) AND ((:IsNu" +
+                "ll_VILLE_POPULATION_2010 = 1 AND \"VILLE_POPULATION_2010\" IS NULL) OR (\"VILLE_POP" +
+                "ULATION_2010\" = :Original_VILLE_POPULATION_2010)) AND ((:IsNull_VILLE_POPULATION" +
+                "_1999 = 1 AND \"VILLE_POPULATION_1999\" IS NULL) OR (\"VILLE_POPULATION_1999\" = :Or" +
+                "iginal_VILLE_POPULATION_1999)) AND ((:IsNull_VILLE_POPULATION_2012 = 1 AND \"VILL" +
+                "E_POPULATION_2012\" IS NULL) OR (\"VILLE_POPULATION_2012\" = :Original_VILLE_POPULA" +
+                "TION_2012)) AND ((:IsNull_VILLE_DENSITE_2010 = 1 AND \"VILLE_DENSITE_2010\" IS NUL" +
+                "L) OR (\"VILLE_DENSITE_2010\" = :Original_VILLE_DENSITE_2010)) AND ((:IsNull_VILLE" +
+                "_SURFACE = 1 AND \"VILLE_SURFACE\" IS NULL) OR (\"VILLE_SURFACE\" = :Original_VILLE_" +
+                "SURFACE)) AND ((:IsNull_VILLE_LONGITUDE_DEG = 1 AND \"VILLE_LONGITUDE_DEG\" IS NUL" +
+                "L) OR (\"VILLE_LONGITUDE_DEG\" = :Original_VILLE_LONGITUDE_DEG)) AND ((:IsNull_VIL" +
+                "LE_LATITUDE_DEG = 1 AND \"VILLE_LATITUDE_DEG\" IS NULL) OR (\"VILLE_LATITUDE_DEG\" =" +
+                " :Original_VILLE_LATITUDE_DEG)) AND ((:IsNull_VILLE_LONGITUDE_GRD = 1 AND \"VILLE" +
+                "_LONGITUDE_GRD\" IS NULL) OR (\"VILLE_LONGITUDE_GRD\" = :Original_VILLE_LONGITUDE_G" +
+                "RD)) AND ((:IsNull_VILLE_LATITUDE_GRD = 1 AND \"VILLE_LATITUDE_GRD\" IS NULL) OR (" +
+                "\"VILLE_LATITUDE_GRD\" = :Original_VILLE_LATITUDE_GRD)) AND ((:IsNull_VILLE_LONGIT" +
+                "UDE_DMS = 1 AND \"VILLE_LONGITUDE_DMS\" IS NULL) OR (\"VILLE_LONGITUDE_DMS\" = :Orig" +
+                "inal_VILLE_LONGITUDE_DMS)) AND ((:IsNull_VILLE_LATITUDE_DMS = 1 AND \"VILLE_LATIT" +
+                "UDE_DMS\" IS NULL) OR (\"VILLE_LATITUDE_DMS\" = :Original_VILLE_LATITUDE_DMS)) AND " +
+                "((:IsNull_VILLE_ZMIN = 1 AND \"VILLE_ZMIN\" IS NULL) OR (\"VILLE_ZMIN\" = :Original_" +
+                "VILLE_ZMIN)) AND ((:IsNull_VILLE_ZMAX = 1 AND \"VILLE_ZMAX\" IS NULL) OR (\"VILLE_Z" +
+                "MAX\" = :Original_VILLE_ZMAX)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_DEPARTEMENT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DEPARTEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_DEPARTEMENT";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DEPARTEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_SLUG";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SLUG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_SLUG";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SLUG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM_SIMPLE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SIMPLE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM_SIMPLE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SIMPLE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM_REEL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_REEL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM_REEL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_REEL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM_SOUNDEX";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SOUNDEX";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM_SOUNDEX";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SOUNDEX";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM_METAPHONE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_METAPHONE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM_METAPHONE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_METAPHONE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_CODE_POSTAL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_POSTAL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_CODE_POSTAL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_POSTAL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_COMMUNE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_COMMUNE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_COMMUNE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_COMMUNE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_CODE_COMMUNE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_COMMUNE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_ARRONDISSEMENT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ARRONDISSEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_ARRONDISSEMENT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ARRONDISSEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_CANTON";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CANTON";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_CANTON";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CANTON";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_AMDI";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_AMDI";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_AMDI";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_AMDI";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_POPULATION_2010";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2010";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_POPULATION_2010";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2010";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_POPULATION_1999";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_1999";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_POPULATION_1999";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_1999";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_POPULATION_2012";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2012";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_POPULATION_2012";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2012";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_DENSITE_2010";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DENSITE_2010";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_DENSITE_2010";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DENSITE_2010";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_SURFACE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SURFACE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_SURFACE";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SURFACE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LONGITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DEG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LONGITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DEG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LATITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DEG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LATITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DEG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LONGITUDE_GRD";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_GRD";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LONGITUDE_GRD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_GRD";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LATITUDE_GRD";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_GRD";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LATITUDE_GRD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_GRD";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LONGITUDE_DMS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DMS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LONGITUDE_DMS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DMS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LATITUDE_DMS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DMS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LATITUDE_DMS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DMS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_ZMIN";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMIN";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_ZMIN";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMIN";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_ZMAX";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMAX";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_ZMAX";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMAX";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""PBDALG8"".""VILLES"" (""VILLE_ID"", ""VILLE_DEPARTEMENT"", ""VILLE_SLUG"", ""VILLE_NOM"", ""VILLE_NOM_SIMPLE"", ""VILLE_NOM_REEL"", ""VILLE_NOM_SOUNDEX"", ""VILLE_NOM_METAPHONE"", ""VILLE_CODE_POSTAL"", ""VILLE_COMMUNE"", ""VILLE_CODE_COMMUNE"", ""VILLE_ARRONDISSEMENT"", ""VILLE_CANTON"", ""VILLE_AMDI"", ""VILLE_POPULATION_2010"", ""VILLE_POPULATION_1999"", ""VILLE_POPULATION_2012"", ""VILLE_DENSITE_2010"", ""VILLE_SURFACE"", ""VILLE_LONGITUDE_DEG"", ""VILLE_LATITUDE_DEG"", ""VILLE_LONGITUDE_GRD"", ""VILLE_LATITUDE_GRD"", ""VILLE_LONGITUDE_DMS"", ""VILLE_LATITUDE_DMS"", ""VILLE_ZMIN"", ""VILLE_ZMAX"") VALUES (:VILLE_ID, :VILLE_DEPARTEMENT, :VILLE_SLUG, :VILLE_NOM, :VILLE_NOM_SIMPLE, :VILLE_NOM_REEL, :VILLE_NOM_SOUNDEX, :VILLE_NOM_METAPHONE, :VILLE_CODE_POSTAL, :VILLE_COMMUNE, :VILLE_CODE_COMMUNE, :VILLE_ARRONDISSEMENT, :VILLE_CANTON, :VILLE_AMDI, :VILLE_POPULATION_2010, :VILLE_POPULATION_1999, :VILLE_POPULATION_2012, :VILLE_DENSITE_2010, :VILLE_SURFACE, :VILLE_LONGITUDE_DEG, :VILLE_LATITUDE_DEG, :VILLE_LONGITUDE_GRD, :VILLE_LATITUDE_GRD, :VILLE_LONGITUDE_DMS, :VILLE_LATITUDE_DMS, :VILLE_ZMIN, :VILLE_ZMAX)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_DEPARTEMENT";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DEPARTEMENT";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_SLUG";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SLUG";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM_SIMPLE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SIMPLE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM_REEL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_REEL";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM_SOUNDEX";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SOUNDEX";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM_METAPHONE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_METAPHONE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_CODE_POSTAL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_POSTAL";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_COMMUNE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_COMMUNE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_CODE_COMMUNE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_COMMUNE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_ARRONDISSEMENT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ARRONDISSEMENT";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_CANTON";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CANTON";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_AMDI";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_AMDI";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_POPULATION_2010";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2010";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_POPULATION_1999";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_1999";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_POPULATION_2012";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2012";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_DENSITE_2010";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DENSITE_2010";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_SURFACE";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SURFACE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LONGITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DEG";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LATITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DEG";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LONGITUDE_GRD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_GRD";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LATITUDE_GRD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_GRD";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LONGITUDE_DMS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DMS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LATITUDE_DMS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DMS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_ZMIN";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMIN";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_ZMAX";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMAX";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE \"PBDALG8\".\"VILLES\" SET \"VILLE_ID\" = :VILLE_ID, \"VILLE_DEPARTEMENT\" = :VILL" +
+                "E_DEPARTEMENT, \"VILLE_SLUG\" = :VILLE_SLUG, \"VILLE_NOM\" = :VILLE_NOM, \"VILLE_NOM_" +
+                "SIMPLE\" = :VILLE_NOM_SIMPLE, \"VILLE_NOM_REEL\" = :VILLE_NOM_REEL, \"VILLE_NOM_SOUN" +
+                "DEX\" = :VILLE_NOM_SOUNDEX, \"VILLE_NOM_METAPHONE\" = :VILLE_NOM_METAPHONE, \"VILLE_" +
+                "CODE_POSTAL\" = :VILLE_CODE_POSTAL, \"VILLE_COMMUNE\" = :VILLE_COMMUNE, \"VILLE_CODE" +
+                "_COMMUNE\" = :VILLE_CODE_COMMUNE, \"VILLE_ARRONDISSEMENT\" = :VILLE_ARRONDISSEMENT," +
+                " \"VILLE_CANTON\" = :VILLE_CANTON, \"VILLE_AMDI\" = :VILLE_AMDI, \"VILLE_POPULATION_2" +
+                "010\" = :VILLE_POPULATION_2010, \"VILLE_POPULATION_1999\" = :VILLE_POPULATION_1999," +
+                " \"VILLE_POPULATION_2012\" = :VILLE_POPULATION_2012, \"VILLE_DENSITE_2010\" = :VILLE" +
+                "_DENSITE_2010, \"VILLE_SURFACE\" = :VILLE_SURFACE, \"VILLE_LONGITUDE_DEG\" = :VILLE_" +
+                "LONGITUDE_DEG, \"VILLE_LATITUDE_DEG\" = :VILLE_LATITUDE_DEG, \"VILLE_LONGITUDE_GRD\"" +
+                " = :VILLE_LONGITUDE_GRD, \"VILLE_LATITUDE_GRD\" = :VILLE_LATITUDE_GRD, \"VILLE_LONG" +
+                "ITUDE_DMS\" = :VILLE_LONGITUDE_DMS, \"VILLE_LATITUDE_DMS\" = :VILLE_LATITUDE_DMS, \"" +
+                "VILLE_ZMIN\" = :VILLE_ZMIN, \"VILLE_ZMAX\" = :VILLE_ZMAX WHERE ((\"VILLE_ID\" = :Orig" +
+                "inal_VILLE_ID) AND ((:IsNull_VILLE_DEPARTEMENT = 1 AND \"VILLE_DEPARTEMENT\" IS NU" +
+                "LL) OR (\"VILLE_DEPARTEMENT\" = :Original_VILLE_DEPARTEMENT)) AND ((:IsNull_VILLE_" +
+                "SLUG = 1 AND \"VILLE_SLUG\" IS NULL) OR (\"VILLE_SLUG\" = :Original_VILLE_SLUG)) AND" +
+                " ((:IsNull_VILLE_NOM = 1 AND \"VILLE_NOM\" IS NULL) OR (\"VILLE_NOM\" = :Original_VI" +
+                "LLE_NOM)) AND ((:IsNull_VILLE_NOM_SIMPLE = 1 AND \"VILLE_NOM_SIMPLE\" IS NULL) OR " +
+                "(\"VILLE_NOM_SIMPLE\" = :Original_VILLE_NOM_SIMPLE)) AND ((:IsNull_VILLE_NOM_REEL " +
+                "= 1 AND \"VILLE_NOM_REEL\" IS NULL) OR (\"VILLE_NOM_REEL\" = :Original_VILLE_NOM_REE" +
+                "L)) AND ((:IsNull_VILLE_NOM_SOUNDEX = 1 AND \"VILLE_NOM_SOUNDEX\" IS NULL) OR (\"VI" +
+                "LLE_NOM_SOUNDEX\" = :Original_VILLE_NOM_SOUNDEX)) AND ((:IsNull_VILLE_NOM_METAPHO" +
+                "NE = 1 AND \"VILLE_NOM_METAPHONE\" IS NULL) OR (\"VILLE_NOM_METAPHONE\" = :Original_" +
+                "VILLE_NOM_METAPHONE)) AND ((:IsNull_VILLE_CODE_POSTAL = 1 AND \"VILLE_CODE_POSTAL" +
+                "\" IS NULL) OR (\"VILLE_CODE_POSTAL\" = :Original_VILLE_CODE_POSTAL)) AND ((:IsNull" +
+                "_VILLE_COMMUNE = 1 AND \"VILLE_COMMUNE\" IS NULL) OR (\"VILLE_COMMUNE\" = :Original_" +
+                "VILLE_COMMUNE)) AND (\"VILLE_CODE_COMMUNE\" = :Original_VILLE_CODE_COMMUNE) AND ((" +
+                ":IsNull_VILLE_ARRONDISSEMENT = 1 AND \"VILLE_ARRONDISSEMENT\" IS NULL) OR (\"VILLE_" +
+                "ARRONDISSEMENT\" = :Original_VILLE_ARRONDISSEMENT)) AND ((:IsNull_VILLE_CANTON = " +
+                "1 AND \"VILLE_CANTON\" IS NULL) OR (\"VILLE_CANTON\" = :Original_VILLE_CANTON)) AND " +
+                "((:IsNull_VILLE_AMDI = 1 AND \"VILLE_AMDI\" IS NULL) OR (\"VILLE_AMDI\" = :Original_" +
+                "VILLE_AMDI)) AND ((:IsNull_VILLE_POPULATION_2010 = 1 AND \"VILLE_POPULATION_2010\"" +
+                " IS NULL) OR (\"VILLE_POPULATION_2010\" = :Original_VILLE_POPULATION_2010)) AND ((" +
+                ":IsNull_VILLE_POPULATION_1999 = 1 AND \"VILLE_POPULATION_1999\" IS NULL) OR (\"VILL" +
+                "E_POPULATION_1999\" = :Original_VILLE_POPULATION_1999)) AND ((:IsNull_VILLE_POPUL" +
+                "ATION_2012 = 1 AND \"VILLE_POPULATION_2012\" IS NULL) OR (\"VILLE_POPULATION_2012\" " +
+                "= :Original_VILLE_POPULATION_2012)) AND ((:IsNull_VILLE_DENSITE_2010 = 1 AND \"VI" +
+                "LLE_DENSITE_2010\" IS NULL) OR (\"VILLE_DENSITE_2010\" = :Original_VILLE_DENSITE_20" +
+                "10)) AND ((:IsNull_VILLE_SURFACE = 1 AND \"VILLE_SURFACE\" IS NULL) OR (\"VILLE_SUR" +
+                "FACE\" = :Original_VILLE_SURFACE)) AND ((:IsNull_VILLE_LONGITUDE_DEG = 1 AND \"VIL" +
+                "LE_LONGITUDE_DEG\" IS NULL) OR (\"VILLE_LONGITUDE_DEG\" = :Original_VILLE_LONGITUDE" +
+                "_DEG)) AND ((:IsNull_VILLE_LATITUDE_DEG = 1 AND \"VILLE_LATITUDE_DEG\" IS NULL) OR" +
+                " (\"VILLE_LATITUDE_DEG\" = :Original_VILLE_LATITUDE_DEG)) AND ((:IsNull_VILLE_LONG" +
+                "ITUDE_GRD = 1 AND \"VILLE_LONGITUDE_GRD\" IS NULL) OR (\"VILLE_LONGITUDE_GRD\" = :Or" +
+                "iginal_VILLE_LONGITUDE_GRD)) AND ((:IsNull_VILLE_LATITUDE_GRD = 1 AND \"VILLE_LAT" +
+                "ITUDE_GRD\" IS NULL) OR (\"VILLE_LATITUDE_GRD\" = :Original_VILLE_LATITUDE_GRD)) AN" +
+                "D ((:IsNull_VILLE_LONGITUDE_DMS = 1 AND \"VILLE_LONGITUDE_DMS\" IS NULL) OR (\"VILL" +
+                "E_LONGITUDE_DMS\" = :Original_VILLE_LONGITUDE_DMS)) AND ((:IsNull_VILLE_LATITUDE_" +
+                "DMS = 1 AND \"VILLE_LATITUDE_DMS\" IS NULL) OR (\"VILLE_LATITUDE_DMS\" = :Original_V" +
+                "ILLE_LATITUDE_DMS)) AND ((:IsNull_VILLE_ZMIN = 1 AND \"VILLE_ZMIN\" IS NULL) OR (\"" +
+                "VILLE_ZMIN\" = :Original_VILLE_ZMIN)) AND ((:IsNull_VILLE_ZMAX = 1 AND \"VILLE_ZMA" +
+                "X\" IS NULL) OR (\"VILLE_ZMAX\" = :Original_VILLE_ZMAX)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_DEPARTEMENT";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DEPARTEMENT";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_SLUG";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SLUG";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM_SIMPLE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SIMPLE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM_REEL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_REEL";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM_SOUNDEX";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SOUNDEX";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_NOM_METAPHONE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_METAPHONE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_CODE_POSTAL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_POSTAL";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_COMMUNE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_COMMUNE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_CODE_COMMUNE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_COMMUNE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_ARRONDISSEMENT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ARRONDISSEMENT";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_CANTON";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CANTON";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_AMDI";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_AMDI";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_POPULATION_2010";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2010";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_POPULATION_1999";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_1999";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_POPULATION_2012";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2012";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_DENSITE_2010";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DENSITE_2010";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_SURFACE";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SURFACE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LONGITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DEG";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LATITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DEG";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LONGITUDE_GRD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_GRD";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LATITUDE_GRD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_GRD";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LONGITUDE_DMS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DMS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_LATITUDE_DMS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DMS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_ZMIN";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMIN";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "VILLE_ZMAX";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMAX";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_DEPARTEMENT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DEPARTEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_DEPARTEMENT";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DEPARTEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_SLUG";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SLUG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_SLUG";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SLUG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM_SIMPLE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SIMPLE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM_SIMPLE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SIMPLE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM_REEL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_REEL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM_REEL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_REEL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM_SOUNDEX";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SOUNDEX";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM_SOUNDEX";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_SOUNDEX";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_NOM_METAPHONE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_METAPHONE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_NOM_METAPHONE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_NOM_METAPHONE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_CODE_POSTAL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_POSTAL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_CODE_POSTAL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_POSTAL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_COMMUNE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_COMMUNE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_COMMUNE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 3;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_COMMUNE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_CODE_COMMUNE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 5;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CODE_COMMUNE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_ARRONDISSEMENT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ARRONDISSEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_ARRONDISSEMENT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ARRONDISSEMENT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_CANTON";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CANTON";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_CANTON";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_CANTON";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_AMDI";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_AMDI";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_AMDI";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_AMDI";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_POPULATION_2010";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2010";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_POPULATION_2010";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2010";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_POPULATION_1999";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_1999";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_POPULATION_1999";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_1999";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_POPULATION_2012";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2012";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_POPULATION_2012";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_POPULATION_2012";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_DENSITE_2010";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DENSITE_2010";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_DENSITE_2010";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_DENSITE_2010";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_SURFACE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SURFACE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_SURFACE";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_SURFACE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LONGITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DEG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LONGITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DEG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LATITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DEG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LATITUDE_DEG";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DEG";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LONGITUDE_GRD";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_GRD";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LONGITUDE_GRD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_GRD";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LATITUDE_GRD";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_GRD";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LATITUDE_GRD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_GRD";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LONGITUDE_DMS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DMS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LONGITUDE_DMS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 9;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LONGITUDE_DMS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_LATITUDE_DMS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DMS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_LATITUDE_DMS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_LATITUDE_DMS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_ZMIN";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMIN";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_ZMIN";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMIN";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_VILLE_ZMAX";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMAX";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_VILLE_ZMAX";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "VILLE_ZMAX";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::testbackoffice7.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT VILLE_ID, VILLE_DEPARTEMENT, VILLE_SLUG, VILLE_NOM, VILLE_NOM_SIMPLE, VILLE_NOM_REEL, VILLE_NOM_SOUNDEX, VILLE_NOM_METAPHONE, VILLE_CODE_POSTAL, VILLE_COMMUNE, VILLE_CODE_COMMUNE, VILLE_ARRONDISSEMENT, VILLE_CANTON, VILLE_AMDI, VILLE_POPULATION_2010, VILLE_POPULATION_1999, VILLE_POPULATION_2012, VILLE_DENSITE_2010, VILLE_SURFACE, VILLE_LONGITUDE_DEG, VILLE_LATITUDE_DEG, VILLE_LONGITUDE_GRD, VILLE_LATITUDE_GRD, VILLE_LONGITUDE_DMS, VILLE_LATITUDE_DMS, VILLE_ZMIN, VILLE_ZMAX FROM PBDALG8.VILLES";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSet2.VILLESDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSet2.VILLESDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSet2.VILLESDataTable dataTable = new DataSet2.VILLESDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet2.VILLESDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet2 dataSet) {
+            return this.Adapter.Update(dataSet, "VILLES");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    decimal Original_VILLE_ID, 
+                    string Original_VILLE_DEPARTEMENT, 
+                    string Original_VILLE_SLUG, 
+                    string Original_VILLE_NOM, 
+                    string Original_VILLE_NOM_SIMPLE, 
+                    string Original_VILLE_NOM_REEL, 
+                    string Original_VILLE_NOM_SOUNDEX, 
+                    string Original_VILLE_NOM_METAPHONE, 
+                    string Original_VILLE_CODE_POSTAL, 
+                    string Original_VILLE_COMMUNE, 
+                    string Original_VILLE_CODE_COMMUNE, 
+                    global::System.Nullable<decimal> Original_VILLE_ARRONDISSEMENT, 
+                    string Original_VILLE_CANTON, 
+                    global::System.Nullable<decimal> Original_VILLE_AMDI, 
+                    global::System.Nullable<decimal> Original_VILLE_POPULATION_2010, 
+                    global::System.Nullable<decimal> Original_VILLE_POPULATION_1999, 
+                    global::System.Nullable<decimal> Original_VILLE_POPULATION_2012, 
+                    global::System.Nullable<decimal> Original_VILLE_DENSITE_2010, 
+                    global::System.Nullable<decimal> Original_VILLE_SURFACE, 
+                    global::System.Nullable<decimal> Original_VILLE_LONGITUDE_DEG, 
+                    global::System.Nullable<decimal> Original_VILLE_LATITUDE_DEG, 
+                    string Original_VILLE_LONGITUDE_GRD, 
+                    string Original_VILLE_LATITUDE_GRD, 
+                    string Original_VILLE_LONGITUDE_DMS, 
+                    string Original_VILLE_LATITUDE_DMS, 
+                    global::System.Nullable<decimal> Original_VILLE_ZMIN, 
+                    global::System.Nullable<decimal> Original_VILLE_ZMAX) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_VILLE_ID));
+            if ((Original_VILLE_DEPARTEMENT == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_VILLE_DEPARTEMENT));
+            }
+            if ((Original_VILLE_SLUG == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_VILLE_SLUG));
+            }
+            if ((Original_VILLE_NOM == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_VILLE_NOM));
+            }
+            if ((Original_VILLE_NOM_SIMPLE == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_VILLE_NOM_SIMPLE));
+            }
+            if ((Original_VILLE_NOM_REEL == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_VILLE_NOM_REEL));
+            }
+            if ((Original_VILLE_NOM_SOUNDEX == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_VILLE_NOM_SOUNDEX));
+            }
+            if ((Original_VILLE_NOM_METAPHONE == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_VILLE_NOM_METAPHONE));
+            }
+            if ((Original_VILLE_CODE_POSTAL == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_VILLE_CODE_POSTAL));
+            }
+            if ((Original_VILLE_COMMUNE == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_VILLE_COMMUNE));
+            }
+            if ((Original_VILLE_CODE_COMMUNE == null)) {
+                throw new global::System.ArgumentNullException("Original_VILLE_CODE_COMMUNE");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_VILLE_CODE_COMMUNE));
+            }
+            if ((Original_VILLE_ARRONDISSEMENT.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((decimal)(Original_VILLE_ARRONDISSEMENT.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_CANTON == null)) {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((string)(Original_VILLE_CANTON));
+            }
+            if ((Original_VILLE_AMDI.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((decimal)(Original_VILLE_AMDI.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_POPULATION_2010.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((decimal)(Original_VILLE_POPULATION_2010.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_POPULATION_1999.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((decimal)(Original_VILLE_POPULATION_1999.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_POPULATION_2012.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((decimal)(Original_VILLE_POPULATION_2012.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_DENSITE_2010.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((decimal)(Original_VILLE_DENSITE_2010.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_SURFACE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((decimal)(Original_VILLE_SURFACE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_LONGITUDE_DEG.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((decimal)(Original_VILLE_LONGITUDE_DEG.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_LATITUDE_DEG.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((decimal)(Original_VILLE_LATITUDE_DEG.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_LONGITUDE_GRD == null)) {
+                this.Adapter.DeleteCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((string)(Original_VILLE_LONGITUDE_GRD));
+            }
+            if ((Original_VILLE_LATITUDE_GRD == null)) {
+                this.Adapter.DeleteCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[43].Value = ((string)(Original_VILLE_LATITUDE_GRD));
+            }
+            if ((Original_VILLE_LONGITUDE_DMS == null)) {
+                this.Adapter.DeleteCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[45].Value = ((string)(Original_VILLE_LONGITUDE_DMS));
+            }
+            if ((Original_VILLE_LATITUDE_DMS == null)) {
+                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[47].Value = ((string)(Original_VILLE_LATITUDE_DMS));
+            }
+            if ((Original_VILLE_ZMIN.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((decimal)(Original_VILLE_ZMIN.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_ZMAX.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[51].Value = ((decimal)(Original_VILLE_ZMAX.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[51].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8526,13 +13249,190 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(decimal NUM_REGION, string LIB_REGION) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(NUM_REGION));
-            if ((LIB_REGION == null)) {
+        public virtual int Insert(
+                    decimal VILLE_ID, 
+                    string VILLE_DEPARTEMENT, 
+                    string VILLE_SLUG, 
+                    string VILLE_NOM, 
+                    string VILLE_NOM_SIMPLE, 
+                    string VILLE_NOM_REEL, 
+                    string VILLE_NOM_SOUNDEX, 
+                    string VILLE_NOM_METAPHONE, 
+                    string VILLE_CODE_POSTAL, 
+                    string VILLE_COMMUNE, 
+                    string VILLE_CODE_COMMUNE, 
+                    global::System.Nullable<decimal> VILLE_ARRONDISSEMENT, 
+                    string VILLE_CANTON, 
+                    global::System.Nullable<decimal> VILLE_AMDI, 
+                    global::System.Nullable<decimal> VILLE_POPULATION_2010, 
+                    global::System.Nullable<decimal> VILLE_POPULATION_1999, 
+                    global::System.Nullable<decimal> VILLE_POPULATION_2012, 
+                    global::System.Nullable<decimal> VILLE_DENSITE_2010, 
+                    global::System.Nullable<decimal> VILLE_SURFACE, 
+                    global::System.Nullable<decimal> VILLE_LONGITUDE_DEG, 
+                    global::System.Nullable<decimal> VILLE_LATITUDE_DEG, 
+                    string VILLE_LONGITUDE_GRD, 
+                    string VILLE_LATITUDE_GRD, 
+                    string VILLE_LONGITUDE_DMS, 
+                    string VILLE_LATITUDE_DMS, 
+                    global::System.Nullable<decimal> VILLE_ZMIN, 
+                    global::System.Nullable<decimal> VILLE_ZMAX) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(VILLE_ID));
+            if ((VILLE_DEPARTEMENT == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(LIB_REGION));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(VILLE_DEPARTEMENT));
+            }
+            if ((VILLE_SLUG == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(VILLE_SLUG));
+            }
+            if ((VILLE_NOM == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(VILLE_NOM));
+            }
+            if ((VILLE_NOM_SIMPLE == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(VILLE_NOM_SIMPLE));
+            }
+            if ((VILLE_NOM_REEL == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(VILLE_NOM_REEL));
+            }
+            if ((VILLE_NOM_SOUNDEX == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(VILLE_NOM_SOUNDEX));
+            }
+            if ((VILLE_NOM_METAPHONE == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(VILLE_NOM_METAPHONE));
+            }
+            if ((VILLE_CODE_POSTAL == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(VILLE_CODE_POSTAL));
+            }
+            if ((VILLE_COMMUNE == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(VILLE_COMMUNE));
+            }
+            if ((VILLE_CODE_COMMUNE == null)) {
+                throw new global::System.ArgumentNullException("VILLE_CODE_COMMUNE");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(VILLE_CODE_COMMUNE));
+            }
+            if ((VILLE_ARRONDISSEMENT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((decimal)(VILLE_ARRONDISSEMENT.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_CANTON == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(VILLE_CANTON));
+            }
+            if ((VILLE_AMDI.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((decimal)(VILLE_AMDI.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_POPULATION_2010.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((decimal)(VILLE_POPULATION_2010.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_POPULATION_1999.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((decimal)(VILLE_POPULATION_1999.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_POPULATION_2012.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((decimal)(VILLE_POPULATION_2012.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_DENSITE_2010.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((decimal)(VILLE_DENSITE_2010.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_SURFACE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((decimal)(VILLE_SURFACE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_LONGITUDE_DEG.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((decimal)(VILLE_LONGITUDE_DEG.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_LATITUDE_DEG.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((decimal)(VILLE_LATITUDE_DEG.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_LONGITUDE_GRD == null)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(VILLE_LONGITUDE_GRD));
+            }
+            if ((VILLE_LATITUDE_GRD == null)) {
+                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(VILLE_LATITUDE_GRD));
+            }
+            if ((VILLE_LONGITUDE_DMS == null)) {
+                this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((string)(VILLE_LONGITUDE_DMS));
+            }
+            if ((VILLE_LATITUDE_DMS == null)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(VILLE_LATITUDE_DMS));
+            }
+            if ((VILLE_ZMIN.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((decimal)(VILLE_ZMIN.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_ZMAX.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[26].Value = ((decimal)(VILLE_ZMAX.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8554,22 +13454,424 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal NUM_REGION, string LIB_REGION, decimal Original_NUM_REGION, string Original_LIB_REGION) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(NUM_REGION));
-            if ((LIB_REGION == null)) {
+        public virtual int Update(
+                    decimal VILLE_ID, 
+                    string VILLE_DEPARTEMENT, 
+                    string VILLE_SLUG, 
+                    string VILLE_NOM, 
+                    string VILLE_NOM_SIMPLE, 
+                    string VILLE_NOM_REEL, 
+                    string VILLE_NOM_SOUNDEX, 
+                    string VILLE_NOM_METAPHONE, 
+                    string VILLE_CODE_POSTAL, 
+                    string VILLE_COMMUNE, 
+                    string VILLE_CODE_COMMUNE, 
+                    global::System.Nullable<decimal> VILLE_ARRONDISSEMENT, 
+                    string VILLE_CANTON, 
+                    global::System.Nullable<decimal> VILLE_AMDI, 
+                    global::System.Nullable<decimal> VILLE_POPULATION_2010, 
+                    global::System.Nullable<decimal> VILLE_POPULATION_1999, 
+                    global::System.Nullable<decimal> VILLE_POPULATION_2012, 
+                    global::System.Nullable<decimal> VILLE_DENSITE_2010, 
+                    global::System.Nullable<decimal> VILLE_SURFACE, 
+                    global::System.Nullable<decimal> VILLE_LONGITUDE_DEG, 
+                    global::System.Nullable<decimal> VILLE_LATITUDE_DEG, 
+                    string VILLE_LONGITUDE_GRD, 
+                    string VILLE_LATITUDE_GRD, 
+                    string VILLE_LONGITUDE_DMS, 
+                    string VILLE_LATITUDE_DMS, 
+                    global::System.Nullable<decimal> VILLE_ZMIN, 
+                    global::System.Nullable<decimal> VILLE_ZMAX, 
+                    decimal Original_VILLE_ID, 
+                    string Original_VILLE_DEPARTEMENT, 
+                    string Original_VILLE_SLUG, 
+                    string Original_VILLE_NOM, 
+                    string Original_VILLE_NOM_SIMPLE, 
+                    string Original_VILLE_NOM_REEL, 
+                    string Original_VILLE_NOM_SOUNDEX, 
+                    string Original_VILLE_NOM_METAPHONE, 
+                    string Original_VILLE_CODE_POSTAL, 
+                    string Original_VILLE_COMMUNE, 
+                    string Original_VILLE_CODE_COMMUNE, 
+                    global::System.Nullable<decimal> Original_VILLE_ARRONDISSEMENT, 
+                    string Original_VILLE_CANTON, 
+                    global::System.Nullable<decimal> Original_VILLE_AMDI, 
+                    global::System.Nullable<decimal> Original_VILLE_POPULATION_2010, 
+                    global::System.Nullable<decimal> Original_VILLE_POPULATION_1999, 
+                    global::System.Nullable<decimal> Original_VILLE_POPULATION_2012, 
+                    global::System.Nullable<decimal> Original_VILLE_DENSITE_2010, 
+                    global::System.Nullable<decimal> Original_VILLE_SURFACE, 
+                    global::System.Nullable<decimal> Original_VILLE_LONGITUDE_DEG, 
+                    global::System.Nullable<decimal> Original_VILLE_LATITUDE_DEG, 
+                    string Original_VILLE_LONGITUDE_GRD, 
+                    string Original_VILLE_LATITUDE_GRD, 
+                    string Original_VILLE_LONGITUDE_DMS, 
+                    string Original_VILLE_LATITUDE_DMS, 
+                    global::System.Nullable<decimal> Original_VILLE_ZMIN, 
+                    global::System.Nullable<decimal> Original_VILLE_ZMAX) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(VILLE_ID));
+            if ((VILLE_DEPARTEMENT == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(LIB_REGION));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(VILLE_DEPARTEMENT));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(Original_NUM_REGION));
-            if ((Original_LIB_REGION == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+            if ((VILLE_SLUG == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(VILLE_SLUG));
+            }
+            if ((VILLE_NOM == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(VILLE_NOM));
+            }
+            if ((VILLE_NOM_SIMPLE == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_LIB_REGION));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(VILLE_NOM_SIMPLE));
+            }
+            if ((VILLE_NOM_REEL == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(VILLE_NOM_REEL));
+            }
+            if ((VILLE_NOM_SOUNDEX == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(VILLE_NOM_SOUNDEX));
+            }
+            if ((VILLE_NOM_METAPHONE == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(VILLE_NOM_METAPHONE));
+            }
+            if ((VILLE_CODE_POSTAL == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(VILLE_CODE_POSTAL));
+            }
+            if ((VILLE_COMMUNE == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(VILLE_COMMUNE));
+            }
+            if ((VILLE_CODE_COMMUNE == null)) {
+                throw new global::System.ArgumentNullException("VILLE_CODE_COMMUNE");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(VILLE_CODE_COMMUNE));
+            }
+            if ((VILLE_ARRONDISSEMENT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(VILLE_ARRONDISSEMENT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_CANTON == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(VILLE_CANTON));
+            }
+            if ((VILLE_AMDI.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(VILLE_AMDI.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_POPULATION_2010.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(VILLE_POPULATION_2010.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_POPULATION_1999.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(VILLE_POPULATION_1999.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_POPULATION_2012.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(VILLE_POPULATION_2012.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_DENSITE_2010.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(VILLE_DENSITE_2010.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_SURFACE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(VILLE_SURFACE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_LONGITUDE_DEG.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((decimal)(VILLE_LONGITUDE_DEG.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_LATITUDE_DEG.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(VILLE_LATITUDE_DEG.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_LONGITUDE_GRD == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(VILLE_LONGITUDE_GRD));
+            }
+            if ((VILLE_LATITUDE_GRD == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(VILLE_LATITUDE_GRD));
+            }
+            if ((VILLE_LONGITUDE_DMS == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(VILLE_LONGITUDE_DMS));
+            }
+            if ((VILLE_LATITUDE_DMS == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(VILLE_LATITUDE_DMS));
+            }
+            if ((VILLE_ZMIN.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(VILLE_ZMIN.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((VILLE_ZMAX.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((decimal)(VILLE_ZMAX.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((decimal)(Original_VILLE_ID));
+            if ((Original_VILLE_DEPARTEMENT == null)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_VILLE_DEPARTEMENT));
+            }
+            if ((Original_VILLE_SLUG == null)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_VILLE_SLUG));
+            }
+            if ((Original_VILLE_NOM == null)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_VILLE_NOM));
+            }
+            if ((Original_VILLE_NOM_SIMPLE == null)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_VILLE_NOM_SIMPLE));
+            }
+            if ((Original_VILLE_NOM_REEL == null)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_VILLE_NOM_REEL));
+            }
+            if ((Original_VILLE_NOM_SOUNDEX == null)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_VILLE_NOM_SOUNDEX));
+            }
+            if ((Original_VILLE_NOM_METAPHONE == null)) {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_VILLE_NOM_METAPHONE));
+            }
+            if ((Original_VILLE_CODE_POSTAL == null)) {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_VILLE_CODE_POSTAL));
+            }
+            if ((Original_VILLE_COMMUNE == null)) {
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_VILLE_COMMUNE));
+            }
+            if ((Original_VILLE_CODE_COMMUNE == null)) {
+                throw new global::System.ArgumentNullException("Original_VILLE_CODE_COMMUNE");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_VILLE_CODE_COMMUNE));
+            }
+            if ((Original_VILLE_ARRONDISSEMENT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((decimal)(Original_VILLE_ARRONDISSEMENT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_CANTON == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_VILLE_CANTON));
+            }
+            if ((Original_VILLE_AMDI.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((decimal)(Original_VILLE_AMDI.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_POPULATION_2010.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((decimal)(Original_VILLE_POPULATION_2010.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_POPULATION_1999.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((decimal)(Original_VILLE_POPULATION_1999.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_POPULATION_2012.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((decimal)(Original_VILLE_POPULATION_2012.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_DENSITE_2010.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((decimal)(Original_VILLE_DENSITE_2010.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_SURFACE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((decimal)(Original_VILLE_SURFACE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_LONGITUDE_DEG.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((decimal)(Original_VILLE_LONGITUDE_DEG.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_LATITUDE_DEG.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((decimal)(Original_VILLE_LATITUDE_DEG.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_LONGITUDE_GRD == null)) {
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_VILLE_LONGITUDE_GRD));
+            }
+            if ((Original_VILLE_LATITUDE_GRD == null)) {
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((string)(Original_VILLE_LATITUDE_GRD));
+            }
+            if ((Original_VILLE_LONGITUDE_DMS == null)) {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_VILLE_LONGITUDE_DMS));
+            }
+            if ((Original_VILLE_LATITUDE_DMS == null)) {
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_VILLE_LATITUDE_DMS));
+            }
+            if ((Original_VILLE_ZMIN.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((decimal)(Original_VILLE_ZMIN.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VILLE_ZMAX.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((decimal)(Original_VILLE_ZMAX.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8591,8 +13893,231 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string LIB_REGION, decimal Original_NUM_REGION, string Original_LIB_REGION) {
-            return this.Update(Original_NUM_REGION, LIB_REGION, Original_NUM_REGION, Original_LIB_REGION);
+        public virtual int Update(
+                    string VILLE_DEPARTEMENT, 
+                    string VILLE_SLUG, 
+                    string VILLE_NOM, 
+                    string VILLE_NOM_SIMPLE, 
+                    string VILLE_NOM_REEL, 
+                    string VILLE_NOM_SOUNDEX, 
+                    string VILLE_NOM_METAPHONE, 
+                    string VILLE_CODE_POSTAL, 
+                    string VILLE_COMMUNE, 
+                    string VILLE_CODE_COMMUNE, 
+                    global::System.Nullable<decimal> VILLE_ARRONDISSEMENT, 
+                    string VILLE_CANTON, 
+                    global::System.Nullable<decimal> VILLE_AMDI, 
+                    global::System.Nullable<decimal> VILLE_POPULATION_2010, 
+                    global::System.Nullable<decimal> VILLE_POPULATION_1999, 
+                    global::System.Nullable<decimal> VILLE_POPULATION_2012, 
+                    global::System.Nullable<decimal> VILLE_DENSITE_2010, 
+                    global::System.Nullable<decimal> VILLE_SURFACE, 
+                    global::System.Nullable<decimal> VILLE_LONGITUDE_DEG, 
+                    global::System.Nullable<decimal> VILLE_LATITUDE_DEG, 
+                    string VILLE_LONGITUDE_GRD, 
+                    string VILLE_LATITUDE_GRD, 
+                    string VILLE_LONGITUDE_DMS, 
+                    string VILLE_LATITUDE_DMS, 
+                    global::System.Nullable<decimal> VILLE_ZMIN, 
+                    global::System.Nullable<decimal> VILLE_ZMAX, 
+                    decimal Original_VILLE_ID, 
+                    string Original_VILLE_DEPARTEMENT, 
+                    string Original_VILLE_SLUG, 
+                    string Original_VILLE_NOM, 
+                    string Original_VILLE_NOM_SIMPLE, 
+                    string Original_VILLE_NOM_REEL, 
+                    string Original_VILLE_NOM_SOUNDEX, 
+                    string Original_VILLE_NOM_METAPHONE, 
+                    string Original_VILLE_CODE_POSTAL, 
+                    string Original_VILLE_COMMUNE, 
+                    string Original_VILLE_CODE_COMMUNE, 
+                    global::System.Nullable<decimal> Original_VILLE_ARRONDISSEMENT, 
+                    string Original_VILLE_CANTON, 
+                    global::System.Nullable<decimal> Original_VILLE_AMDI, 
+                    global::System.Nullable<decimal> Original_VILLE_POPULATION_2010, 
+                    global::System.Nullable<decimal> Original_VILLE_POPULATION_1999, 
+                    global::System.Nullable<decimal> Original_VILLE_POPULATION_2012, 
+                    global::System.Nullable<decimal> Original_VILLE_DENSITE_2010, 
+                    global::System.Nullable<decimal> Original_VILLE_SURFACE, 
+                    global::System.Nullable<decimal> Original_VILLE_LONGITUDE_DEG, 
+                    global::System.Nullable<decimal> Original_VILLE_LATITUDE_DEG, 
+                    string Original_VILLE_LONGITUDE_GRD, 
+                    string Original_VILLE_LATITUDE_GRD, 
+                    string Original_VILLE_LONGITUDE_DMS, 
+                    string Original_VILLE_LATITUDE_DMS, 
+                    global::System.Nullable<decimal> Original_VILLE_ZMIN, 
+                    global::System.Nullable<decimal> Original_VILLE_ZMAX) {
+            return this.Update(Original_VILLE_ID, VILLE_DEPARTEMENT, VILLE_SLUG, VILLE_NOM, VILLE_NOM_SIMPLE, VILLE_NOM_REEL, VILLE_NOM_SOUNDEX, VILLE_NOM_METAPHONE, VILLE_CODE_POSTAL, VILLE_COMMUNE, VILLE_CODE_COMMUNE, VILLE_ARRONDISSEMENT, VILLE_CANTON, VILLE_AMDI, VILLE_POPULATION_2010, VILLE_POPULATION_1999, VILLE_POPULATION_2012, VILLE_DENSITE_2010, VILLE_SURFACE, VILLE_LONGITUDE_DEG, VILLE_LATITUDE_DEG, VILLE_LONGITUDE_GRD, VILLE_LATITUDE_GRD, VILLE_LONGITUDE_DMS, VILLE_LATITUDE_DMS, VILLE_ZMIN, VILLE_ZMAX, Original_VILLE_ID, Original_VILLE_DEPARTEMENT, Original_VILLE_SLUG, Original_VILLE_NOM, Original_VILLE_NOM_SIMPLE, Original_VILLE_NOM_REEL, Original_VILLE_NOM_SOUNDEX, Original_VILLE_NOM_METAPHONE, Original_VILLE_CODE_POSTAL, Original_VILLE_COMMUNE, Original_VILLE_CODE_COMMUNE, Original_VILLE_ARRONDISSEMENT, Original_VILLE_CANTON, Original_VILLE_AMDI, Original_VILLE_POPULATION_2010, Original_VILLE_POPULATION_1999, Original_VILLE_POPULATION_2012, Original_VILLE_DENSITE_2010, Original_VILLE_SURFACE, Original_VILLE_LONGITUDE_DEG, Original_VILLE_LATITUDE_DEG, Original_VILLE_LONGITUDE_GRD, Original_VILLE_LATITUDE_GRD, Original_VILLE_LONGITUDE_DMS, Original_VILLE_LATITUDE_DMS, Original_VILLE_ZMIN, Original_VILLE_ZMAX);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class NBADHLOCATIONTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public NBADHLOCATIONTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "NBADHLOCATION";
+            tableMapping.ColumnMappings.Add("NB_ADH", "NB_ADH");
+            tableMapping.ColumnMappings.Add("VILLE_LATITUDE_DEG", "VILLE_LATITUDE_DEG");
+            tableMapping.ColumnMappings.Add("VILLE_LONGITUDE_DEG", "VILLE_LONGITUDE_DEG");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::testbackoffice7.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT NB_ADH, VILLE_LATITUDE_DEG, VILLE_LONGITUDE_DEG FROM PBDALG8.NBADHLOCATION" +
+                "";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSet2.NBADHLOCATIONDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSet2.NBADHLOCATIONDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSet2.NBADHLOCATIONDataTable dataTable = new DataSet2.NBADHLOCATIONDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
@@ -8617,6 +14142,8 @@ namespace testbackoffice7.DataSet2TableAdapters {
         private PRESTATIONS_SANTETableAdapter _pRESTATIONS_SANTETableAdapter;
         
         private REGIONSTableAdapter _rEGIONSTableAdapter;
+        
+        private VILLESTableAdapter _vILLESTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -8705,6 +14232,20 @@ namespace testbackoffice7.DataSet2TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public VILLESTableAdapter VILLESTableAdapter {
+            get {
+                return this._vILLESTableAdapter;
+            }
+            set {
+                this._vILLESTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -8742,6 +14283,10 @@ namespace testbackoffice7.DataSet2TableAdapters {
                             && (this._rEGIONSTableAdapter.Connection != null))) {
                     return this._rEGIONSTableAdapter.Connection;
                 }
+                if (((this._vILLESTableAdapter != null) 
+                            && (this._vILLESTableAdapter.Connection != null))) {
+                    return this._vILLESTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -8768,6 +14313,9 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     count = (count + 1);
                 }
                 if ((this._rEGIONSTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._vILLESTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -8826,6 +14374,15 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._vILLESTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.VILLES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._vILLESTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -8876,6 +14433,14 @@ namespace testbackoffice7.DataSet2TableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._vILLESTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.VILLES.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._vILLESTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -8886,6 +14451,14 @@ namespace testbackoffice7.DataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._vILLESTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.VILLES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._vILLESTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._rEGIONSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.REGIONS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -8990,6 +14563,11 @@ namespace testbackoffice7.DataSet2TableAdapters {
                 throw new global::System.ArgumentException("Tous les TableAdapters managés par un TableAdapterManager doivent utiliser la mêm" +
                         "e chaîne de connexion.");
             }
+            if (((this._vILLESTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._vILLESTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tous les TableAdapters managés par un TableAdapterManager doivent utiliser la mêm" +
+                        "e chaîne de connexion.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager ne contient pas d\'informations de connexion. Définissez chaqu" +
@@ -9069,6 +14647,15 @@ namespace testbackoffice7.DataSet2TableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._rEGIONSTableAdapter.Adapter);
                     }
                 }
+                if ((this._vILLESTableAdapter != null)) {
+                    revertConnections.Add(this._vILLESTableAdapter, this._vILLESTableAdapter.Connection);
+                    this._vILLESTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
+                    this._vILLESTableAdapter.Transaction = ((global::Oracle.ManagedDataAccess.Client.OracleTransaction)(workTransaction));
+                    if (this._vILLESTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._vILLESTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._vILLESTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -9146,6 +14733,10 @@ namespace testbackoffice7.DataSet2TableAdapters {
                 if ((this._rEGIONSTableAdapter != null)) {
                     this._rEGIONSTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._rEGIONSTableAdapter]));
                     this._rEGIONSTableAdapter.Transaction = null;
+                }
+                if ((this._vILLESTableAdapter != null)) {
+                    this._vILLESTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._vILLESTableAdapter]));
+                    this._vILLESTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
