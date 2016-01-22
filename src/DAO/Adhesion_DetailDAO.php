@@ -27,9 +27,7 @@ class Adhesion_DetailDAO extends DAO {
        $result = $this->getDb()->fetchAssoc($sql, array($beneficiaire,$anneeDebutSoin));
         return $this->buildDomainObject($result);
     }
-    
-    
-    
+   
     protected function buildDomainObject($row) {
        
         $adhesion_detail = new Adhesion_Detail();       

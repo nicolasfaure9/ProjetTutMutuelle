@@ -14,7 +14,7 @@ $app->get('/remboursements', "ProjetTutMutuelle\Controller\RemboursementsControl
 $app->get('/contrats', "ProjetTutMutuelle\Controller\ContratsController::contratsAction");
 $app->get('/newContract', "ProjetTutMutuelle\Controller\NewContratController::newContratAction");
 $app->get('/detailContrat', "ProjetTutMutuelle\Controller\DetailContratController::detailContratAction");
-$app->get('/profil', "ProjetTutMutuelle\Controller\ProfilController::profilAction");
+
 $app->get('/contacts', "ProjetTutMutuelle\Controller\ContactsController::contactsAction");
 $app->get('/documents', "ProjetTutMutuelle\Controller\DocumentsController::documentsAction");
 
@@ -33,4 +33,7 @@ $app->get('/remboursements/{id}', "ProjetTutMutuelle\Controller\PrestationSanteC
 $app->get('/remboursement/{id}', "ProjetTutMutuelle\Controller\PrestationSanteController::prestationSanteDetailActionRemboursement");
 
 $app->post('/cts', "ProjetTutMutuelle\Controller\ContactsController::contactsAction");
+
+$app->get('/profil', "ProjetTutMutuelle\Controller\ProfilController::profilAction");
+
 
