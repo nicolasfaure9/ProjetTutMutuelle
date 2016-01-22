@@ -35,5 +35,6 @@ $app->get('/remboursement/{id}', "ProjetTutMutuelle\Controller\PrestationSanteCo
 $app->post('/cts', "ProjetTutMutuelle\Controller\ContactsController::contactsAction");
 
 $app->get('/profil', "ProjetTutMutuelle\Controller\ProfilController::profilAction");
+$app->get('/profil/{id}', "ProjetTutMutuelle\Controller\ProfilController::profilActionBeneficiaire");
 
 

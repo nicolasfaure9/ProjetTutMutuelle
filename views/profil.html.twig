@@ -8,100 +8,134 @@
     <div>
     <ol class="breadcrumb"  >
                     <li><a href="/accueil">Accueil</a></li>
-                    <li><a href="/contracts">Mon profil</a></li>
+                    <li><a href="/profil">Mon profil</a></li>
                  
     </ol>
     </div>
-    
-    {% if beneficiaireProfil %}
-        <b>Numéro de bénéficiaire :</b> {{ beneficiaireProfil.num }}<br/>
-                        <b>Sexe : </b>{{beneficiaireProfil.sexe}}<br/>
-                        <b>Date naissance : </b> {{beneficiaireProfil.datenaissance}}<br/>
-                        <b>Régime social :</b> {{beneficiaireProfil.regime_social}}
-    {% endif %} 
-    {% if adhesion %}
-        <b>numero beneficiaire sur contrat :</b> {{adhesion.numbeneficiaire}}
-        <div class="jumbotron">
-        <div class="row wrap">
-          <div class="col-sm-12">
-        <div class="row">
-            <div class="col-xs-12">
-                {% for beneficiaire in adhesion.beneficiaires %}
-                <div class="panel panel-default">
-                    <div class="panel-heading">{{ beneficiaire.prenom }}</div>
-                    <div class="panel-body">
-                        <b>Numéro de bénéficiaire :</b> {{ beneficiaire.num }}<br/>
-                        <b>Sexe : </b>{{beneficiaire.sexe}}<br/>
-                        <b>Date naissance : </b> {{beneficiaire.datenaissance}}<br/>
-                        <b>Régime social :</b> {{beneficiaire.regime_social}}
-                    </div>
-                    <div class="text-center">
-                        <a href="/remboursements/{{ beneficiaire.num }}"><span class="glyphicon glyphicon-plus"></span> Plus d'infos</a>
-                    </div>
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+    	 <div class="well profile">
+            <div class="col-sm-12">
+                <div class="col-xs-12 col-sm-8">
+                    <h2>{{beneficiaireProfil.prenom}}</h2>
+                    <p><strong>Sexe : </strong> {{beneficiaireProfil.sexe}} </p>
+                    <p><strong>Date de naissance : </strong> {{beneficiaireProfil.datenaissance}}</p>
+                    <p><strong>Régime social : </strong> {{beneficiaireProfil.regime_social}}</p>
+                    {% set nbB = adhesion.beneficiaires | length %}
+                    {% if nbB>0 %}
+                    <p><strong>Bénéficiaires : </strong>
+                        {% for beneficiaire in adhesion.beneficiaires %}
+                            <a href="/profil/{{ beneficiaire.num }}"> <span class="tags">{{ beneficiaire.prenom }}</span> </a>
+                         {% endfor %}
+                    </p>
+                    {% endif %}
+                </div>             
+            </div>            
+            <div class="col-xs-12 divider text-center">
+                <div class="col-xs-12 col-sm-4 emphasis">
+                    {% set nbP = adhesion.prestations_Details | length %}
+                    {% set TRSecu = 0 %}
+                    {% set TRMut = 0 %}
+                     {% for prestation_sante in adhesion.prestations_Details %}
+                         {% set TRSecu = TRSecu + prestation_sante.montant_secu %}
+                         {% set TRMut = TRMut + prestation_sante.montant_rembourse %}
+                        {% endfor %}
+                    <h2><strong> {{nbP}}</strong></h2>                    
+                    <p><small>Nombre de remboursement</small></p>
                 </div>
-                <hr />
-                {% endfor %}
-                
+                <div class="col-xs-12 col-sm-4 emphasis">
+                    <h2><strong>{{TRSecu}} €</strong></h2>                    
+                    <p><small>Total des remboursements Sécu</small></p>
+                </div>
+                <div class="col-xs-12 col-sm-4 emphasis">
+                    <h2><strong>{{TRMut}} €</strong></h2>                    
+                    <p><small>Total des remboursements Mutuelle</small></p>
+                </div>
             </div>
-        </div>
-    </div>
-    </div>
-    </div>
-        
-       
-{% else %}
-    <div class="alert alert-warning">Erreur chargement de vos bénéficiaires.</div>
-{% endif %}       
-     {% if adhesion %}
-    <div class="table-responsive">
-        <div class="jumbotron">
-        <table  class="table table-hover table-condensed">
-            <thead>
-                <tr>
-                    <th>Numéro Beneficiaire</th>
-                    <th>Acte</th>
-                    <th>Date Soins</th>
-                    <th>Total de la prestation</th>
-                    <th>Montant pris en charge</th>
-                    <th>Date paiement</th>
-                    <th></th>
-                </tr>
-            </thead>
-            {% for prestation_sante in adhesion.prestations_Details %}
-                <tr>
-                    <td><a  href="/remboursements/{{prestation_sante.num_beneficiaire_sinistre }}">{{ prestation_sante.num_beneficiaire_sinistre }}</a></td>
-                    <td><a  href="/remboursement/{{ prestation_sante.num_sinistre }}">{{ prestation_sante.designation_acte }}</a></td>
-                    <td>{{ prestation_sante.jour_debut_soins }}/{{ prestation_sante.mois_debut_soins }}/{{prestation_sante.annee_debut_soins }}</td>
-                    <td>{{ prestation_sante.frais_reel_assure }}€</td>
-                    <td>{{ prestation_sante.montant_secu + prestation_sante.montant_rembourse }}€</td>
-                    <td>{{ prestation_sante.jour_paiement }}/{{ prestation_sante.mois_paiement }}/{{prestation_sante.annee_paiement }}</td>
-                    <td><a  href="/remboursement/{{ prestation_sante.num_sinistre }}"><div class="zoomInfos"/></td>
-                </tr>
-            {% endfor %}
-        </table>
-        </div>
-    </div>
-{% else %}
-    <div class="alert alert-warning">Erreur chargement de vos remboursements.</div>
-{% endif %} 
-    
-    </div>
+                    <center>
+                        <a href="remboursements/{{beneficiaireProfil.num}}"> Détail de mes remboursements</a>
+                    </center>
+                </div>                 
+            </div>
+	</div>
     <style>
-body {
-    font-family: "Segoe UI", 'sans-serif';
-}
 
-.avg {
-    font-size:77px; 
-    padding-top: 20px;
-    color:#5CB85C;
-}
-
-.details {
+.profile 
+{
     min-height: 355px;
     display: inline-block;
-}
-
+    }
+figcaption.ratings
+{
+    margin-top:20px;
+    }
+figcaption.ratings a
+{
+    color:#f1c40f;
+    font-size:11px;
+    }
+figcaption.ratings a:hover
+{
+    color:#f39c12;
+    text-decoration:none;
+    }
+.divider 
+{
+    border-top:1px solid rgba(0,0,0,0.1);
+    }
+.emphasis 
+{
+    border-top: 4px solid transparent;
+    }
+.emphasis:hover 
+{
+    border-top: 4px solid #1abc9c;
+    }
+.emphasis h2
+{
+    margin-bottom:0;
+    }
+span.tags 
+{
+    background: #1abc9c;
+    border-radius: 2px;
+    color: #f5f5f5;
+    font-weight: bold;
+    padding: 2px 4px;
+    }
+.dropdown-menu 
+{
+    background-color: #34495e;    
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    width: 250px;
+    margin-left: -125px;
+    left: 50%;
+    }
+.dropdown-menu .divider 
+{
+    background:none;    
+    }
+.dropdown-menu>li>a
+{
+    color:#f5f5f5;
+    }
+.dropup .dropdown-menu 
+{
+    margin-bottom:10px;
+    }
+.dropup .dropdown-menu:before 
+{
+    content: "";
+    border-top: 10px solid #34495e;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -10px;
+    z-index: 10;
+    }
 </style>
 
 <!-- you need to include the shieldui css and js assets in order for the components to work -->

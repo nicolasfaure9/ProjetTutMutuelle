@@ -17,13 +17,18 @@ class ProfilController {
         $adhesion->setPrestations_Details($prestations_Santes);
         if ($adhesion->getNumBeneficiaire()==1){
             $adhesion->setBeneficiaires($beneficiaires);
+        }
             return $app['twig']->render('profil.html.twig', array('adhesion' => $adhesion, 'beneficiaireProfil'=>$beneficiareProfil));
-        }
-        else {
-            return $app['twig']->render('profilB.html.twig', array('adhesion' => $adhesion, 'beneficiaireProfil'=>$beneficiareProfil));
-        }
+        
     }
-    
+ public function profilActionBeneficiaire($id, Application $app) {
+        $beneficiareProfil = $app['dao.beneficiaire']->find($id);
+        $adhesion = $app['dao.adhesion']->findByBeneficiaireAndYear($id);
+        $prestations_Santes = $app['dao.prestationSante']->findByAdhesionBeneficiaire($adhesion->getNum(),$id);
+        $adhesion->setPrestations_Details($prestations_Santes);
+        return $app['twig']->render('profil.html.twig', array('adhesion' => $adhesion, 'beneficiaireProfil'=>$beneficiareProfil));
+
+    }
     
 
 }
