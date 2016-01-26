@@ -17,6 +17,7 @@ class HomeController {
        return $app['twig']->render('accueil.html.twig');
     }   
     
+    //retourne le formulaire de changement de mot de passe
     public function loginAction(Request $request, Application $app) {
         return $app['twig']->render('login.html.twig', array(
             'error'         => $app['security.last_error']($request),

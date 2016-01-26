@@ -9,6 +9,7 @@ use ProjetTutMutuelle\Form\Type\BeneficiaireType;
 
 class ProfilController {
 
+//aller chercher toutes les infos liées a l'utilisateur connecté    
  public function profilAction(Application $app) {
         $beneficiareProfil = $app['dao.beneficiaire']->find($app['security']->getToken()->getUser()->getNum());
         $adhesion = $app['dao.adhesion']->findByBeneficiaireAndYear($app['security']->getToken()->getUser()->getNum());
@@ -19,6 +20,7 @@ class ProfilController {
         return $app['twig']->render('profil.html.twig', array('adhesion' => $adhesion, 'beneficiaireProfil'=>$beneficiareProfil));
         
     }
+  //aller chercher toutes les infos liées a l'id de l'utilisateur passé en paramètre connecté     
  public function profilActionBeneficiaire($id, Application $app) {
         $beneficiareProfil = $app['dao.beneficiaire']->find($id);
         $adhesion = $app['dao.adhesion']->findByBeneficiaireAndYear($id);
@@ -32,4 +34,3 @@ class ProfilController {
     
 
 }
- 

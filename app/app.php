@@ -17,7 +17,7 @@ $app['twig'] = $app->share($app->extend('twig', function(Twig_Environment $twig,
             $twig->addExtension(new Twig_Extensions_Extension_Text());
             return $twig;
         }));
-        
+ //Register security providers       
 $app->register(new Silex\Provider\ValidatorServiceProvider());
 $app->register(new Silex\Provider\SessionServiceProvider());
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
@@ -58,9 +58,11 @@ $app['dao.prestationSante'] = $app->share(function ($app) {
      $prestationDAO->setBeneficiaireDAO($app['dao.beneficiaire']);
     return $prestationDAO; 
     });
-    // Register error handler
     
-    /*
+
+// Page d'erreur par defaut
+    
+    
 $app->error(function (\Exception $e, $code) use ($app) {
     switch ($code) {
         case 403:
@@ -74,4 +76,4 @@ $app->error(function (\Exception $e, $code) use ($app) {
     }
     return $app['twig']->render('error.html.twig', array('message' => $message));
 });
-    */
+    
