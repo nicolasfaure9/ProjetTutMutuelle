@@ -15,19 +15,16 @@ class Adhesion_DetailDAO extends DAO {
     }
   
    
-
+//retourne l'adhesion pour un beneficiaire et l'année 2012
    public function findByBeneficiaireAndYear($beneficiaire){
        $sql = "select * from adhesion_detail where  num_beneficiaire_unique=? and exercice_paiement=2012 ";
        $result = $this->getDb()->fetchAssoc($sql, array($beneficiaire));
        return $this->buildDomainObject($result);
     }
    
- public function find($numAdhesion,$beneficiaire,$anneeDebutSoin){
-       $sql = "select * from adhesion_detail where  and num_beneficiaire_unique=? and annee_debut_soin=? ";
-       $result = $this->getDb()->fetchAssoc($sql, array($beneficiaire,$anneeDebutSoin));
-        return $this->buildDomainObject($result);
-    }
-   
+ 
+    
+   //construit l'objet
     protected function buildDomainObject($row) {
        
         $adhesion_detail = new Adhesion_Detail();       

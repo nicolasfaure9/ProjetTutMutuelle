@@ -17,7 +17,7 @@ public function setBeneficiaireDAO($beneficiaireDAO) {
         $this->beneficiaireDAO = $beneficiaireDAO;
     }
         
-    
+    //cherche les prestations sante par adhesion
     public function findByAdhesion($numadhesion){
        $sql = "select * from prestations_sante where num_adhesion=?  ";
        $result = $this->getDb()->fetchAll($sql,array($numadhesion));
@@ -28,7 +28,7 @@ public function setBeneficiaireDAO($beneficiaireDAO) {
         }
         return $prestations_santes;
     }
-    
+    //cherche les prestations sante par adhesion et beneficiaire
     public function findByAdhesionBeneficiaire($numadhesion, $numbeneficiaire){
        $sql = "select * from prestations_sante where num_adhesion=? and num_beneficiaire_sinistre=? ";
        $result = $this->getDb()->fetchAll($sql,array($numadhesion, $numbeneficiaire));
@@ -39,7 +39,7 @@ public function setBeneficiaireDAO($beneficiaireDAO) {
         }
         return $prestations_santes;
     }
-    
+    //retourne les 5 dernières prestations sante pour un num d'adhesion
     public function findByAdhesionLimit($numadhesion){
        $sql = "select * from prestations_sante where num_adhesion=? and rownum<5 order by date_soins";
        $result = $this->getDb()->fetchAll($sql,array($numadhesion));

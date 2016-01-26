@@ -8,6 +8,7 @@ use ProjetTutMutuelle\Domain\Beneficiaire;
 
 class BeneficiaireDAO extends DAO implements UserProviderInterface
 {
+    //cherche un beneficiaire sur son id
     public function find($id) {
         $sql = "select * from beneficiaire where num=?";
         $row = $this->getDb()->fetchAssoc($sql, array($id));
@@ -17,6 +18,7 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
             throw new \Exception("No beneficiaire matching id " . $id);
     }
    
+    //cherche et retourne tous les bénéficiaires
     public function findAll() {
         $sql = "select * from beneficiaire";
         $result = $this->getDb()->fetchAll($sql);
@@ -29,6 +31,8 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
         }
         return $beneficiaires;
     }
+    
+    //cherche la liste des bénéficiaires pour le numéro d'adhesion passé en paramètre
    public function findByAdhesion($numadhesion){
        $sql = "select * from beneficiaire where  num in (select num_beneficiaire_unique from adhesion_detail where num_adhesion_normalise=? and exercice_paiement=2012) ";
        $result = $this->getDb()->fetchAll($sql,array($numadhesion));
@@ -41,6 +45,8 @@ class BeneficiaireDAO extends DAO implements UserProviderInterface
       
        
     }
+    
+    //sauvegarde le nouveau mot de passe
     public function save($beneficiaire) {
         
         $beneficiaireData = array(
