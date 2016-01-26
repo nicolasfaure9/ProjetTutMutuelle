@@ -15,10 +15,8 @@ class ProfilController {
         $beneficiaires = $app['dao.beneficiaire']->findByAdhesion($adhesion->getNum());
         $prestations_Santes = $app['dao.prestationSante']->findByAdhesionBeneficiaire($adhesion->getNum(),$app['security']->getToken()->getUser()->getNum());
         $adhesion->setPrestations_Details($prestations_Santes);
-        if ($adhesion->getNumBeneficiaire()==1){
-            $adhesion->setBeneficiaires($beneficiaires);
-        }
-            return $app['twig']->render('profil.html.twig', array('adhesion' => $adhesion, 'beneficiaireProfil'=>$beneficiareProfil));
+        $adhesion->setBeneficiaires($beneficiaires);
+        return $app['twig']->render('profil.html.twig', array('adhesion' => $adhesion, 'beneficiaireProfil'=>$beneficiareProfil));
         
     }
  public function profilActionBeneficiaire($id, Application $app) {
@@ -26,6 +24,8 @@ class ProfilController {
         $adhesion = $app['dao.adhesion']->findByBeneficiaireAndYear($id);
         $prestations_Santes = $app['dao.prestationSante']->findByAdhesionBeneficiaire($adhesion->getNum(),$id);
         $adhesion->setPrestations_Details($prestations_Santes);
+        $beneficiaires = $app['dao.beneficiaire']->findByAdhesion($adhesion->getNum());
+        $adhesion->setBeneficiaires($beneficiaires);
         return $app['twig']->render('profil.html.twig', array('adhesion' => $adhesion, 'beneficiaireProfil'=>$beneficiareProfil));
 
     }

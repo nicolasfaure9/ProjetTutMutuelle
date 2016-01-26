@@ -21,8 +21,8 @@
                     <p><strong>Sexe : </strong> {{beneficiaireProfil.sexe}} </p>
                     <p><strong>Date de naissance : </strong> {{beneficiaireProfil.datenaissance}}</p>
                     <p><strong>Régime social : </strong> {{beneficiaireProfil.regime_social}}</p>
-                    {% set nbB = adhesion.beneficiaires | length %}
-                    {% if nbB>0 %}
+                    {% set nbB = adhesion.beneficiaires | length  %}
+                    {% if nbB>1 %}
                     <p><strong>Bénéficiaires : </strong>
                         {% for beneficiaire in adhesion.beneficiaires %}
                             <a href="/profil/{{ beneficiaire.num }}"> <span class="tags">{{ beneficiaire.prenom }}</span> </a>
@@ -54,7 +54,7 @@
                 </div>
             </div>
                     <center>
-                        <a href="remboursements/{{beneficiaireProfil.num}}"> Détail de mes remboursements</a>
+                        <a href="/remboursements/{{beneficiaireProfil.num}}"> Détail des remboursements</a>
                     </center>
                 </div>                 
             </div>
