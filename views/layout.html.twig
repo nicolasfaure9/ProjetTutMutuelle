@@ -91,8 +91,25 @@
                     {% autoescape %}
                 <div id="content">{% block content %}{% endblock %}</div>
             {% endautoescape %}
-          
+       <footer class="footer">
+      <div class="container">
+        <p>Merci Robin pour ce footer</p>
+      </div>
+    </footer>       
  </div>
 
     </body>
+
+    <style> 
+    footer {
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  color: white;
+  background-color: #03A9F4;
+}
+footer .container {
+  margin: 20px 0;
+}
+</style>
 </html>
