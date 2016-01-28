@@ -9,6 +9,11 @@
             <strong>Echec de la connexion ! ( verifier votre mot de passe et identifiant )</strong> 
         </div>
     {% endif %}
+
+     <div class="jumbotron">
+        <img class="img-responsive pull-center" src="{{ app.request.basepath }}/images/cover.jpg" alt="cover"/>
+    </div>  
+
     <div class="well">
         <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4"><h2 style="margin-left: -5px;">Indentification</h2> <br/></div>
         <form class="form-signin form-horizontal form-group-material-light-blue-500" role="form" action="{{ path('login_check') }}" method="post">
