@@ -66,8 +66,6 @@ public function setBeneficiaireDAO($beneficiaireDAO) {
     protected function buildDomainObject($row) {    
         $beneficiaireID = $row['NUM_BENEFICIAIRE_SINISTRE'];
         $beneficiaire = $this->beneficiaireDAO->find($beneficiaireID);
-        
-        
         $prestation_sante = new Prestation_Sante();
         $prestation_sante->setNum_sinistre($row['NUM_SINISTRE']);
         $prestation_sante->setNum_adhesion($row['NUM_ADHESION']);
