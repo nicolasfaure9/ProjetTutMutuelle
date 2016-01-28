@@ -766,24 +766,170 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HASHTABLETableAdapter" GeneratorDataComponentClassName="HASHTABLETableAdapter" Name="HASHTABLE" UserDataComponentName="HASHTABLETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.HASHTABLE" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT *
+FROM     PBDALG8.HASHTABLE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODE_PROFESSION" DataSetColumn="CODE_PROFESSION" />
+              <Mapping SourceColumn="ACTE" DataSetColumn="ACTE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FORMULETableAdapter" GeneratorDataComponentClassName="FORMULETableAdapter" Name="FORMULE" UserDataComponentName="FORMULETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.FORMULE" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT FORMULE
+FROM     PBDALG8.FORMULE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FORMULE" DataSetColumn="FORMULE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SOINSTableAdapter" GeneratorDataComponentClassName="SOINSTableAdapter" Name="SOINS" UserDataComponentName="SOINSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.SOINS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT *
+FROM     PBDALG8.SOINS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DESIGNATION_ACTE" DataSetColumn="DESIGNATION_ACTE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources>
-          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.MOYENNE_SOINS_SEXE" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="MOYENNE_SOINS_SEXE" MethodsParameterType="CLR" Modifier="Public" Name="MOYENNE_SOINS_SEXE" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="MOYENNE_SOINS_SEXE">
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.CA" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CA" MethodsParameterType="CLR" Modifier="Public" Name="CA" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="CA">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
-                <CommandText>PBDALG8.MOYENNE_SOINS_SEXE</CommandText>
+                <CommandText>PBDALG8.CA</CommandText>
                 <Parameters>
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="VARCHAR2" DbType="String" Direction="Input" ParameterName="SEXE" Precision="0" ProviderType="Varchar2" Scale="0" Size="32767" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="CA" Precision="0" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
                 </Parameters>
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NB_REMBOURSEMENTS" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="NB_REMBOURSEMENTS" MethodsParameterType="CLR" Modifier="Public" Name="NB_REMBOURSEMENTS" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="NB_REMBOURSEMENTS">
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.MARGE" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="MARGE" MethodsParameterType="CLR" Modifier="Public" Name="MARGE" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="MARGE">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.MARGE</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="MARGE" Precision="38" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NB_ADH_CONTRAT" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="NB_ADH_CONTRAT" MethodsParameterType="CLR" Modifier="Public" Name="NB_ADH_CONTRAT" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="NB_ADH_CONTRAT">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.NB_ADH_CONTRAT</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="VARCHAR2" DbType="String" Direction="Input" ParameterName="FORMULE" Precision="0" ProviderType="Varchar2" Scale="0" Size="32767" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="NB_ADH_CONTRAT" Precision="0" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NB_PRESTA_SOINS" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="NB_PRESTA_SOINS" MethodsParameterType="CLR" Modifier="Public" Name="NB_PRESTA_SOINS" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="NB_PRESTA_SOINS">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.NB_PRESTA_SOINS</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="VARCHAR2" DbType="String" Direction="Input" ParameterName="SOINS" Precision="0" ProviderType="Varchar2" Scale="0" Size="32767" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="NBR" Precision="38" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.REMBOURSEMENTS" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="REMBOURSEMENTS" MethodsParameterType="CLR" Modifier="Public" Name="REMBOURSEMENTS" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="REMBOURSEMENTS">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.REMBOURSEMENTS</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="RB" Precision="0" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.TAUX_REMBOURSEMENT" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="TAUX_REMBOURSEMENT" MethodsParameterType="CLR" Modifier="Public" Name="TAUX_REMBOURSEMENT" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="TAUX_REMBOURSEMENT">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.TAUX_REMBOURSEMENT</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="TX" Precision="38" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NB_ADHERENT" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="NB_ADHERENT" MethodsParameterType="CLR" Modifier="Public" Name="NB_ADHERENT" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="NB_ADHERENT">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.NB_ADHERENT</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="NB" Precision="0" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NB_PRESTA" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="NB_PRESTA" MethodsParameterType="CLR" Modifier="Public" Name="NB_PRESTA" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="NB_PRESTA">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.NB_PRESTA</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="NBR" Precision="38" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NB_REMBOURSEMENTS" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="NB_REMBOURSEMENTS" MethodsParameterType="CLR" Modifier="Public" Name="NB_REMBOURSEMENTS" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="NB_REMBOURSEMENTS">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>PBDALG8.NB_REMBOURSEMENTS</CommandText>
                 <Parameters>
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="VARCHAR2" DbType="String" Direction="Input" ParameterName="REGION" Precision="0" ProviderType="Varchar2" Scale="0" Size="32767" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="NBR" Precision="38" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.NB_BENEFICIAIRE" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="NB_BENEFICIAIRE" MethodsParameterType="CLR" Modifier="Public" Name="NB_BENEFICIAIRE" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="NB_BENEFICIAIRE">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.NB_BENEFICIAIRE</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="NB" Precision="0" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="PBDALG8.MOYENNE_SOINS_SEXE" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="MOYENNE_SOINS_SEXE" MethodsParameterType="CLR" Modifier="Public" Name="MOYENNE_SOINS_SEXE" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="MOYENNE_SOINS_SEXE">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>PBDALG8.MOYENNE_SOINS_SEXE</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="VARCHAR2" DbType="String" Direction="Input" ParameterName="SEXE" Precision="0" ProviderType="Varchar2" Scale="0" Size="32767" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="NUMBER" DbType="Decimal" Direction="Output" ParameterName="MOY" Precision="38" ProviderType="Decimal" Scale="0" Size="22" SourceColumnNullMapping="false" SourceVersion="Current" />
                 </Parameters>
               </DbCommand>
             </SelectCommand>
@@ -1174,6 +1320,52 @@
               </xs:element>
               <xs:element name="VILLE_LATITUDE_DEG" msprop:Generator_ColumnVarNameInTable="columnVILLE_LATITUDE_DEG" msprop:Generator_ColumnPropNameInRow="VILLE_LATITUDE_DEG" msprop:Generator_ColumnPropNameInTable="VILLE_LATITUDE_DEGColumn" msprop:Generator_UserColumnName="VILLE_LATITUDE_DEG" type="xs:decimal" minOccurs="0" />
               <xs:element name="VILLE_LONGITUDE_DEG" msprop:Generator_ColumnVarNameInTable="columnVILLE_LONGITUDE_DEG" msprop:Generator_ColumnPropNameInRow="VILLE_LONGITUDE_DEG" msprop:Generator_ColumnPropNameInTable="VILLE_LONGITUDE_DEGColumn" msprop:Generator_UserColumnName="VILLE_LONGITUDE_DEG" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HASHTABLE" msprop:Generator_TableClassName="HASHTABLEDataTable" msprop:Generator_TableVarName="tableHASHTABLE" msprop:Generator_RowChangedName="HASHTABLERowChanged" msprop:Generator_TablePropName="HASHTABLE" msprop:Generator_RowDeletingName="HASHTABLERowDeleting" msprop:Generator_RowChangingName="HASHTABLERowChanging" msprop:Generator_RowEvHandlerName="HASHTABLERowChangeEventHandler" msprop:Generator_RowDeletedName="HASHTABLERowDeleted" msprop:Generator_RowClassName="HASHTABLERow" msprop:Generator_UserTableName="HASHTABLE" msprop:Generator_RowEvArgName="HASHTABLERowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE_PROFESSION" msprop:Generator_ColumnVarNameInTable="columnCODE_PROFESSION" msprop:Generator_ColumnPropNameInRow="CODE_PROFESSION" msprop:Generator_ColumnPropNameInTable="CODE_PROFESSIONColumn" msprop:Generator_UserColumnName="CODE_PROFESSION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACTE" msprop:Generator_ColumnVarNameInTable="columnACTE" msprop:Generator_ColumnPropNameInRow="ACTE" msprop:Generator_ColumnPropNameInTable="ACTEColumn" msprop:Generator_UserColumnName="ACTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FORMULE" msprop:Generator_TableClassName="FORMULEDataTable" msprop:Generator_TableVarName="tableFORMULE" msprop:Generator_TablePropName="FORMULE" msprop:Generator_RowDeletingName="FORMULERowDeleting" msprop:Generator_RowChangingName="FORMULERowChanging" msprop:Generator_RowEvHandlerName="FORMULERowChangeEventHandler" msprop:Generator_RowDeletedName="FORMULERowDeleted" msprop:Generator_UserTableName="FORMULE" msprop:Generator_RowChangedName="FORMULERowChanged" msprop:Generator_RowEvArgName="FORMULERowChangeEvent" msprop:Generator_RowClassName="FORMULERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FORMULE" msprop:Generator_ColumnVarNameInTable="columnFORMULE" msprop:Generator_ColumnPropNameInRow="FORMULE" msprop:Generator_ColumnPropNameInTable="FORMULEColumn" msprop:Generator_UserColumnName="FORMULE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SOINS" msprop:Generator_TableClassName="SOINSDataTable" msprop:Generator_TableVarName="tableSOINS" msprop:Generator_RowChangedName="SOINSRowChanged" msprop:Generator_TablePropName="SOINS" msprop:Generator_RowDeletingName="SOINSRowDeleting" msprop:Generator_RowChangingName="SOINSRowChanging" msprop:Generator_RowEvHandlerName="SOINSRowChangeEventHandler" msprop:Generator_RowDeletedName="SOINSRowDeleted" msprop:Generator_RowClassName="SOINSRow" msprop:Generator_UserTableName="SOINS" msprop:Generator_RowEvArgName="SOINSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DESIGNATION_ACTE" msprop:Generator_ColumnVarNameInTable="columnDESIGNATION_ACTE" msprop:Generator_ColumnPropNameInRow="DESIGNATION_ACTE" msprop:Generator_ColumnPropNameInTable="DESIGNATION_ACTEColumn" msprop:Generator_UserColumnName="DESIGNATION_ACTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

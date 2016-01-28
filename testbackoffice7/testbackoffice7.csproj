@@ -132,11 +132,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="simpledatagrid.xaml.cs">
-      <DependentUpon>simpledatagrid.xaml</DependentUpon>
+    <Compile Include="Haspmap.xaml.cs">
+      <DependentUpon>Haspmap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SortingUC.xaml.cs">
+      <DependentUpon>SortingUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sorts.xaml.cs">
+      <DependentUpon>Sorts.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
     <Page Include="Charts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Haspmap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,7 +166,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="simpledatagrid.xaml">
+    <Page Include="SortingUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sorts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,9 +198,9 @@
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
     <None Include="DataSet2.xsd">
-      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="DataSet2.xss">
       <DependentUpon>DataSet2.xsd</DependentUpon>
@@ -200,7 +214,9 @@
     <Resource Include="Resources\Entypo.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

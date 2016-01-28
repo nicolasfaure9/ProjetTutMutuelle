@@ -3,149 +3,216 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges" x:Class="testbackoffice7.Charts" 
+             xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" x:Class="testbackoffice7.Charts" 
              mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
              d:DesignHeight="800" d:DesignWidth="800">
     <Grid Margin="10">
-        
+
         <Grid.Resources>
-            <Style TargetType="Label">
+            <Style TargetType="{x:Type Label}">
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="FontFamily" Value="Lato"/>
                 <Setter Property="FontSize" Value="20"/>
             </Style>
-            <Style TargetType="dxga:CircularGaugeControl">
+            <Style TargetType="{x:Type dxga:CircularGaugeControl}">
                 <Setter Property="Width" Value="460"/>
-                
+
             </Style>
         </Grid.Resources>
-        <ScrollViewer >
-        <WrapPanel Orientation="Horizontal">
-        <Grid  Margin="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label Content="blublu"/>
-            <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
-                <dxga:CircularGaugeControl.Scales>
+        
+        <ScrollViewer  >
+            <StackPanel Orientation="Vertical">
+                
+                <Label Content="Bilan" FontFamily="Lato" FontSize="25" HorizontalAlignment="Left" Margin="10,30,0,0"/>
+                <Separator Height="30" HorizontalAlignment="Stretch"/>
+                <StackPanel Orientation="Horizontal">
+                <Grid  Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Chiffre d'affaire"/>
+                    <dxga:DigitalGaugeControl Grid.Row="1"  Width="350" Margin="50,0,50,0" x:Name="cagauge"/>
+
+
+                </Grid>
+                <Grid  Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="montant total remboursé"/>
+                    <dxga:DigitalGaugeControl Grid.Row="1"  Width="350" Margin="50,0,50,0" x:Name="rembgauge" />
+                </Grid>
+                <Grid  Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <dxga:DigitalGaugeControl Grid.Row="1"  Width="350" Margin="50,0,50,0" x:Name="margegauge"/>
+                    <Label Content="Marge"/>
+                </Grid>
+                </StackPanel>
+                <Label Content="Pourcentages" FontFamily="Lato" FontSize="25" HorizontalAlignment="Left" Margin="10,30,0,0"/>
+                <Separator Height="30" HorizontalAlignment="Stretch"/>
+                <StackPanel Orientation="Horizontal">
+                
+                <Grid  Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="remboursements/type de soins"/>
+
+                    <dxc:ChartControl Grid.Row="1"  Width="350" BorderBrush="Transparent" Background="Transparent" BorderThickness="0" Margin="50,0,50,0">
+                       
+                        <dxc:ChartControl.Diagram>
+                            <dxc:SimpleDiagram2D BorderBrush="{x:Null}">
+                                
+                                <dxc:SimpleDiagram2D.Series>
+                                    <dxc:PieSeries2D HoleRadiusPercent="70" x:Name="soinspie" >
+                                        
+                                    </dxc:PieSeries2D>
+                                </dxc:SimpleDiagram2D.Series>
+                            </dxc:SimpleDiagram2D>
+                        </dxc:ChartControl.Diagram>
                     
-                    <dxga:ArcScale>
-                                <dxga:ArcScale.Needles>
-                                    <dxga:ArcScaleNeedle Value="30" />
-                                </dxga:ArcScale.Needles>
-                            </dxga:ArcScale>
+                    </dxc:ChartControl>
 
-                        </dxga:CircularGaugeControl.Scales>
-                        
-                    </dxga:CircularGaugeControl>
-        </Grid>
-        <Grid  Margin="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label Content="blibli"/>
-            <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1"  >
-                <dxga:CircularGaugeControl.Scales>
-                    <dxga:ArcScale/>
-                </dxga:CircularGaugeControl.Scales>
+                </Grid>
+                <Grid  Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="adhérant/region"/>
 
-            </dxga:CircularGaugeControl>
-        </Grid>
-        <Grid  Margin="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
-                <dxga:CircularGaugeControl.Scales>
-                    <dxga:ArcScale/>
-                </dxga:CircularGaugeControl.Scales>
+                        <dxc:ChartControl Grid.Row="1"  Width="350" BorderBrush="Transparent" Background="Transparent" BorderThickness="0" Margin="50,0,50,0">
 
-            </dxga:CircularGaugeControl>
-            <Label Content="bloblo"/>
-        </Grid>
-        <Grid  Margin="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label Content="blibli"/>
-            <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
-                <dxga:CircularGaugeControl.Scales>
-                    <dxga:ArcScale/>
-                </dxga:CircularGaugeControl.Scales>
+                        <dxc:ChartControl.Diagram>
+                            <dxc:SimpleDiagram2D BorderBrush="{x:Null}">
 
-            </dxga:CircularGaugeControl>
-        </Grid>
-        <Grid  Margin="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label Content="blabla"/>
-            <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
-                <dxga:CircularGaugeControl.Scales>
-                    <dxga:ArcScale/>
-                </dxga:CircularGaugeControl.Scales>
+                                <dxc:SimpleDiagram2D.Series>
+                                    <dxc:PieSeries2D HoleRadiusPercent="70" x:Name="regpie" >
+                                        
+                                    </dxc:PieSeries2D>
+                                </dxc:SimpleDiagram2D.Series>
+                            </dxc:SimpleDiagram2D>
+                        </dxc:ChartControl.Diagram>
 
-            </dxga:CircularGaugeControl>
-        </Grid>
-        <Grid  Margin="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label Content="blybly"/>
-            <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
-                <dxga:CircularGaugeControl.Scales>
-                    <dxga:ArcScale/>
-                </dxga:CircularGaugeControl.Scales>
+                    </dxc:ChartControl>
 
-            </dxga:CircularGaugeControl>
-        </Grid>
-        <Grid  Margin="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label Content="bleble"/>
-            <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
-                <dxga:CircularGaugeControl.Scales>
-                    <dxga:ArcScale/>
-                </dxga:CircularGaugeControl.Scales>
+                </Grid>
+                <Grid  Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="blibli"/>
 
-            </dxga:CircularGaugeControl>
-        </Grid>
-        <Grid  Margin="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label Content="blublu"/>
-            <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
-                <dxga:CircularGaugeControl.Scales>
-                    <dxga:ArcScale/>
-                </dxga:CircularGaugeControl.Scales>
+                        <dxc:ChartControl Grid.Row="1"  Width="350" BorderBrush="Transparent" Background="Transparent" BorderThickness="0" Margin="50,0,50,0">
 
-            </dxga:CircularGaugeControl>
-        </Grid>
-        <Grid  Margin="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label Content="bloblo"/>
-            <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
-                <dxga:CircularGaugeControl.Scales>
-                    <dxga:ArcScale/>
-                </dxga:CircularGaugeControl.Scales>
+                        <dxc:ChartControl.Diagram>
+                            <dxc:SimpleDiagram2D BorderBrush="{x:Null}">
 
-            </dxga:CircularGaugeControl>
-        </Grid>
-        </WrapPanel>
+                                <dxc:SimpleDiagram2D.Series>
+                                    <dxc:PieSeries2D HoleRadiusPercent="70" >
+                                        <dxc:PieSeries2D.Points>
+                                            <dxc:SeriesPoint Argument="A" Value="1" />
+                                            <dxc:SeriesPoint Argument="B" Value="3" />
+                                            <dxc:SeriesPoint Argument="C" Value="7" />
+                                            <dxc:SeriesPoint Argument="D" Value="4" />
+                                        </dxc:PieSeries2D.Points>
+                                    </dxc:PieSeries2D>
+                                </dxc:SimpleDiagram2D.Series>
+                            </dxc:SimpleDiagram2D>
+                        </dxc:ChartControl.Diagram>
+
+                    </dxc:ChartControl>
+
+                </Grid>
+                </StackPanel>
+                <Label Content="Chiffres" FontFamily="Lato" FontSize="25" HorizontalAlignment="Left" Margin="10,30,0,0"/>
+                <Separator Height="30" HorizontalAlignment="Stretch"/>
+                <StackPanel Orientation="Horizontal">
+                    <Grid  Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Content="nombre d'adhérants"/>
+                        <dxga:DigitalGaugeControl Grid.Row="1" x:Name="nbadher"  Width="350" Margin="50,0,50,0" />
+
+
+                    </Grid>
+                    <Grid  Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Content="nombre de remboursement"/>
+                        <dxga:DigitalGaugeControl Grid.Row="1" x:Name="nbremb"  Width="350" Margin="50,0,50,0" />
+                    </Grid>
+                    <Grid  Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <dxga:DigitalGaugeControl Grid.Row="1" x:Name="nbbene"  Width="350" Margin="50,0,50,0" />
+                        <Label Content="nombre de bénéficiares"/>
+                    </Grid>
+                </StackPanel>
+                <Label Content="Moyenne" FontFamily="Lato" FontSize="25"  HorizontalAlignment="Left" Margin="10,50,0,0"/>
+                <Separator Height="30" HorizontalAlignment="Stretch"/>
+                <StackPanel Orientation="Horizontal">
+                    
+                    <Grid  Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Content="taux de remboursement"/>
+                        <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1"  >
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale x:Name="txremb" EndValue="200"/>
+                            </dxga:CircularGaugeControl.Scales>
+
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <Grid  Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Content="remboursement/femme"/>
+                        <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale x:Name="rembfemme"/>
+                            </dxga:CircularGaugeControl.Scales>
+
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                    <Grid  Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Content="remboursement / homme"/>
+                        <dxga:CircularGaugeControl  Cursor="Arrow" Grid.Row="1" >
+                            <dxga:CircularGaugeControl.Scales>
+                                <dxga:ArcScale x:Name="rembhom">
+                                    
+                                </dxga:ArcScale>
+                                
+                            </dxga:CircularGaugeControl.Scales>
+
+                        </dxga:CircularGaugeControl>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
         </ScrollViewer>
+        <Button Content="imprimer" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

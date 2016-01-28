@@ -48,8 +48,33 @@
                     <TabItem Header="INDICATEURS">
                         <local:Charts HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     </TabItem>
-                    <TabItem Header="CHIFFRES">
+                    <TabItem Header="GRAPHIQUES">
                         <Grid>
+                            
+                                <ScrollViewer>
+                                    <StackPanel Orientation="Vertical">
+                                        <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="10"  >
+                                            <dxc:XYDiagram2D x:Name="diagrammeregion">
+                                                <dxc:BarSideBySideSeries2D x:Name="histo" DisplayName="regions"/>
+                                            </dxc:XYDiagram2D>
+                                        </dxc:ChartControl>
+                                        <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10" >
+                                            <dxc:XYDiagram2D x:Name="diagrammeregion2">
+                                                <dxc:BarSideBySideSeries2D x:Name="histo2" DisplayName="regions"/>
+                                            </dxc:XYDiagram2D>
+                                        </dxc:ChartControl>
+                                        <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10" >
+                                            <dxc:XYDiagram2D x:Name="diagrammeregion3">
+                                                <dxc:BarSideBySideSeries2D x:Name="histo3" DisplayName="regions"/>
+                                            </dxc:XYDiagram2D>
+                                        </dxc:ChartControl>
+                                        <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10" >
+                                            <dxc:XYDiagram2D x:Name="diagrammeregion4">
+                                                <dxc:BarSideBySideSeries2D x:Name="histo4" DisplayName="regions" />
+                                            </dxc:XYDiagram2D>
+                                        </dxc:ChartControl>
+                                    </StackPanel>
+                                </ScrollViewer>
                             
                         </Grid>
                     </TabItem>
@@ -136,7 +161,6 @@
                         <StackPanel.Effect>
                             <DropShadowEffect Opacity="0.3" Direction="270" ShadowDepth="5" BlurRadius="5"/>
                         </StackPanel.Effect>
-                        <Label Content="Rechercher" Width="120" Margin="2" Foreground="#FF303030" FontFamily="Lato" FontSize="20" FontWeight="Light" />
                         <TextBox x:Name="rechtext" Width="150" Margin="2" />
                         <Button Content="rechercher" Click="Button_Click_6" Margin="2" />
                     </StackPanel>
@@ -144,45 +168,27 @@
                 
             </TabItem>
 
-            <TabItem Header="GRAPHIQUES" Margin="10,0,10,0" >
-                <ScrollViewer>
-                <StackPanel Orientation="Vertical">
-                    <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="10"  >
-                        <dxc:XYDiagram2D x:Name="diagrammeregion">
-                            <dxc:BarSideBySideSeries2D x:Name="histo" DisplayName="regions"/>
-                        </dxc:XYDiagram2D>
-                    </dxc:ChartControl>
-                    <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10" >
-                        <dxc:XYDiagram2D x:Name="diagrammeregion2">
-                            <dxc:BarSideBySideSeries2D x:Name="histo2" DisplayName="regions"/>
-                        </dxc:XYDiagram2D>
-                    </dxc:ChartControl>
-                    <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10" >
-                        <dxc:XYDiagram2D x:Name="diagrammeregion3">
-                            <dxc:BarSideBySideSeries2D x:Name="histo3" DisplayName="regions"/>
-                        </dxc:XYDiagram2D>
-                    </dxc:ChartControl>
-                    <dxc:ChartControl HorizontalAlignment="Center" VerticalAlignment="Stretch"  Margin="10" >
-                        <dxc:XYDiagram2D x:Name="diagrammeregion4">
-                            <dxc:BarSideBySideSeries2D x:Name="histo4" DisplayName="regions" />
-                        </dxc:XYDiagram2D>
-                    </dxc:ChartControl>
-                </StackPanel>
-                </ScrollViewer>
-            </TabItem>
+            
             <TabItem Header="ANALITICS" Margin="5,0,5,0" >
-                <dragablz:TabablzControl>
+               <!--<dragablz:TabablzControl>
                     <dragablz:TabablzControl.InterTabController>
                         <dragablz:InterTabController/>
                     </dragablz:TabablzControl.InterTabController>
-                    <TabItem Header="HOTJAR">
-                        <cefSharp:ChromiumWebBrowser x:Name="hotjar" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Address="https://insights.hotjar.com/login"/>
+                    <TabItem Header="HOTJAR" x:Name="hotjartab">
+                        
+                        
+                        
+                        <cefSharp:ChromiumWebBrowser  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Address="https://insights.hotjar.com/login"/>
                     </TabItem>
-                    <TabItem Header="GOOGLE ANALITICS">
-                        <cefSharp:ChromiumWebBrowser x:Name="google" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Address="https://www.google.fr/intl/fr/analytics/"/>
+                    <TabItem Header="GOOGLE ANALITICS" x:Name="anatab">
+                        <cefSharp:ChromiumWebBrowser  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Address="https://www.google.fr/intl/fr/analytics/"/>
                     </TabItem>
-                </dragablz:TabablzControl>
+                   
+                </dragablz:TabablzControl>-->
                 
+            </TabItem>
+            <TabItem Header="SORT">
+                <local:Sorts HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </TabItem>
             
         </dragablz:TabablzControl>
