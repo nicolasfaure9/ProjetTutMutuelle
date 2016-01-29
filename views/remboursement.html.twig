@@ -110,7 +110,7 @@
                                     <td>Reste à payer par l'assuré</td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
-                                    <td class="text-right">{{ (prestation_sante.frais_reel_assure - prestation_sante.montant_secu - prestation_sante.montant_rembourse) | round|abs}}€</td>
+                                    <td class="text-right">{{ (prestation_sante.frais_reel_assure - prestation_sante.montant_secu - prestation_sante.montant_rembourse) | round(2,'floor')|abs}}€</td>
                                 </tr>
                                 <tr>
                                     <td class="highrow emptyrow"><i class="fa fa-barcode iconbig"></i></td>
